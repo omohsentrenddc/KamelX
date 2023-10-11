@@ -4,8 +4,9 @@
 
   <data>
     <variable
-      name="movie"
-      type="app.fawry.task.presentation.movie.ui_state.MovieUIState" />
+      name="viewmodel"
+      type="app.fawry.task.presentation.auth.login.LoginViewModel" />
+
   </data>
 
   <androidx.core.widget.NestedScrollView
@@ -17,6 +18,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
       android:layout_width="match_parent"
+      android:layout_margin="@dimen/dimen10"
       android:layout_height="match_parent">
 
       <androidx.appcompat.widget.AppCompatImageView
@@ -27,45 +29,38 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:loadImage="@{movie.moviePosterPath}" />
+        android:src="@drawable/ic_more_gifts"
+        />
 
       <com.google.android.material.textview.MaterialTextView
         android:id="@+id/tv_title"
-        style="@style/TextAppearance.AppCompat.Title"
+        style="@style/txtStyleBold"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/dimen5"
         android:layout_marginTop="@dimen/dimen5"
         android:gravity="start"
-        android:text="@{movie.movieTitle}"
-        android:textColor="@color/colorPrimary"
+        android:textSize="16sp"
+        android:text="@string/phone"
+        android:textColor="@color/colorSecondary"
         app:layout_constraintTop_toBottomOf="@+id/img_poster" />
 
 
-      <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/tv_overview"
-        style="@style/TextAppearance.AppCompat.Body1"
+      <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/input_phone"
+        style="@style/editText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/dimen5"
-        android:layout_marginTop="@dimen/dimen5"
-        android:gravity="start"
-        android:text="@{movie.movieOverview}"
-        android:textColor="@color/colorPrimary"
-        app:layout_constraintTop_toBottomOf="@+id/tv_title" />
-
-      <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/tv_release_date"
-        style="@style/TextAppearance.AppCompat.Body2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/dimen5"
-        android:layout_marginTop="@dimen/dimen5"
-        android:gravity="start"
-        android:text="@{movie.getMovieReleaseDate(context)}"
-        android:textColor="@color/colorPrimary"
-        app:layout_constraintTop_toBottomOf="@+id/tv_overview" />
-
+        android:layout_marginTop="@dimen/dimen14"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:hint="5xxxxxxxxxx"
+        android:inputType="text"
+        android:text="@={viewmodel.request.name}"
+        android:textColor="@android:color/black"
+        android:textColorHint="@color/colorAccent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_header_login" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
   </androidx.core.widget.NestedScrollView>

@@ -1,7 +1,7 @@
-package com.trenddc.hashksa.task.domain.auth.use_case
+package app.fawry.task.domain.auth.use_case
 
-import com.trenddc.hashksa.task.domain.account.repository.AccountRepository
-import com.trenddc.hashksa.task.domain.auth.entity.UserModel
+import app.fawry.task.domain.repository.AccountRepository
+import app.fawry.task.domain.auth.entity.UserModel
 import javax.inject.Inject
 
 class UserLocalUseCase @Inject constructor(private val accountRepository: AccountRepository) {

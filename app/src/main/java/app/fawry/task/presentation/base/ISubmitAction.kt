@@ -1,4 +1,4 @@
-package com.trenddc.hashksa.task.presentation.base
+package app.fawry.task.presentation.base
 
 import android.view.View
 

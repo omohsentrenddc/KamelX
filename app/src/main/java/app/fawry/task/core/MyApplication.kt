@@ -30,6 +30,11 @@ class MyApplication : Application(), Configuration.Provider {
     MultiDex.install(this)
   }
 
+  companion object {
+    lateinit var instance : MyApplication
+  }
+
+
   override
   fun onCreate() {
     super.onCreate()

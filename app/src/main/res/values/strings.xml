@@ -10,5 +10,10 @@
   <string name="cancel">Cancel</string>
   <string name="some_error">Some error occurred, try again later</string>
   <string name="release">Release Date:</string>
+  <string name="phone">رقم الجوال</string>
+  <string name="reset">إعادة تعيين</string>
+  <string name="share">مشاركة</string>
+  <string name="please_enter">من فضلك قم بادخال</string>
+  <string name="password">كلمة المرور</string>
 
 </resources>

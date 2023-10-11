@@ -1,4 +1,4 @@
-package com.trenddc.hashksa.task.presentation.base.extensions
+package app.fawry.task.presentation.base.extensions
 
 import android.content.ContentResolver
 import android.content.Context

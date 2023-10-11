@@ -1,14 +1,16 @@
-package com.trenddc.hashksa.task.domain.auth.repository
+package app.fawry.task.domain.auth.repository
 
-import com.trenddc.hashksa.task.domain.auth.entity.LoginResponse
-import com.trenddc.hashksa.task.domain.auth.entity.UserModel
-import com.trenddc.hashksa.task.domain.auth.request.*
-import com.trenddc.hashksa.task.domain.auth.request.forgetPassword.ForgetPasswordRequest
-import com.trenddc.hashksa.task.domain.auth.request.forgetPassword.ForgetPasswordResponse
-import com.trenddc.hashksa.task.domain.auth.request.forgetPassword.UpdateTokenGuestUserRequest
-import com.trenddc.hashksa.task.domain.auth.request.social.LogInSocialRequest
-import com.trenddc.hashksa.task.domain.utils.BaseResponse
-import com.trenddc.hashksa.task.domain.utils.Resource
+import app.fawry.task.domain.auth.entity.LoginResponse
+import app.fawry.task.domain.auth.request.LogInRequest
+import app.fawry.task.domain.auth.request.UpdatePasswordRequest
+import app.fawry.task.domain.auth.request.UpdateProfileRequest
+import app.fawry.task.domain.utils.BaseResponse
+import app.fawry.task.domain.utils.Resource
+import app.fawry.task.domain.auth.request.*
+import app.fawry.task.domain.auth.request.forgetPassword.ForgetPasswordRequest
+import app.fawry.task.domain.auth.request.forgetPassword.ForgetPasswordResponse
+import app.fawry.task.domain.auth.request.forgetPassword.UpdateTokenGuestUserRequest
+import app.fawry.task.domain.auth.request.social.LogInSocialRequest
 
 interface AuthRepository {
 
@@ -20,7 +22,7 @@ interface AuthRepository {
   suspend fun confirmCode(request: ForgetPasswordRequest): Resource<BaseResponse<*>>
   suspend fun updatePassword(request: UpdatePasswordRequest): Resource<BaseResponse<*>>
   suspend fun updateToken(request: UpdateTokenRequest): Resource<BaseResponse<*>>
-  suspend fun updateTokenGuestUser(request:UpdateTokenGuestUserRequest): Resource<BaseResponse<LoginResponse>>
+  suspend fun updateTokenGuestUser(request: UpdateTokenGuestUserRequest): Resource<BaseResponse<LoginResponse>>
   suspend fun updateProfile(request: UpdateProfileRequest): Resource<BaseResponse<LoginResponse>>
 
 }

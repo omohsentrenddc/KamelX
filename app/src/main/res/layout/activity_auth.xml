@@ -13,7 +13,7 @@
       android:layout_height="wrap_content"
       android:layoutDirection="ltr"
       app:layout_constraintTop_toTopOf="parent"
-      app:titleTextColor="@color/colorTxtHeaderIntro"
+      app:titleTextColor="@color/colorSecondary"
       app:titleCentered="true"
       />
 

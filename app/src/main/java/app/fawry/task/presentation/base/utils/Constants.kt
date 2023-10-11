@@ -6,5 +6,6 @@ object Constants {
   const val MESSAGE: String = "MESSAGE"
   const val NETWORK_FAILURE: String = "Failed to call api"
 
+  const val FIREBASE_TOKEN = "firebase_token"
 
 }

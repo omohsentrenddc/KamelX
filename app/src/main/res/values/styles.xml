@@ -29,6 +29,30 @@
     <item name="android:textColorSecondary">@color/colorPrimary</item>
   </style>
 
+  <style name="editText" parent="Widget.AppCompat.EditText">
+    <item name="android:background">@drawable/bg_rounded_text</item>
+    <item name="android:padding">@dimen/dimen16</item>
+    <item name="android:drawablePadding">@dimen/dimen10</item>
+    <item name="android:drawableTint">@color/colorAccent</item>
+    <item name="android:textAlignment">textStart</item>
+    <item name="android:gravity">start</item>
+    <item name="android:fontFamily">@font/ibm_medium</item>
+    <item name="android:textDirection">rtl</item>
+  </style>
+
+  <style name="datepicker" parent="Theme.AppCompat.Light.Dialog">
+    <item name="colorPrimary">@color/colorPrimary</item>
+    <item name="colorAccent">@color/colorPrimary</item>
+    <item name="colorPrimaryDark">@color/colorPrimary</item>
+    <item name="android:textColor">@color/colorPrimary</item>
+    <item name="android:tint">@color/colorPrimary</item>
+    <item name="android:textColorHint">@color/colorPrimary</item>
+  </style>
+
+  <style name="chipText" parent="TextAppearance.MaterialComponents.Chip">
+    <item name="android:fontFamily">@font/ibm_medium</item>
+  </style>
+
   <style name="ThemeOverlay.App.NavigationView" parent="Widget.MaterialComponents.NavigationView">
     <item name="colorPrimary">@color/colorPrimary</item>
     <item name="colorSurface">@color/transparent</item>
@@ -58,6 +82,15 @@
     <item name="android:windowAnimationStyle">@style/PauseDialogAnimation</item>
     <item name="android:windowMinWidthMajor">@android:dimen/dialog_min_width_major</item>
     <item name="android:windowMinWidthMinor">@android:dimen/dialog_min_width_minor</item>
+  </style>
+
+
+  <style name="txtStyleRegular" parent="Widget.AppCompat.TextView">
+    <item name="android:fontFamily">@font/ibm_regular</item>
+  </style>
+
+  <style name="txtStyleBold" parent="Widget.AppCompat.TextView">
+    <item name="android:fontFamily">@font/ibm_bold</item>
   </style>
 
 

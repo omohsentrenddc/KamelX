@@ -1,7 +1,6 @@
-package com.trenddc.hashksa.task.presentation.base.extensions
+package app.fawry.task.presentation.base.extensions
 
 import android.os.Bundle
-import android.util.Log
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.facebook.*
@@ -11,14 +10,11 @@ import com.facebook.login.widget.LoginButton
 import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.OAuthProvider
-import com.trenddc.hashksa.BuildConfig
-import com.trenddc.hashksa.R
-import com.trenddc.hashksa.task.presentation.base.showError
-import com.trenddc.hashksa.task.presentation.base.utils.hideLoadingDialog
-import com.trenddc.hashksa.task.presentation.base.utils.showLoadingDialog
-import com.twitter.sdk.android.core.Twitter
-import com.twitter.sdk.android.core.TwitterAuthConfig
-import com.twitter.sdk.android.core.TwitterConfig
+import app.fawry.BuildConfig
+import app.fawry.R
+import app.fawry.task.presentation.base.extensions.showError
+import app.fawry.task.presentation.base.utils.hideLoadingDialog
+import app.fawry.task.presentation.base.utils.showLoadingDialog
 import org.json.JSONObject
 import java.util.*
 
@@ -96,8 +92,8 @@ fun Fragment.facebookLogin(
 ////
 ////
 ////  val mTwitterAuthConfig = TwitterAuthConfig(
-////    getString(com.trenddc.hashksa.R.string.twitter_consumer_key),
-////    getString(com.trenddc.hashksa.R.string.twitter_consumer_secret)
+////    getString(app.fawry.R.string.twitter_consumer_key),
+////    getString(app.fawry.R.string.twitter_consumer_secret)
 ////  )
 ////  val twitterConfig = TwitterConfig.Builder(requireContext())
 ////    .twitterAuthConfig(mTwitterAuthConfig)
@@ -166,7 +162,7 @@ fun Fragment.facebookLogin(
 fun Fragment.twitterLoginFirebase(
   loginResult: (res : AuthResult) -> Unit
 ){
-  val dialog = showLoadingDialog(requireActivity(),getString(com.trenddc.hashksa.R.string.please_wait))
+  val dialog = showLoadingDialog(requireActivity(),getString(app.fawry.R.string.please_wait))
   val provider: OAuthProvider.Builder = OAuthProvider.newBuilder("twitter.com")
   //provider.addCustomParameter("lang", "fr");
   val firebaseAuth = FirebaseAuth.getInstance()

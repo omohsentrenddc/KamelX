@@ -10,6 +10,9 @@ import androidx.annotation.LayoutRes
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
+import app.fawry.task.domain.utils.BaseResponse
+import app.fawry.task.domain.utils.Resource
+import app.fawry.task.presentation.base.extensions.hideKeyboard
 import app.fawry.task.presentation.base.utils.SingleLiveEvent
 import app.fawry.task.presentation.base.utils.hideLoadingDialog
 import app.fawry.task.presentation.base.utils.showLoadingDialog
@@ -105,5 +108,26 @@ abstract class BaseFragment<VB : ViewDataBinding> : Fragment() {
 
   val currentLanguage: Locale
     get() = Locale.getDefault()
+
+  fun handleLoading(it: Resource<BaseResponse<*>>) {
+    println("handleAction $it")
+    when (it) {
+      Resource.Loading -> {
+        hideKeyboard()
+        showLoading()
+      }
+      is Resource.HideProgress -> {
+        hideLoading()
+      }
+      is Resource.Success -> {
+        hideLoading()
+      }
+      is Resource.Failure -> {
+        hideLoading()
+      }
+      else -> {}
+    }
+  }
+
 
 }

@@ -1,5 +1,8 @@
 package app.fawry.task.presentation.base.extensions
 
+import android.app.Activity
+import androidx.annotation.DrawableRes
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import app.fawry.task.domain.utils.FailureStatus
 import app.fawry.task.domain.utils.Resource.Failure
@@ -32,6 +35,12 @@ fun Fragment.handleApiError(
       )
     }
   }
+}
+
+fun Fragment.getMyDrawable(@DrawableRes id: Int) = ContextCompat.getDrawable(requireContext(), id)!!
+
+fun <A : Activity> Fragment.openActivityAndClearStack(activity: Class<A>) {
+  requireActivity().openActivityAndClearStack(activity)
 }
 
 fun Fragment.hideKeyboard() = hideSoftInput(requireActivity())

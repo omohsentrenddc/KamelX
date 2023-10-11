@@ -136,5 +136,7 @@ dependencies {
   implementation(Libraries.hiltCommonWorkManager)
   kapt(Libraries.hiltCompilerWorkManager)
 
+  //toasty
+  implementation("com.github.GrenderG:Toasty:1.5.2")
 
 }

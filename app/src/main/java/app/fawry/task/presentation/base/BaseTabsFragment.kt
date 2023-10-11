@@ -1,4 +1,4 @@
-package com.trenddc.hashksa.task.presentation.base
+package app.fawry.task.presentation.base
 
 import android.app.Dialog
 import android.net.Uri
@@ -11,13 +11,11 @@ import androidx.annotation.LayoutRes
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
-import com.trenddc.hashksa.task.domain.utils.BaseResponse
-import com.trenddc.hashksa.task.domain.utils.Resource
-import com.trenddc.hashksa.task.presentation.base.extensions.handleApiError
-import com.trenddc.hashksa.task.presentation.base.extensions.hideKeyboard
-import com.trenddc.hashksa.task.presentation.base.utils.SingleLiveEvent
-import com.trenddc.hashksa.task.presentation.base.utils.hideLoadingDialog
-import com.trenddc.hashksa.task.presentation.base.utils.showLoadingDialog
+import app.fawry.task.domain.utils.BaseResponse
+import app.fawry.task.domain.utils.Resource
+import app.fawry.task.presentation.base.extensions.hideKeyboard
+import app.fawry.task.presentation.base.utils.hideLoadingDialog
+import app.fawry.task.presentation.base.utils.showLoadingDialog
 import java.util.*
 
 abstract class BaseTabsFragment: Fragment() {

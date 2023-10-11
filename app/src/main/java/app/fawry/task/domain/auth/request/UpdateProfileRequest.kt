@@ -1,4 +1,4 @@
-package com.trenddc.hashksa.task.domain.auth.request
+package app.fawry.task.domain.auth.request
 
 import android.net.Uri
 import androidx.annotation.Keep

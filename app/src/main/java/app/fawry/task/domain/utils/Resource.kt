@@ -11,6 +11,7 @@ sealed class Resource<out T> {
   ) : Resource<Nothing>()
 
   object Loading : Resource<Nothing>()
+  object HideProgress : Resource<Nothing>()
 
   object Default : Resource<Nothing>()
 }

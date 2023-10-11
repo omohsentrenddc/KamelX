@@ -1,4 +1,4 @@
-package com.trenddc.hashksa.task.presentation.base.extensions
+package app.fawry.task.presentation.base.extensions
 
 import android.app.DatePickerDialog
 import android.app.TimePickerDialog
@@ -16,9 +16,9 @@ import com.google.android.exoplayer2.upstream.DefaultAllocator
 import com.google.android.exoplayer2.upstream.DefaultDataSourceFactory
 import com.google.android.exoplayer2.util.Util
 import com.google.gson.Gson
-import com.trenddc.hashksa.R
-import com.trenddc.hashksa.task.presentation.base.custom_views.TimePicker
-import com.trenddc.hashksa.task.presentation.base.utils.isUrlValid
+import app.fawry.R
+import app.fawry.task.presentation.base.custom_views.TimePicker
+import app.fawry.task.presentation.base.utils.isUrlValid
 import java.text.SimpleDateFormat
 import java.util.*
 

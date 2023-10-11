@@ -1,4 +1,4 @@
-package com.trenddc.hashksa.task.domain.auth.entity
+package app.fawry.task.domain.auth.entity
 
 import androidx.annotation.Keep
 import com.google.gson.annotations.Expose

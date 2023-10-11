@@ -1,4 +1,4 @@
-package com.trenddc.hashksa.task.domain.auth.request.forgetPassword
+package app.fawry.task.domain.auth.request.forgetPassword
 
 import androidx.annotation.Keep
 import com.google.gson.annotations.Expose

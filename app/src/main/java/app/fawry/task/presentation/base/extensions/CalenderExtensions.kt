@@ -1,11 +1,10 @@
-package com.trenddc.hashksa.task.presentation.base.extensions
+package app.fawry.task.presentation.base.extensions
 
 import android.app.DatePickerDialog
 import android.app.TimePickerDialog
 import android.content.Context
-import android.content.DialogInterface
 import android.util.Log
-import com.trenddc.hashksa.R
+import com.structure.base_mvvm.R
 import java.text.SimpleDateFormat
 import java.util.*
 

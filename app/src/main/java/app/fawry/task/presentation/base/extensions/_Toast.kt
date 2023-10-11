@@ -1,4 +1,4 @@
-package com.trenddc.hashksa.task.presentation.base
+package app.fawry.task.presentation.base.extensions
 
 import android.content.Context
 import android.content.Intent
@@ -8,8 +8,8 @@ import android.widget.Toast
 import androidx.navigation.NavDeepLinkRequest
 import androidx.navigation.NavOptions
 import androidx.navigation.findNavController
-import com.trenddc.hashksa.R
-import com.trenddc.hashksa.task.core.MyApplication
+import app.fawry.task.core.MyApplication
+import com.structure.base_mvvm.R
 import es.dmoral.toasty.Toasty
 
 fun Context.showError( message: String) {

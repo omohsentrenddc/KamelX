@@ -1,6 +1,6 @@
-package com.trenddc.hashksa.task.domain.account.repository
+package app.fawry.task.domain.repository
 
-import com.trenddc.hashksa.task.domain.auth.entity.UserModel
+import app.fawry.task.domain.auth.entity.UserModel
 
 interface AccountRepository {
 

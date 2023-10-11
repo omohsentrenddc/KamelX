@@ -1,4 +1,4 @@
-package com.trenddc.hashksa.task.domain.home.entity
+package app.fawry.task.domain.home.entity
 
 
 import com.google.gson.annotations.SerializedName

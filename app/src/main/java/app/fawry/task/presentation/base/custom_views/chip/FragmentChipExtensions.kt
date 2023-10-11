@@ -1,35 +1,12 @@
-package com.trenddc.hashksa.task.presentation.base.custom_views.chip
+package app.fawry.task.presentation.base.custom_views.chip
 
-import android.app.Activity
-import android.app.AlertDialog
-import android.content.DialogInterface
-import android.provider.MediaStore
 import android.util.Log
-import android.util.TypedValue
-import android.view.View
-import android.webkit.URLUtil
-import androidx.annotation.DrawableRes
-import androidx.core.app.ActivityCompat
-import androidx.core.content.ContextCompat
-import androidx.core.view.get
-import androidx.databinding.BindingAdapter
 import androidx.fragment.app.Fragment
-import com.denzcoskun.imageslider.ImageSlider
-import com.denzcoskun.imageslider.constants.ScaleTypes
-import com.denzcoskun.imageslider.interfaces.ItemClickListener
-import com.denzcoskun.imageslider.models.SlideModel
+import app.fawry.task.presentation.base.extensions.getMyDrawable
 import com.google.android.material.chip.ChipGroup
-import com.trenddc.hashksa.R
-import com.trenddc.hashksa.task.domain.home.entity.IdNameIcon
-import com.trenddc.hashksa.task.domain.home.entity.slider.SliderModel
-import com.trenddc.hashksa.task.domain.utils.FailureStatus
-import com.trenddc.hashksa.task.domain.utils.Resource
-import com.trenddc.hashksa.task.domain.utils.Resource.Failure
-import com.trenddc.hashksa.task.presentation.base.extensions.getMyDrawable
-import com.trenddc.hashksa.task.presentation.base.showError
-import com.trenddc.hashksa.task.presentation.base.utils.hideSoftInput
-import com.trenddc.hashksa.task.presentation.base.utils.showNoApiErrorAlert
-import com.trenddc.hashksa.task.presentation.base.utils.showNoInternetAlert
+import com.structure.base_mvvm.R
+import app.fawry.task.domain.home.entity.IdNameIcon
+
 //import kotlinx.android.synthetic.main.fragment_map.view.*
 
 

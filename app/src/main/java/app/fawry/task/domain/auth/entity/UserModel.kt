@@ -1,9 +1,9 @@
-package com.trenddc.hashksa.task.domain.auth.entity
+package app.fawry.task.domain.auth.entity
 
 import androidx.annotation.Keep
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
-import com.trenddc.hashksa.task.domain.home.entity.IdNameIcon
+import app.fawry.task.domain.home.entity.IdNameIcon
 
 @Keep
 data class UserModel(
