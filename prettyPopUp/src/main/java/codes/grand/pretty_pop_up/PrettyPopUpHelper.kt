@@ -307,7 +307,7 @@ class PrettyPopUpHelper private constructor(builder: Builder) {
           binding.tvTitle.setTextColor(
             ContextCompat.getColor(
               requireContext(),
-              R.color.colorDarkGray
+              R.color.colorGray
             )
           )
         }

@@ -8,5 +8,14 @@
   <fragment
     android:id="@+id/loginFragment"
     android:name="app.fawry.task.presentation.auth.login.LoginFragment"
-    android:label="LoginFragment" />
+    android:label="@string/login" >
+    <deepLink
+      android:id="@+id/loginFragment"
+      android:autoVerify="true"
+      app:uri="registerFragment://app.kamelx.register" />
+  </fragment>
+  <fragment
+    android:id="@+id/registerFragment"
+    android:name="app.fawry.task.presentation.auth.register.RegisterFragment"
+    android:label="@string/new_account" />
 </navigation>

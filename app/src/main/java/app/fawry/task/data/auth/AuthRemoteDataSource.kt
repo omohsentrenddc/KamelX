@@ -3,6 +3,7 @@ package app.fawry.task.data.auth
 import android.util.Log
 import app.fawry.task.data.remote.BaseRemoteDataSource
 import app.fawry.task.domain.auth.request.LogInRequest
+import app.fawry.task.domain.auth.request.RegisterRequest
 import javax.inject.Inject
 
 class AuthRemoteDataSource @Inject constructor(private val apiService: AuthServices) :
@@ -14,14 +15,16 @@ class AuthRemoteDataSource @Inject constructor(private val apiService: AuthServi
     apiService.logIn(request)
   }
 
+  suspend fun register(request: RegisterRequest) = safeApiCall {
+    apiService.register(request)
+  }
+
 //  suspend fun loginSocial(request: LogInSocialRequest) = safeApiCall {
 //    Log.d(TAG, "logIn: worked")
 //    apiService.loginSocial(request)
 //  }
 
-//  suspend fun register(request: RegisterRequest) = safeApiCall {
-//    apiService.register(request)
-//  }
+
 
 //  suspend fun registerSecond(request: RegisterRequest) = safeApiCall {
 //    apiService.registerSecond(request)

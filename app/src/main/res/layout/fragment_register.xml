@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto">
+
+  <data>
+
+    <variable
+      name="viewmodel"
+      type="app.fawry.task.presentation.auth.register.RegisterViewModel" />
+
+  </data>
+
+  <androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background"
+    android:clickable="false"
+    android:fillViewport="true">
+
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_margin="@dimen/dimen20"
+      android:orientation="vertical">
+
+      <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen250"
+        android:scaleType="fitCenter"
+        android:src="@drawable/img_register"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+      <androidx.appcompat.widget.AppCompatEditText
+        style="@style/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen14"
+        android:hint="@string/first_name"
+        android:inputType="text"
+        android:text="@={viewmodel.request.firstName}"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textColor="@android:color/black"
+        android:textColorHint="@color/colorAccent"
+        app:layout_constraintEnd_toStartOf="@+id/linearLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+      <androidx.appcompat.widget.AppCompatEditText
+        style="@style/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen14"
+        android:hint="@string/last_name"
+        android:inputType="text"
+        android:text="@={viewmodel.request.lastName}"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textColor="@android:color/black"
+        android:textColorHint="@color/colorAccent"
+        app:layout_constraintEnd_toStartOf="@+id/linearLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+      <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/dimen14"
+        android:layout_height="wrap_content">
+
+
+        <androidx.appcompat.widget.AppCompatEditText
+          android:id="@+id/input_phone"
+          style="@style/editText"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:hint="5xxxxxxxxxx"
+          android:textAlignment="viewStart"
+          android:inputType="phone"
+          android:text="@={viewmodel.request.phone}"
+          android:textAppearance="@style/TextAppearance.AppCompat.Small"
+          android:textColor="@android:color/black"
+          android:textColorHint="@color/colorAccent"
+          app:layout_constraintEnd_toStartOf="@+id/linearLayout"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+          android:id="@+id/linearLayout"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="@drawable/bg_rounded_text"
+          android:gravity="center"
+          android:orientation="horizontal"
+          android:padding="@dimen/dimen10"
+          app:layout_constraintBottom_toBottomOf="@+id/input_phone"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintTop_toTopOf="@+id/input_phone">
+
+          <androidx.appcompat.widget.AppCompatTextView
+            style="@style/txtStyleMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="@dimen/dimen10"
+            android:gravity="center"
+            android:text="966"
+            android:textSize="@dimen/text_size16" />
+
+          <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/dimen20"
+            android:layout_height="@dimen/dimen20"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:src="@drawable/img_saudia" />
+
+
+        </LinearLayout>
+
+      </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+      <!--      <androidx.appcompat.widget.AppCompatEditText
+              android:id="@+id/input_password"
+              style="@style/editText"
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="@dimen/dimen14"
+              android:hint="5xxxxxxxxxx"
+              android:layout_marginEnd="@dimen/dimen10"
+              android:inputType="text"
+              android:text="@={viewmodel.request.phone}"
+              android:textAppearance="@style/TextAppearance.AppCompat.Small"
+              android:textColor="@android:color/black"
+              android:textColorHint="@color/colorAccent"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toBottomOf="@+id/tv_password" />-->
+
+
+      <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_password"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen10"
+        android:inputType="textPassword"
+        app:boxBackgroundColor="@color/white"
+        app:boxCornerRadiusBottomEnd="@dimen/dimen14"
+        app:boxCornerRadiusBottomStart="@dimen/dimen14"
+        app:boxCornerRadiusTopEnd="@dimen/dimen14"
+        app:boxCornerRadiusTopStart="@dimen/dimen14"
+        app:boxStrokeColor="@color/colorHintText"
+        app:boxStrokeWidth="1dp"
+        app:boxStrokeWidthFocused="0dp"
+        app:hintEnabled="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_password"
+        app:passwordToggleDrawable="@drawable/show_password_selector"
+        app:passwordToggleEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+          android:id="@+id/edittextPassword"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:hint="@string/password"
+          android:inputType="textPassword"
+          android:textAlignment="viewStart" />
+      </com.google.android.material.textfield.TextInputLayout>
+
+      <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen10"
+        android:inputType="textPassword"
+        app:boxBackgroundColor="@color/white"
+        app:boxCornerRadiusBottomEnd="@dimen/dimen14"
+        app:boxCornerRadiusBottomStart="@dimen/dimen14"
+        app:boxCornerRadiusTopEnd="@dimen/dimen14"
+        app:boxCornerRadiusTopStart="@dimen/dimen14"
+        app:boxStrokeColor="@color/colorHintText"
+        app:boxStrokeWidth="1dp"
+        app:boxStrokeWidthFocused="0dp"
+        app:hintEnabled="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_password"
+        app:passwordToggleDrawable="@drawable/show_password_selector"
+        app:passwordToggleEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:hint="@string/confirm_password"
+          android:inputType="textPassword"
+          android:textAlignment="viewStart" />
+      </com.google.android.material.textfield.TextInputLayout>
+
+
+
+      <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/dimen20"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+          android:id="@+id/materialCheckBox"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:fontFamily="@font/ibm_medium"
+          android:backgroundTint="@color/colorPrimary"
+          android:onClick="@{ (v) -> viewmodel.acceptPrivacy(v)}"
+          android:checked="@{viewmodel.checked ? true : false}"
+          android:textColor="@color/colorPrimary"
+          android:padding="0dp"
+          app:buttonTint="@color/colorPrimary"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent"
+          app:useMaterialThemeColors="false" />
+
+        <com.google.android.material.textview.MaterialTextView
+          android:id="@+id/tv_register_agree_on"
+          style="@style/txtStyleMedium"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:gravity="start"
+          android:text="@string/agree_on"
+          android:textColor="@color/colorHintText"
+          android:textSize="@dimen/text_size14"
+          app:layout_constraintStart_toEndOf="@+id/materialCheckBox"
+          app:layout_constraintBottom_toBottomOf="@+id/materialCheckBox"
+          app:layout_constraintTop_toTopOf="@+id/materialCheckBox" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+          style="@style/txtStyleRegular"
+          android:text="@string/privacy_policy"
+          android:textColor="@color/colorPrimary"
+          android:textSize="@dimen/text_size14"
+          android:layout_marginStart="@dimen/dimen8"
+          android:onClick="@{ (v) -> viewmodel.privacy(v) }"
+          android:layout_width="wrap_content"
+          app:layout_constraintStart_toEndOf="@+id/tv_register_agree_on"
+          app:layout_constraintTop_toTopOf="@+id/materialCheckBox"
+          app:layout_constraintBottom_toBottomOf="@+id/materialCheckBox"
+          android:layout_height="wrap_content"/>
+
+      </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+      <com.google.android.material.button.MaterialButton
+        android:id="@+id/materialButton2"
+        style="@style/btnSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen20"
+        app:icon="@drawable/ic_arrow_next"
+        app:iconGravity="textEnd"
+        android:onClick="@{ (v) -> viewmodel.submit(v) }"
+        android:paddingStart="@dimen/dimen30"
+        android:paddingEnd="@dimen/dimen30"
+        android:text="@string/register"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_forget_password" />
+
+
+    </LinearLayout>
+  </androidx.core.widget.NestedScrollView>
+
+</layout>

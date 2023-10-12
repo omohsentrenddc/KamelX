@@ -11,6 +11,8 @@ import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.*
 import app.fawry.task.core.language.LanguagesHelper
 import app.fawry.task.presentation.base.BaseActivity
+import app.fawry.task.presentation.base.extensions.hide
+import app.fawry.task.presentation.base.extensions.show
 import com.structure.base_mvvm.databinding.ActivityAuthBinding
 import dagger.hilt.android.AndroidEntryPoint
 import java.util.*
@@ -70,9 +72,11 @@ class AuthActivity : BaseActivity<ActivityAuthBinding>() {
 //
 //      supportActionBar?.setHomeAsUpIndicator(ResourcesCompat.getDrawable(resources,R.drawable.ic_logo,null))
 //      when (destination.id) {
-//        R.id.introFragment -> binding.toolbar.hide()
+//        R.id.loginFragment -> binding.toolbar.hide()
 //        else -> binding.toolbar.show()
 //      }
+//
+      binding.toolbar.title = destination.label
     }
   }
   override fun onSupportNavigateUp(): Boolean {

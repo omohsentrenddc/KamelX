@@ -12,6 +12,7 @@ import app.fawry.task.presentation.base.BaseFragment
 import app.fawry.task.presentation.base.HomeActivity
 import app.fawry.task.presentation.base.extensions.handleApiError
 import app.fawry.task.presentation.base.extensions.openActivityAndClearStack
+import com.google.android.material.textfield.TextInputLayout
 import com.structure.base_mvvm.R
 import com.structure.base_mvvm.databinding.FragmentLoginBinding
 import dagger.hilt.android.AndroidEntryPoint
@@ -26,6 +27,8 @@ class LoginFragment : BaseFragment<FragmentLoginBinding>(){
   override
   fun setBindingVariables() {
     binding.viewmodel = viewModel
+
+    //binding.tilPassword.isEnabled = false
   }
 
 

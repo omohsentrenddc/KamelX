@@ -15,5 +15,16 @@
   <string name="share">مشاركة</string>
   <string name="please_enter">من فضلك قم بادخال</string>
   <string name="password">كلمة المرور</string>
+    <string name="enter">دخول</string>
+  <string name="forget_password">هل نسيت كلمة المرور؟</string>
+  <string name="register_now">تسجيل الآن</string>
+  <string name="login">اقلط</string>
+  <string name="new_account">حساب جديد</string>
+  <string name="first_name">الاسم الأول</string>
+  <string name="last_name">الاسم الأخير</string>
+  <string name="confirm_password">تأكيد كلمـة الـمـرور</string>
+  <string name="agree_on">أوافق على </string>
+  <string name="register">تسجيل</string>
+  <string name="privacy_policy">الشروط والأحكام</string>
 
 </resources>

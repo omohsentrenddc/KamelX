@@ -11,9 +11,9 @@
 
   <androidx.core.widget.NestedScrollView
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/colorPrimaryOpacity"
-    android:paddingBottom="@dimen/dimen20"
+    android:layout_height="wrap_content"
+    android:clickable="false"
+    android:background="@color/background"
     android:fillViewport="true">
 
 
@@ -55,7 +55,7 @@
         android:layout_marginTop="@dimen/dimen14"
         android:hint="5xxxxxxxxxx"
         android:layout_marginEnd="@dimen/dimen10"
-        android:inputType="text"
+        android:inputType="phone"
         android:text="@={viewmodel.request.phone}"
         android:textAppearance="@style/TextAppearance.AppCompat.Small"
         android:textColor="@android:color/black"
@@ -129,33 +129,85 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_password" />-->
 
 
-<!--      <com.google.android.material.textfield.TextInputLayout-->
-<!--        android:theme="@style/TextInputLayoutStyle"-->
-<!--        android:id="@+id/layout_Password"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        app:boxBackgroundColor="@color/white"-->
-<!--        app:boxStrokeColor="@color/textBackgroundColor"-->
-<!--        android:layout_marginTop="@dimen/dimen10"-->
-<!--        app:passwordToggleEnabled="true"-->
-<!--        android:text="@={viewmodel.request.phone}"-->
-<!--        app:boxStrokeWidth="0dp"-->
-<!--        app:boxStrokeWidthFocused="0dp"-->
-<!--        app:passwordToggleTint="@color/passwordToggleColor"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/tv_password"-->
-<!--        app:shapeAppearance="@style/txtStyleBold">-->
+      <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_password"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:boxStrokeWidth="1dp"
+        android:inputType="textPassword"
+        app:boxStrokeColor="@color/colorHintText"
+        app:boxCornerRadiusTopStart="@dimen/dimen14"
+        app:boxCornerRadiusBottomEnd="@dimen/dimen14"
+        app:boxCornerRadiusBottomStart="@dimen/dimen14"
+        app:boxCornerRadiusTopEnd="@dimen/dimen14"
+        app:boxStrokeWidthFocused="0dp"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleDrawable="@drawable/show_password_selector"
+        app:hintEnabled="false"
+        android:layout_marginTop="@dimen/dimen10"
+        app:boxBackgroundColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_password">
 
-<!--        <com.google.android.material.textfield.TextInputEditText-->
-<!--          android:id="@+id/input_Password"-->
-<!--          android:layout_width="match_parent"-->
-<!--          android:layout_height="wrap_content"-->
-<!--          android:inputType="textPassword"-->
-<!--          android:hint="@string/password"-->
-<!--          android:textColorHint="@color/colorSecondary"-->
-<!--          android:minHeight="60dp"-->
-<!--          android:text="" />-->
-<!--        -->
-<!--      </com.google.android.material.textfield.TextInputLayout>-->
+        <com.google.android.material.textfield.TextInputEditText
+          android:id="@+id/edittextPassword"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:textAlignment="viewStart"
+          android:hint="@string/password"
+          android:inputType="textPassword" />
+      </com.google.android.material.textfield.TextInputLayout>
+
+
+      <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_forget_password"
+        style="@style/txtStyleMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:onClick="@{ (v) -> viewmodel.forgetPassword(v) }"
+        android:textSize="@dimen/text_size14"
+        android:text="@string/forget_password"
+        android:textColor="@color/colorGrayDark"
+        android:layout_marginTop="@dimen/dimen20"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@+id/til_password" />
+
+
+      <com.google.android.material.button.MaterialButton
+        android:id="@+id/materialButton2"
+        style="@style/btnSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen20"
+        app:icon="@drawable/ic_arrow_next"
+        app:iconGravity="textEnd"
+        android:onClick="@{ (v) -> viewmodel.submit(v) }"
+        android:paddingStart="@dimen/dimen30"
+        android:paddingEnd="@dimen/dimen30"
+        android:text="@string/enter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_forget_password" />
+
+
+      <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_register_now"
+        style="@style/txtStyleBold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:onClick="@{ (v) -> viewmodel.forgetPassword(v) }"
+        android:text="@string/register_now"
+        android:textColor="@color/colorGrayDark"
+        android:textSize="@dimen/text_size14"
+        app:layout_constraintEnd_toEndOf="@+id/materialButton2"
+        android:layout_marginTop="@dimen/dimen8"
+        app:layout_constraintStart_toStartOf="@+id/materialButton2"
+        app:layout_constraintTop_toBottomOf="@+id/materialButton2" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
   </androidx.core.widget.NestedScrollView>

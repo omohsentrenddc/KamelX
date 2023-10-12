@@ -2,21 +2,23 @@ package app.fawry.task.data.auth
 
 import app.fawry.task.domain.auth.entity.LoginResponse
 import app.fawry.task.domain.auth.request.LogInRequest
+import app.fawry.task.domain.auth.request.RegisterRequest
 import app.fawry.task.domain.utils.BaseResponse
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
 import retrofit2.http.*
 
 interface AuthServices {
-  @POST("login")
+  @POST("auth/login")
   suspend fun logIn(@Body request: LogInRequest): BaseResponse<LoginResponse>
+
+  @POST("register")
+  suspend fun register(@Body request: RegisterRequest): BaseResponse<LoginResponse>
 
 //  @POST("provider")
 //  suspend fun loginSocial(@Body request: LogInSocialRequest): BaseResponse<LoginResponse>
 //
-//  @POST("registerStepOne")
-//  suspend fun register(@Body request: RegisterRequest): BaseResponse<LoginResponse>
-//
+
 //  @POST("registerStepTwo")
 //  suspend fun registerSecond(@Body request: RegisterRequest): BaseResponse<LoginResponse>
 //
@@ -47,7 +49,7 @@ interface AuthServices {
   @Multipart
   @POST("updateProfile")
   suspend fun updateProfile(
-    @PartMap mapOfOtherParams: Map<String,@JvmSuppressWildcards RequestBody>,
+    @PartMap mapOfOtherParams: Map<String, @JvmSuppressWildcards RequestBody>,
     @Part image: MultipartBody.Part?
   ): BaseResponse<LoginResponse>
 

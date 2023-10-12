@@ -51,7 +51,11 @@ class LoginViewModel @Inject constructor(
     }.launchIn(viewModelScope)
   }
 
+  fun forgetPassword(v: View){
+    v.context.navigate(v, "forgetPassword", "app.kamelx.register")
+  }
+
   fun register(v: View) {
-    v.context.navigate(v, "registerFragment", "app.hashksa.register")
+    v.context.navigate(v, "registerFragment", "app.kamelx.register")
   }
 }

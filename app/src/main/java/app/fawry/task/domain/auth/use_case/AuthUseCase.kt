@@ -40,18 +40,18 @@ class AuthUseCase @Inject constructor(
   }.flowOn(Dispatchers.IO)
 
 
-//  fun register(
-//    request: RegisterRequest
-//  ): Flow<Resource<BaseResponse<LoginResponse>>> = flow {
-//
-//    emit(Resource.Loading)
-//    val result = repository.register(request)
-//    if (result is Resource.Success) {
-//      result.value.data.data.jwtToken = result.value.data.token.accessToken
-//      userLocalUseCase.invoke(result.value.data.data)
-//    }
-//    emit(result)
-//  }.flowOn(Dispatchers.IO)
+  fun register(
+    request: RegisterRequest
+  ): Flow<Resource<BaseResponse<LoginResponse>>> = flow {
+
+    emit(Resource.Loading)
+    val result = repository.register(request)
+    if (result is Resource.Success) {
+      result.value.data.data.jwtToken = result.value.data.token.accessToken
+      userLocalUseCase.invoke(result.value.data.data)
+    }
+    emit(result)
+  }.flowOn(Dispatchers.IO)
 //
 //  fun registerSecond(
 //    request: RegisterRequest
