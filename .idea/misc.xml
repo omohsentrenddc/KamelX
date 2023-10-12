@@ -12,9 +12,11 @@
         <entry key="..\:/projects/KamelX/app/src/main/res/drawable/img_login.xml" value="0.1455" />
         <entry key="..\:/projects/KamelX/app/src/main/res/drawable/img_register.xml" value="0.1455" />
         <entry key="..\:/projects/KamelX/app/src/main/res/layout/activity_auth.xml" value="0.22592592592592592" />
-        <entry key="..\:/projects/KamelX/app/src/main/res/layout/fragment_login.xml" value="0.22592592592592592" />
+        <entry key="..\:/projects/KamelX/app/src/main/res/layout/fragment_home.xml" value="0.10989583333333333" />
+        <entry key="..\:/projects/KamelX/app/src/main/res/layout/fragment_login.xml" value="0.290633608815427" />
         <entry key="..\:/projects/KamelX/app/src/main/res/layout/fragment_movie.xml" value="0.22592592592592592" />
         <entry key="..\:/projects/KamelX/app/src/main/res/layout/fragment_splash.xml" value="0.22592592592592592" />
+        <entry key="..\:/projects/KamelX/app/src/main/res/layout/item_movie.xml" value="0.10989583333333333" />
         <entry key="..\:/projects/KamelX/prettyPopUp/src/main/res/drawable/img_login.xml" value="0.1455" />
         <entry key="..\:/projects/kamelX/app/src/main/res/layout/fragment_sign_up.xml" value="0.1" />
         <entry key="..\:/projects/kamelX/app/src/main/res/layout/list_general.xml" value="0.10989583333333333" />

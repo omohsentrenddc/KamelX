@@ -11,7 +11,8 @@
 
   <androidx.core.widget.NestedScrollView
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryOpacity"
     android:paddingBottom="@dimen/dimen20"
     android:fillViewport="true">
 
@@ -29,7 +30,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:src="@drawable/ic_more_gifts"
+        android:src="@drawable/img_login"
         />
 
       <com.google.android.material.textview.MaterialTextView
@@ -49,18 +50,112 @@
       <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/input_phone"
         style="@style/editText"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dimen14"
-        android:textAppearance="@style/TextAppearance.AppCompat.Small"
         android:hint="5xxxxxxxxxx"
+        android:layout_marginEnd="@dimen/dimen10"
         android:inputType="text"
-        android:text="@={viewmodel.request.name}"
+        android:text="@={viewmodel.request.phone}"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textColor="@android:color/black"
+        android:textColorHint="@color/colorAccent"
+        app:layout_constraintEnd_toStartOf="@+id/linearLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+      <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:background="@drawable/bg_rounded_text"
+        android:orientation="horizontal"
+        android:padding="@dimen/dimen10"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="@+id/input_phone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/input_phone">
+
+        <androidx.appcompat.widget.AppCompatTextView
+          style="@style/txtStyleMedium"
+          android:textSize="@dimen/text_size16"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginEnd="@dimen/dimen10"
+          android:layout_gravity="center"
+          android:gravity="center"
+          android:text="966" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+          android:layout_width="@dimen/dimen20"
+          android:layout_height="@dimen/dimen20"
+          android:layout_gravity="center"
+          android:gravity="center"
+          android:src="@drawable/img_saudia" />
+
+
+
+      </LinearLayout>
+
+
+      <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_password"
+        style="@style/txtStyleBold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen20"
+        android:gravity="start"
+        android:textSize="16sp"
+        android:text="@string/password"
+        android:textColor="@color/colorSecondary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+<!--      <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/input_password"
+        style="@style/editText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen14"
+        android:hint="5xxxxxxxxxx"
+        android:layout_marginEnd="@dimen/dimen10"
+        android:inputType="text"
+        android:text="@={viewmodel.request.phone}"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
         android:textColor="@android:color/black"
         android:textColorHint="@color/colorAccent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_header_login" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_password" />-->
+
+
+<!--      <com.google.android.material.textfield.TextInputLayout-->
+<!--        android:theme="@style/TextInputLayoutStyle"-->
+<!--        android:id="@+id/layout_Password"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:boxBackgroundColor="@color/white"-->
+<!--        app:boxStrokeColor="@color/textBackgroundColor"-->
+<!--        android:layout_marginTop="@dimen/dimen10"-->
+<!--        app:passwordToggleEnabled="true"-->
+<!--        android:text="@={viewmodel.request.phone}"-->
+<!--        app:boxStrokeWidth="0dp"-->
+<!--        app:boxStrokeWidthFocused="0dp"-->
+<!--        app:passwordToggleTint="@color/passwordToggleColor"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/tv_password"-->
+<!--        app:shapeAppearance="@style/txtStyleBold">-->
+
+<!--        <com.google.android.material.textfield.TextInputEditText-->
+<!--          android:id="@+id/input_Password"-->
+<!--          android:layout_width="match_parent"-->
+<!--          android:layout_height="wrap_content"-->
+<!--          android:inputType="textPassword"-->
+<!--          android:hint="@string/password"-->
+<!--          android:textColorHint="@color/colorSecondary"-->
+<!--          android:minHeight="60dp"-->
+<!--          android:text="" />-->
+<!--        -->
+<!--      </com.google.android.material.textfield.TextInputLayout>-->
 
     </androidx.constraintlayout.widget.ConstraintLayout>
   </androidx.core.widget.NestedScrollView>

@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
   <color name="colorPrimary">#A07614</color>
+  <color name="colorPrimaryOpacity">#1AA07614</color>
   <color name="colorPrimaryDark">#9A6C00</color>
   <color name="colorSecondary">#015929</color>
+  <color name="colorHintText">#B0B0B0</color>
   <color name="textBackgroundColor">#E7E7E7</color>
+  <color name="passwordToggleColor">#CFCFCF</color>
   <color name="background">#f3f3EF</color>
 
   <color name="colorAccent">#E4E4E4</color>
@@ -15,5 +18,6 @@
   <color name="white">#FFFFFF</color>
   <color name="transparent">#00FFFFFF</color>
   <color name="backgroundGray">#FAFAFA</color>
+  <color name="mtrl_textinput_default_box_stroke_color">#E7E7E7</color>
 
 </resources>

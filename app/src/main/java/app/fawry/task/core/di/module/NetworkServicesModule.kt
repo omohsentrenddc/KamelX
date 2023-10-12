@@ -1,6 +1,6 @@
 package app.fawry.task.core.di.module
 
-import app.fawry.task.data.category.data_source.remote.MovieServices
+import app.fawry.task.data.auth.AuthServices
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -15,7 +15,7 @@ object NetworkServicesModule {
 
   @Provides
   @Singleton
-  fun provideMovieServices(retrofit: Retrofit): MovieServices =
-    retrofit.create(MovieServices::class.java)
+  fun provideAuthServices(retrofit: Retrofit): AuthServices =
+    retrofit.create(AuthServices::class.java)
 
 }

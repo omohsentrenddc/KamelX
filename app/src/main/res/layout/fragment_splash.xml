@@ -16,53 +16,6 @@
     android:fillViewport="true">
 
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-      android:layout_width="match_parent"
-      android:layout_margin="@dimen/dimen10"
-      android:layout_height="match_parent">
-
-      <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/img_poster"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/dimen250"
-        android:scaleType="fitCenter"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:src="@drawable/ic_more_gifts"
-        />
-
-      <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/tv_title"
-        style="@style/txtStyleBold"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/dimen5"
-        android:layout_marginTop="@dimen/dimen5"
-        android:gravity="start"
-        android:textSize="16sp"
-        android:text="@string/phone"
-        android:textColor="@color/colorSecondary"
-        app:layout_constraintTop_toBottomOf="@+id/img_poster" />
-
-
-      <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/input_phone"
-        style="@style/editText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dimen14"
-        android:textAppearance="@style/TextAppearance.AppCompat.Small"
-        android:hint="5xxxxxxxxxx"
-        android:inputType="text"
-        android:text="@={viewmodel.request.name}"
-        android:textColor="@android:color/black"
-        android:textColorHint="@color/colorAccent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_header_login" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
   </androidx.core.widget.NestedScrollView>
 
 </layout>

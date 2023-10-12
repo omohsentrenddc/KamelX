@@ -20,8 +20,20 @@
     android:theme="@style/Theme.AppTheme"
     tools:replace="android:allowBackup">
 
+<!--    <activity-->
+<!--      android:name="app.fawry.task.presentation.base.HomeActivity"-->
+<!--      android:configChanges="orientation|screenSize"-->
+<!--      android:screenOrientation="fullSensor"-->
+<!--      android:windowSoftInputMode="adjustResize|stateHidden"-->
+<!--      android:exported="true">-->
+<!--      <intent-filter>-->
+<!--        <action android:name="android.intent.action.MAIN" />-->
+<!--        <category android:name="android.intent.category.LAUNCHER" />-->
+<!--      </intent-filter>-->
+<!--    </activity>-->
+
     <activity
-      android:name="app.fawry.task.presentation.base.HomeActivity"
+      android:name="app.fawry.task.presentation.activity.auth.AuthActivity"
       android:configChanges="orientation|screenSize"
       android:screenOrientation="fullSensor"
       android:windowSoftInputMode="adjustResize|stateHidden"

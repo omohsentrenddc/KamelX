@@ -1,17 +1,12 @@
 package app.fawry.task.core.di.module
 
-import app.fawry.task.data.category.data_source.local.CategoryLocalDataSource
-import app.fawry.task.data.category.data_source.remote.CategoryRemoteDataSource
-import app.fawry.task.data.category.repository.CategoryLocalRepositoryImpl
-import app.fawry.task.data.category.repository.CategoryRemoteRepositoryImpl
-import app.fawry.task.data.movie.data_source.local.MovieLocalDataSource
-import app.fawry.task.data.movie.data_source.remote.MovieRemoteDataSource
-import app.fawry.task.data.movie.repository.MovieLocalRepositoryImpl
-import app.fawry.task.data.movie.repository.MovieRemoteRepositoryImpl
-import app.fawry.task.domain.category.repository.CategoryLocalRepository
+import app.fawry.task.data.auth.AuthRemoteDataSource
+import app.fawry.task.data.auth.AuthRepositoryImpl
+import app.fawry.task.data.local.preferences.AppPreferences
+import app.fawry.task.data.repository.AccountRepositoryImpl
+import app.fawry.task.domain.auth.repository.AuthRepository
 import app.fawry.task.domain.category.repository.CategoryRemoteRepository
-import app.fawry.task.domain.movie.repository.MovieLocalRepository
-import app.fawry.task.domain.movie.repository.MovieRemoteRepository
+import app.fawry.task.domain.repository.AccountRepository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -25,27 +20,14 @@ class RepositoryModule {
 
   @Provides
   @Singleton
-  fun provideHomeRepository(
-    remoteDataSource: CategoryRemoteDataSource
-  ): CategoryRemoteRepository = CategoryRemoteRepositoryImpl(remoteDataSource)
-
-  @Provides
-  @Singleton
-  fun provideMovieRepository(
-    remoteDataSource: MovieRemoteDataSource
-  ): MovieRemoteRepository = MovieRemoteRepositoryImpl(remoteDataSource)
+  fun provideAuthRepository(
+    remoteDataSource: AuthRemoteDataSource
+  ): AuthRepository = AuthRepositoryImpl(remoteDataSource)
 
 
   @Provides
   @Singleton
-  fun provideCategoryLocalRepository(
-    categoryLocalDataSource: CategoryLocalDataSource
-  ): CategoryLocalRepository = CategoryLocalRepositoryImpl(categoryLocalDataSource)
-
-
-  @Provides
-  @Singleton
-  fun provideMovieLocalRepository(
-    movieLocalDataSource: MovieLocalDataSource
-  ): MovieLocalRepository = MovieLocalRepositoryImpl(movieLocalDataSource)
+  fun provideAccountRepository(
+    appPreferences: AppPreferences
+  ): AccountRepository = AccountRepositoryImpl(appPreferences)
 }

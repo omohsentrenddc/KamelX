@@ -7,14 +7,13 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.navArgs
 import app.fawry.task.domain.utils.Resource
+import app.fawry.task.presentation.activity.auth.AuthActivity
 import app.fawry.task.presentation.base.BaseFragment
 import app.fawry.task.presentation.base.HomeActivity
 import app.fawry.task.presentation.base.extensions.handleApiError
 import app.fawry.task.presentation.base.extensions.openActivityAndClearStack
-import app.fawry.task.presentation.movie.ui_state.MovieUIState
 import com.structure.base_mvvm.R
 import com.structure.base_mvvm.databinding.FragmentLoginBinding
-import com.structure.base_mvvm.databinding.FragmentMovieBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -52,44 +51,5 @@ class LoginFragment : BaseFragment<FragmentLoginBinding>(){
       }
     }
 
-    (requireActivity() as AuthActivity).twitterLogin.callback = object : Callback<TwitterSession?>(){
-      override fun success(result: Result<TwitterSession?>?) {
-        authBaseViewModel.twitterLogin(result)
-      }
-
-      override fun failure(exception: TwitterException?) {
-        Log.d(TAG, "failure: ${exception?.message}")
-        requireContext().showError(getString(R.string.something_went_wrong_please_try_again))
-      }
-    }
   }
-
-  val activityResultGoogleSignIn = registerForActivityResult(
-    ActivityResultContracts.StartActivityForResult()
-  ) {
-    Log.d(TAG, "${it.resultCode}: ")
-    if (it.resultCode == Activity.RESULT_OK) {
-      val task = GoogleSignIn.getSignedInAccountFromIntent(it.data)
-      try {
-        authBaseViewModel.googleLogin(
-          task.getResult(ApiException::class.java)
-        )
-      } catch (throwable: Throwable) {
-        Log.d(TAG, ": ${throwable.message}")
-        error(throwable)
-      }
-    }
-  }
-
-  fun gmail(){
-    Log.d(TAG, "gmail: here")
-    val options = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-      .requestId()
-      .requestEmail()
-      .requestProfile()
-      .build()
-    val googleClient = GoogleSignIn.getClient(requireContext(), options)
-    activityResultGoogleSignIn.launch(googleClient.signInIntent)
-  }
-
 }

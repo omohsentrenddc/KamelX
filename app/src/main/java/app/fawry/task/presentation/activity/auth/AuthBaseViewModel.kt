@@ -18,8 +18,6 @@ import javax.inject.Inject
 
 @HiltViewModel
 class AuthBaseViewModel @Inject constructor(
-  private val useCase: AuthUseCase,
-  private val userLocalUseCase: UserLocalUseCase,
 ) : BaseViewModel() {
   private val TAG = "BaseViewModel"
 

@@ -38,6 +38,7 @@ class MyApplication : Application(), Configuration.Provider {
   override
   fun onCreate() {
     super.onCreate()
+    instance = this
   }
 
 }

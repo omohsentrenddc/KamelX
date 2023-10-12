@@ -6,6 +6,13 @@ object Constants {
   const val MESSAGE: String = "MESSAGE"
   const val NETWORK_FAILURE: String = "Failed to call api"
 
+  const val APP_PREFERENCES_NAME = "KAMELX"
+  const val LANGUAGE_DATA = "kamelX"
+
+  const val DEFAULT_LANGUAGE = "ar"
+  const val LANGUAGE: String = "language"
+
+  const val TOKEN = "token"
   const val FIREBASE_TOKEN = "firebase_token"
 
 }

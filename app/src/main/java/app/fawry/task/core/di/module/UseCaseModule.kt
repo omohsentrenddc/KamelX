@@ -1,11 +1,8 @@
 package app.fawry.task.core.di.module
 
-import app.fawry.task.domain.category.repository.CategoryLocalRepository
-import app.fawry.task.domain.category.repository.CategoryRemoteRepository
-import app.fawry.task.domain.category.use_case.CategoryUseCase
-import app.fawry.task.domain.movie.repository.MovieLocalRepository
-import app.fawry.task.domain.movie.repository.MovieRemoteRepository
-import app.fawry.task.domain.movie.use_case.MovieUseCase
+import app.fawry.task.domain.auth.repository.AuthRepository
+import app.fawry.task.domain.auth.use_case.AuthUseCase
+import app.fawry.task.domain.auth.use_case.UserLocalUseCase
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -16,18 +13,12 @@ import javax.inject.Singleton
 @Module
 @InstallIn(SingletonComponent::class)
 class UseCaseModule {
-
   @Provides
   @Singleton
-  fun provideHomeUseCase(
-    repositoryRemote: CategoryRemoteRepository,
-    repositoryLocal: CategoryLocalRepository,
-  ): CategoryUseCase = CategoryUseCase(repositoryRemote,repositoryLocal)
+  fun provideAuthUseCase(
+    repositoryRemote: AuthRepository,
+    userLocalUseCase: UserLocalUseCase
+  ): AuthUseCase = AuthUseCase(repositoryRemote, userLocalUseCase)
 
-  @Provides
-  @Singleton
-  fun provideMovieUseCase(
-    repository: MovieRemoteRepository,
-  ): MovieUseCase = MovieUseCase(repository)
 
 }
