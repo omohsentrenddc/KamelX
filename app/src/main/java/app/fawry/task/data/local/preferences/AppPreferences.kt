@@ -31,7 +31,7 @@ class AppPreferences @Inject constructor(private val context: Context) {
   fun saveUser(user: UserModel) {
     appPreferences.edit {
       it.putString(USER_DATA.first, Gson().toJson(user))
-      it.putString(Constants.TOKEN, user.jwtToken)
+      it.putString(Constants.TOKEN, user.token)
       it.putInt("id", user.id)
       it.apply()
     }

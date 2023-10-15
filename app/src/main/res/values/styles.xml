@@ -133,4 +133,18 @@
   <style name="ShapeAppearanceOverlay.App.CornerSize10Percent" parent="">
     <item name="cornerSize">20%</item>
   </style>
+
+  <style name="CustomBottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+    <item name="bottomSheetStyle">@style/CustomBottomSheetStyle</item>
+  </style>
+
+  <style name="CustomBottomSheetStyle" parent="Widget.Design.BottomSheet.Modal">
+    <item name="android:background">@drawable/bg_rounded_white_19</item>
+  </style>
+
+  <style name="RobotoBoldTextAppearance">
+    <item name="android:fontFamily">@font/ibm_bold</item>
+    <item name="android:textSize">18sp</item>
+  </style>
+
 </resources>

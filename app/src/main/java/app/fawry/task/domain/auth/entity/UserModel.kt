@@ -7,24 +7,28 @@ import app.fawry.task.domain.home.entity.IdNameIcon
 
 @Keep
 data class UserModel(
+//512345687
   @SerializedName("id")
   @Expose val id: Int = -1,
-  @SerializedName("name")
-  @Expose val name: String = "",
+  @SerializedName("first_name")
+  @Expose val firstName: String = "",
+  @SerializedName("last_name")
+  @Expose val lastName: String = "",
+  @SerializedName("full_name")
+  @Expose val fullName: String = "",
+  @SerializedName("image")
+  @Expose val image: String? = "",
+  @SerializedName("phone_code")
+  @Expose val phoneCode: String? = "",
+  @SerializedName("code")
+  @Expose val code: String? = "",
   @SerializedName("phone")
   @Expose var phone: String = "",
-  @SerializedName("email")
-  @Expose var email: String = "",
-  @SerializedName("photo")
-  @Expose var photo: String = "",
-  @SerializedName("jwt_token")
-  @Expose var jwtToken: String? = "",
-  @SerializedName("date_of_birth")
-  @Expose var dateOfBirth: String = "",
-  @SerializedName("turn_notification")
-  @Expose var turnNotification: Boolean = true,
-  @SerializedName("role")
-  @Expose var role: String = "",
-  @SerializedName("gender_id")
-  @Expose var genderId: IdNameIcon = IdNameIcon(),
-)
+  @SerializedName("is_active")
+  @Expose var isActive: Int = 0,
+  @SerializedName("token")
+  @Expose var token: String = "",
+){
+  //{"token":null,"user":{"id":5,"first_name":"osama","last_name":"mohsen","full_name":"osama mohsen",
+  // "image":null,"phone_code":966,"phone":"0512345678","code":2483,"is_active":0}}}
+}

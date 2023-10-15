@@ -38,7 +38,7 @@ fun showNoApiErrorAlert(activity: Activity, message: String) {
   Alerter.create(activity)
     .setText(message)
     .setIcon(R.drawable.ic_api_warning)
-    .setBackgroundColorRes(R.color.colorSecondary)
+    .setBackgroundColorRes(android.R.color.holo_red_dark)
     .enableClickAnimation(true)
     .enableSwipeToDismiss()
     .show()

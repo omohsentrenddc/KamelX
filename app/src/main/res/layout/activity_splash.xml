@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools">
+
+  <data>
+
+    <import type="android.view.View" />
+    <variable
+      name="viewmodel"
+      type="app.fawry.task.presentation.splash.SplashViewModel" />
+
+  </data>
+
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/constraintLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorSecondary"
+    android:fitsSystemWindows="true"
+    android:gravity="center_horizontal">
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+      android:id="@+id/splach_place_holder2"
+      android:layout_width="108dp"
+      android:layout_height="73dp"
+      android:background="@drawable/ic_splash_eye"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+      android:id="@+id/splach_place_holder"
+      android:layout_width="159dp"
+      android:layout_height="@dimen/dimen50"
+      android:scaleType="fitXY"
+      android:layout_marginBottom="@dimen/dimen50"
+      android:src="@drawable/ic_splash_saudia"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+      android:id="@+id/splach_place_holder_2"
+      android:layout_width="159dp"
+      android:layout_height="@dimen/dimen50"
+      android:layout_marginBottom="@dimen/dimen50"
+      android:scaleType="fitXY"
+      android:layout_marginTop="@dimen/dimen20"
+      android:src="@drawable/ic_ra3e_alnzr"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/splach_place_holder2" />
+
+    <!--    <com.airbnb.lottie.LottieAnimationView-->
+    <!--      android:id="@+id/animation_view"-->
+    <!--      android:layout_width="match_parent"-->
+    <!--      android:layout_height="match_parent"-->
+    <!--      android:fitsSystemWindows="true"-->
+    <!--      android:gravity="center_horizontal"-->
+    <!--      app:lottie_rawRes="@raw/splash"-->
+    <!--      app:lottie_autoPlay="true"/>-->
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

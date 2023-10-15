@@ -40,6 +40,8 @@ object Libraries {
   const val hiltCompilerWorkManager = "androidx.hilt:hilt-compiler:${Versions.hiltWorkVersion}"
 
 
+  //pinView
+  const val pinView = "com.chaos.view:pinview:1.4.4"
 
   //Image
   const val glide = "com.github.bumptech.glide:glide:${Versions.glide}"

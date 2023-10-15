@@ -54,29 +54,27 @@ class AuthActivity : BaseActivity<ActivityAuthBinding>() {
     nav = navHostFragment.findNavController()
     appBarConfiguration = AppBarConfiguration(
       setOf(
-        R.id.loginFragment,
       ),
     )
 //    binding.toolbar.setTitleTextAppearance(this, R.style.toolbar_style)
+    binding.toolbar.setTitleTextAppearance(this, R.style.RobotoBoldTextAppearance);
+    binding.toolbar.title = getString(R.string.login)
     setSupportActionBar(binding.toolbar)
+
 //    supportActionBar?.setDisplayHomeAsUpEnabled(true);
 //    supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_arrow)
 //    supportActionBar?.setDisplayShowHomeEnabled(true);
     binding.toolbar.setupWithNavController(nav, appBarConfiguration)
     nav.addOnDestinationChangedListener { controller, destination, arguments ->
-
-      binding.toolbar.navigationIcon =
-        ResourcesCompat.getDrawable(resources, R.drawable.ic_arrow_down, null)
-//      supportActionBar?.setHomeButtonEnabled(true);
-//      supportActionBar?.setDisplayHomeAsUpEnabled(true);
-//
-//      supportActionBar?.setHomeAsUpIndicator(ResourcesCompat.getDrawable(resources,R.drawable.ic_logo,null))
-//      when (destination.id) {
-//        R.id.loginFragment -> binding.toolbar.hide()
-//        else -> binding.toolbar.show()
-//      }
-//
       binding.toolbar.title = destination.label
+      when(destination.id){
+        R.id.loginFragment -> {
+          binding.toolbar.navigationIcon = null
+        }
+        else -> {
+          binding.toolbar.navigationIcon = ResourcesCompat.getDrawable(resources, R.drawable.ic_back_circle_white, null)
+        }
+      }
     }
   }
   override fun onSupportNavigateUp(): Boolean {

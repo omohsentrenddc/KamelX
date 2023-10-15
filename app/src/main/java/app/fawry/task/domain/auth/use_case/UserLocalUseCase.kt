@@ -1,11 +1,12 @@
 package app.fawry.task.domain.auth.use_case
 
+import app.fawry.task.domain.auth.entity.LoginResponse
 import app.fawry.task.domain.repository.AccountRepository
 import app.fawry.task.domain.auth.entity.UserModel
 import javax.inject.Inject
 
 class UserLocalUseCase @Inject constructor(private val accountRepository: AccountRepository) {
-  suspend operator fun invoke(user: UserModel) = accountRepository.saveUserToLocal(user)
+  suspend operator fun invoke(user: LoginResponse) = accountRepository.saveUserToLocal(user.data)
   operator fun invoke(): UserModel = accountRepository.getUserToLocal()
 
   fun clearUser() {

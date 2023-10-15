@@ -139,4 +139,8 @@ dependencies {
   //toasty
   implementation("com.github.GrenderG:Toasty:1.5.2")
 
+  //pinview
+  implementation(Libraries.pinView)
+
+
 }

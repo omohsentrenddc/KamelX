@@ -53,12 +53,32 @@ class RegisterViewModel @Inject constructor(
   }
 
   fun submit(v: View) {
+    if (request.first_name.isEmpty()) {
+      v.context.showError("${v.context.getString(R.string.please_enter)} ${v.context.getString(R.string.first_name)}")
+      return
+    }
+    if (request.last_name.isEmpty()) {
+      v.context.showError("${v.context.getString(R.string.please_enter)} ${v.context.getString(R.string.last_name)}")
+      return
+    }
     if (request.phone.isEmpty()) {
       v.context.showError("${v.context.getString(R.string.please_enter)} ${v.context.getString(R.string.phone)}")
       return
     }
     if (request.password.isEmpty()) {
       v.context.showError("${v.context.getString(R.string.please_enter)} ${v.context.getString(R.string.password)}")
+      return
+    }
+    if (request.confirm_password.isEmpty()) {
+      v.context.showError("${v.context.getString(R.string.please_enter)} ${v.context.getString(R.string.confirm_password)}")
+      return
+    }
+    if (request.password != request.confirm_password) {
+      v.context.showError(v.context.getString(R.string.both_password_must_be_both))
+      return
+    }
+    if (!checked) {
+      v.context.showError(v.context.getString(R.string.please_accept_privacy_policy))
       return
     }
     useCase.register(request).onEach {

@@ -41,7 +41,7 @@
         android:layout_marginTop="@dimen/dimen14"
         android:hint="@string/first_name"
         android:inputType="text"
-        android:text="@={viewmodel.request.firstName}"
+        android:text="@={viewmodel.request.first_name}"
         android:textAppearance="@style/TextAppearance.AppCompat.Small"
         android:textColor="@android:color/black"
         android:textColorHint="@color/colorAccent"
@@ -56,7 +56,7 @@
         android:layout_marginTop="@dimen/dimen14"
         android:hint="@string/last_name"
         android:inputType="text"
-        android:text="@={viewmodel.request.lastName}"
+        android:text="@={viewmodel.request.last_name}"
         android:textAppearance="@style/TextAppearance.AppCompat.Small"
         android:textColor="@android:color/black"
         android:textColorHint="@color/colorAccent"
@@ -165,6 +165,7 @@
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:hint="@string/password"
+          android:text="@={viewmodel.request.password}"
           android:inputType="textPassword"
           android:textAlignment="viewStart" />
       </com.google.android.material.textfield.TextInputLayout>
@@ -193,6 +194,7 @@
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:hint="@string/confirm_password"
+          android:text="@={viewmodel.request.confirm_password}"
           android:inputType="textPassword"
           android:textAlignment="viewStart" />
       </com.google.android.material.textfield.TextInputLayout>

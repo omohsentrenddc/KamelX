@@ -3,6 +3,9 @@ package app.fawry.task.data.auth
 import app.fawry.task.domain.auth.entity.LoginResponse
 import app.fawry.task.domain.auth.request.LogInRequest
 import app.fawry.task.domain.auth.request.RegisterRequest
+import app.fawry.task.domain.auth.request.UpdatePasswordRequest
+import app.fawry.task.domain.auth.request.forgetPassword.ForgetPasswordRequest
+import app.fawry.task.domain.auth.request.forgetPassword.ForgetPasswordResponse
 import app.fawry.task.domain.utils.BaseResponse
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
@@ -12,8 +15,20 @@ interface AuthServices {
   @POST("auth/login")
   suspend fun logIn(@Body request: LogInRequest): BaseResponse<LoginResponse>
 
-  @POST("register")
+  @POST("auth/register")
   suspend fun register(@Body request: RegisterRequest): BaseResponse<LoginResponse>
+
+  @POST("auth/forgetPassword")
+  suspend fun forgetPassword(@Body request: ForgetPasswordRequest): BaseResponse<ForgetPasswordResponse>
+
+
+  //SendOrCheckCodeRequest
+  @POST("auth/checkCode")
+  suspend fun confirmCode(@Body request: ForgetPasswordRequest): BaseResponse<*>
+
+
+  @POST("auth/updatePassword")
+  suspend fun updatePassword(@Body request: UpdatePasswordRequest): BaseResponse<*>
 
 //  @POST("provider")
 //  suspend fun loginSocial(@Body request: LogInSocialRequest): BaseResponse<LoginResponse>

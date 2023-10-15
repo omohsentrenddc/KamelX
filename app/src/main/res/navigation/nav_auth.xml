@@ -9,13 +9,76 @@
     android:id="@+id/loginFragment"
     android:name="app.fawry.task.presentation.auth.login.LoginFragment"
     android:label="@string/login" >
-    <deepLink
-      android:id="@+id/loginFragment"
-      android:autoVerify="true"
-      app:uri="registerFragment://app.kamelx.register" />
+
   </fragment>
   <fragment
     android:id="@+id/registerFragment"
     android:name="app.fawry.task.presentation.auth.register.RegisterFragment"
-    android:label="@string/new_account" />
+    android:label="@string/new_account" >
+    <deepLink
+      android:id="@+id/registerFragment"
+      android:autoVerify="true"
+      app:uri="registerFragment://app.kamelx.register" />
+  </fragment>
+  <dialog
+    android:id="@+id/forgetPasswordDialog"
+    android:name="app.fawry.task.presentation.auth.forgetPassword.ForgetPasswordDialog"
+    android:label="">
+    <deepLink
+      android:id="@+id/forgetPasswordDialog"
+      android:autoVerify="true"
+      app:uri="forgetPasswordDialog://app.kamelx.forget.password" />
+    <action
+      android:id="@+id/action_forgetPasswordDialog_to_confirmCodeDialog"
+      app:enterAnim="@anim/anim_slide_in_right"
+      app:exitAnim="@anim/anim_slide_out_left"
+      app:popEnterAnim="@anim/anim_slide_in_left"
+      app:popExitAnim="@anim/anim_slide_out_right"
+      app:destination="@id/confirmCodeDialog"
+      />
+  </dialog>
+
+  <dialog
+    android:id="@+id/confirmCodeDialog"
+    android:name="app.fawry.task.presentation.auth.confirmCode.ConfirmCodeDialog"
+    android:label="">
+    <deepLink
+      android:id="@+id/confirmCodeDialog"
+      android:autoVerify="true"
+      app:uri="confirmCodeDialog://app.kamelx.confirm.code" />
+    <action
+      android:id="@+id/action_confirmCodeDialog_to_changePasswordDialog"
+      app:enterAnim="@anim/anim_slide_in_right"
+      app:exitAnim="@anim/anim_slide_out_left"
+      app:popEnterAnim="@anim/anim_slide_in_left"
+      app:popExitAnim="@anim/anim_slide_out_right"
+      app:destination="@id/changePasswordDialog"
+      app:popUpTo="@id/forgetPasswordDialog"
+      app:popUpToInclusive="true"
+      />
+    <argument
+      android:name="phone"
+      app:argType="string"
+      app:nullable="true" />
+    <argument
+      android:name="email"
+      app:argType="string"
+      app:nullable="true" />
+    <argument
+      android:name="code"
+      app:argType="string" />
+  </dialog>
+  <dialog
+    android:id="@+id/changePasswordDialog"
+    android:name="app.fawry.task.presentation.auth.updatePassword.ChangePasswordDialog">
+    <argument
+      android:name="phone"
+      app:argType="string"
+      app:nullable="true" />
+    <deepLink
+      android:id="@+id/changePasswordDialog"
+      android:autoVerify="true"
+      app:uri="changePasswordDialog://app.kamelx.change.password/{phone}" />
+  </dialog>
+
 </navigation>

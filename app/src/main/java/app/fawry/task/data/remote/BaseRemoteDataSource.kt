@@ -1,11 +1,13 @@
 package app.fawry.task.data.remote
 
+import android.util.Log
 import com.google.gson.Gson
 import com.google.gson.JsonSyntaxException
 import app.fawry.task.domain.utils.BaseResponse
 import app.fawry.task.domain.utils.ErrorResponse
 import app.fawry.task.domain.utils.FailureStatus
 import app.fawry.task.domain.utils.Resource
+import app.fawry.task.presentation.base.utils.Constants
 import retrofit2.HttpException
 import java.net.ConnectException
 import java.net.UnknownHostException
@@ -13,13 +15,19 @@ import javax.inject.Inject
 
 open class BaseRemoteDataSource @Inject constructor() {
   var gson: Gson = Gson()
+  private  val TAG = "BaseRemoteDataSource"
 
   suspend fun <T> safeApiCall(apiCall: suspend () -> T): Resource<T> {
     println(apiCall)
     try {
       val apiResponse = apiCall.invoke()
-      return Resource.Success(apiResponse)
+      if((apiResponse as BaseResponse<*>).status == Constants.SUCCESS)
+        return Resource.Success(apiResponse)
+      else
+        return Resource.Failure(FailureStatus.API_FAIL, message = (apiResponse as BaseResponse<*>).msg)
+
     } catch (throwable: Throwable) {
+      Log.d(TAG, "safeApiCall: "+throwable.message)
       when (throwable) {
         is HttpException -> {
           when {

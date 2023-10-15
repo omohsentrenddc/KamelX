@@ -12,6 +12,10 @@ object Constants {
   const val DEFAULT_LANGUAGE = "ar"
   const val LANGUAGE: String = "language"
 
+  const val FAIL = "fail"
+  const val SUCCESS = "success"
+
+
   const val TOKEN = "token"
   const val FIREBASE_TOKEN = "firebase_token"
 

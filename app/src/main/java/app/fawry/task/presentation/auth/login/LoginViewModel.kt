@@ -52,7 +52,7 @@ class LoginViewModel @Inject constructor(
   }
 
   fun forgetPassword(v: View){
-    v.context.navigate(v, "forgetPassword", "app.kamelx.register")
+    v.context.navigate(v, "forgetPasswordDialog", "app.kamelx.forget.password")
   }
 
   fun register(v: View) {

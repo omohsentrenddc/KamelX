@@ -7,10 +7,10 @@ import kotlinx.android.parcel.Parcelize
 @Parcelize
 @Keep
 class RegisterRequest : Parcelable {
-  var firstName: String = ""
-  var lastName: String = ""
-  var phone: String = ""
+  var first_name: String = ""
+  var last_name: String = ""
   var password: String = ""
-  var confirmPassword: String = ""
+  var confirm_password: String = ""
+  var phone: String = ""
   var firebase_token: String = ""
 }

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools">
+
+  <data>
+
+    <import type="android.view.View" />
+
+    <variable
+      name="viewmodel"
+      type="app.fawry.task.presentation.auth.confirmCode.ConfirmCodeViewModel" />
+  </data>
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/dimen14"
+    android:paddingBottom="@dimen/dimen20">
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/tv_did_you_forget_password"
+      style="@style/txtStyleMedium"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="@dimen/dimen14"
+      android:text="@string/enter_code"
+      android:textColor="@color/colorPrimaryDark"
+      android:textSize="24sp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      />
+
+    <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/tv_enter_your_phone"
+      style="@style/txtStyleRegular"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/enter_your_phone_will_send_code_to_it"
+      android:textColor="@color/colorSecondary"
+      android:textSize="16sp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/tv_did_you_forget_password" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+      android:id="@+id/confirmCode"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="@dimen/dimen18"
+      android:background="@drawable/bg_rounded_setting_item_14"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/tv_enter_your_phone">
+
+      <com.chaos.view.PinView
+        android:id="@+id/pin_Validate"
+        style="@style/PinWidget.PinView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:cursorVisible="true"
+        android:gravity="center_horizontal"
+        android:inputType="number"
+        android:itemBackground="@color/textBackgroundColor"
+        android:text="@={viewmodel.request.code}"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:cursorColor="@android:color/black"
+        app:hideLineWhenFilled="false"
+        app:itemCount="4"
+        app:itemHeight="60dp"
+        app:itemRadius="@dimen/dimen8"
+        app:itemSpacing="8dp"
+        app:itemWidth="60dp"
+        android:hint="----"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lineColor="@color/colorPrimary"
+        android:state_selected="true"
+
+        app:lineWidth="0dp"
+        app:viewType="rectangle" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <LinearLayout
+      app:layout_constraintTop_toBottomOf="@+id/confirmCode"
+      android:id="@+id/ll_code_dialog"
+      android:layout_width="wrap_content"
+      android:gravity="center"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/resend_code"
+      style="@style/txtStyleRegular"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/resend_code"
+      android:textColor="@color/colorPrimary"
+      android:layout_marginEnd="@dimen/dimen5"
+      android:textSize="14sp"
+      android:visibility="@{viewmodel.resend ? View.VISIBLE : View.GONE}"
+
+      android:onClick="@{ (v) -> viewmodel.resend(v)}"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/confirmCode" />
+
+      <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_forget_timer"
+        style="@style/txtStyleRegular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@={viewmodel.timerText}"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:layout_marginStart="@dimen/dimen5"
+        android:textColor="@color/colorSecondary"
+        android:textSize="14sp"
+        android:visibility="@{viewmodel.resend ? View.GONE : View.VISIBLE}"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="asd asd ad as" />
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+      android:id="@+id/btn_submit"
+      style="@style/btnSubmit"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="@dimen/dimen14"
+      android:onClick="@{ (v) -> viewmodel.submit(v) }"
+      android:text="@string/follow"
+      android:textSize="18sp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/ll_code_dialog" />
+
+    <ProgressBar
+      android:id="@+id/progress"
+      style="Widget.MaterialComponents.LinearProgressIndicator"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:indeterminate="true"
+      android:visibility="gone"
+      app:layout_constraintBottom_toBottomOf="@+id/confirmCode"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/tv_did_you_forget_password"
+      app:trackColor="@color/colorPrimary"
+      app:trackThickness="@dimen/dimen4" />
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
+

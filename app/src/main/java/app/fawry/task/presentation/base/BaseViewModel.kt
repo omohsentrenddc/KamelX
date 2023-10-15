@@ -4,12 +4,19 @@ import androidx.lifecycle.ViewModel
 import app.fawry.task.presentation.base.utils.SingleLiveEvent
 import androidx.databinding.Observable
 import androidx.databinding.PropertyChangeRegistry
+import app.fawry.task.domain.utils.BaseResponse
+import app.fawry.task.domain.utils.Resource
+import kotlinx.coroutines.flow.MutableStateFlow
 
 open class BaseViewModel : ViewModel(), Observable {
   private val callbacks: PropertyChangeRegistry = PropertyChangeRegistry()
 
   var dataLoadingEvent: SingleLiveEvent<Int> = SingleLiveEvent()
   var clickEvent: SingleLiveEvent<Int> = SingleLiveEvent()
+  val responseDefault =
+    MutableStateFlow<Resource<BaseResponse<*>>>(Resource.Default)
+
+
   fun clickEvent(action: Int) {
     clickEvent.value = action
   }

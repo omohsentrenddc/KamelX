@@ -19,7 +19,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
       android:layout_width="match_parent"
-      android:layout_margin="@dimen/dimen10"
+      android:layout_margin="@dimen/dimen20"
       android:layout_height="match_parent">
 
       <androidx.appcompat.widget.AppCompatImageView
@@ -155,6 +155,7 @@
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:textAlignment="viewStart"
+          android:text="@={viewmodel.request.password}"
           android:hint="@string/password"
           android:inputType="textPassword" />
       </com.google.android.material.textfield.TextInputLayout>
@@ -199,7 +200,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="start"
-        android:onClick="@{ (v) -> viewmodel.forgetPassword(v) }"
+        android:onClick="@{ (v) -> viewmodel.register(v) }"
         android:text="@string/register_now"
         android:textColor="@color/colorGrayDark"
         android:textSize="@dimen/text_size14"

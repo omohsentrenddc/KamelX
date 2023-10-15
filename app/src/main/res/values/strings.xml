@@ -26,5 +26,19 @@
   <string name="agree_on">أوافق على </string>
   <string name="register">تسجيل</string>
   <string name="privacy_policy">الشروط والأحكام</string>
+  <string name="enter_code">ادخل الرمز</string>
+  <string name="new_password">كلمة المرور الجديد</string>
+  <string name="change_password">تغيير كلمة المرور؟</string>
+  <string name="current_password">كلمة المرور الحالية</string>
+  <string name="enter_your_phone_will_send_code_to_it">ادخل الهاتف الخاص بك ليتم ارسال رمز لاعادة التعيين</string>
+  <string name="confirm_code_not_correct">الرمز التاكيدى ليس صحيحا</string>
+  <string name="did_you_forget_password">هل نسيت كلمة المرور؟</string>
+  <string name="enter_your_phone">ادخل رقم الهاتف</string>
+  <string name="next">التالى</string>
+  <string name="resend_code">ارسال رمز اخر</string>
+  <string name="follow">متابعة</string>
+  <string name="reset_password">اعادة تعيين كلمة المرور</string>
+  <string name="please_accept_privacy_policy">من فضلك قم بالموافقة على الشروط والاحكام</string>
+  <string name="both_password_must_be_both">كلا من كلمتى المرور لابد ان يكونوا متطابقين</string>
 
 </resources>

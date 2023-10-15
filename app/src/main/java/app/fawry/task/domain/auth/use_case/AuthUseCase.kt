@@ -1,19 +1,15 @@
 package app.fawry.task.domain.auth.use_case
 
 import android.util.Log
-import app.fawry.task.domain.auth.use_case.UserLocalUseCase
 import app.fawry.task.domain.auth.entity.LoginResponse
 import app.fawry.task.domain.auth.repository.AuthRepository
 import app.fawry.task.domain.auth.request.LogInRequest
 import app.fawry.task.domain.auth.request.UpdatePasswordRequest
-import app.fawry.task.domain.auth.request.UpdateProfileRequest
 import app.fawry.task.domain.auth.request.*
 import app.fawry.task.domain.auth.request.forgetPassword.ForgetPasswordRequest
 import app.fawry.task.domain.auth.request.forgetPassword.ForgetPasswordResponse
-import app.fawry.task.domain.auth.request.forgetPassword.UpdateTokenGuestUserRequest
 import app.fawry.task.domain.utils.BaseResponse
 import app.fawry.task.domain.utils.Resource
-import app.fawry.task.presentation.base.utils.Constants
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
@@ -32,9 +28,10 @@ class AuthUseCase @Inject constructor(
     emit(Resource.Loading) //show loader
     val result = repository.login(request)
     if (result is Resource.Success) {
-      Log.d(TAG, "login: here")
-      result.value.data.data.jwtToken = result.value.data.token.accessToken
-      userLocalUseCase.invoke(result.value.data.data)
+      if(result.value.data.data.isActive == 1){
+//        result.value.data.data.token = result.value.data.token?.accessToken.toString()
+        userLocalUseCase.invoke(result.value.data)
+      }
     }
     emit(result)//send result for collecting
   }.flowOn(Dispatchers.IO)
@@ -47,11 +44,38 @@ class AuthUseCase @Inject constructor(
     emit(Resource.Loading)
     val result = repository.register(request)
     if (result is Resource.Success) {
-      result.value.data.data.jwtToken = result.value.data.token.accessToken
-      userLocalUseCase.invoke(result.value.data.data)
+      if(result.value.data.data.isActive == 1) {
+//        result.value.data.data.token = result.value.data.token?.accessToken.toString()
+        userLocalUseCase.invoke(result.value.data)
+      }
     }
     emit(result)
   }.flowOn(Dispatchers.IO)
+
+  fun confirmCode(
+    request: ForgetPasswordRequest
+  ): Flow<Resource<BaseResponse<*>>> = flow {
+    emit(Resource.Loading)
+    val result = repository.confirmCode(request)
+    emit(result)
+  }.flowOn(Dispatchers.IO)
+
+  fun forgetPassword(
+    request: ForgetPasswordRequest
+  ): Flow<Resource<BaseResponse<ForgetPasswordResponse>>> = flow {
+    emit(Resource.Loading)
+    val result = repository.forgetPassword(request)
+    emit(result)
+  }.flowOn(Dispatchers.IO)
+
+  fun updatePassword(
+    request: UpdatePasswordRequest
+  ): Flow<Resource<BaseResponse<*>>> = flow {
+    emit(Resource.Loading)
+    val result = repository.updatePassword(request)
+    emit(result)
+  }.flowOn(Dispatchers.IO)
+
 //
 //  fun registerSecond(
 //    request: RegisterRequest

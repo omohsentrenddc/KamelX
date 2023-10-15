@@ -7,8 +7,8 @@ import com.google.gson.annotations.SerializedName
 @Keep
 data class LoginResponse(
   @SerializedName("token")
-  @Expose val token: AccessToken = AccessToken(),
-  @SerializedName("data")
+  @Expose var token: String? = "",
+  @SerializedName("user")
   @Expose val data: UserModel = UserModel(),
 )
 
