@@ -8,6 +8,7 @@ import androidx.lifecycle.viewModelScope
 import androidx.navigation.fragment.findNavController
 import app.fawry.task.domain.auth.request.forgetPassword.ForgetPasswordRequest
 import app.fawry.task.domain.auth.request.forgetPassword.ForgetPasswordResponse
+import app.fawry.task.domain.auth.use_case.AuthUseCase
 import app.fawry.task.domain.home.use_case.HomeUseCase
 import app.fawry.task.domain.utils.BaseResponse
 import app.fawry.task.domain.utils.Resource
@@ -22,7 +23,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class ConfirmCodeViewModel @Inject constructor(
-  private val useCase: HomeUseCase,
+  private val useCase: AuthUseCase,
 ) : BaseViewModel() {
   var code: String = ""
   private val TAG = "ConfirmCodeViewModel"

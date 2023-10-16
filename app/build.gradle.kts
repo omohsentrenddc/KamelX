@@ -130,6 +130,10 @@ dependencies {
   implementation(Libraries.loadingAnimations)
   implementation(Libraries.alerter)
 
+  //coil
+  implementation("io.coil-kt:coil:2.2.2")
+
+
   //Work-Manager
   implementation(Libraries.workManager)
   implementation(Libraries.hiltWorkManager)

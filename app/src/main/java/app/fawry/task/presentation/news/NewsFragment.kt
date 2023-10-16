@@ -24,6 +24,7 @@ class NewsFragment : BaseFragment<FragmentNewsBinding>() , ISubmitAction {
   override
   fun setBindingVariables() {
     binding.viewmodel = viewModel
+    binding.recyclerViewSettings.adapter = viewModel.newsAdapter
     viewModel.newsAdapter.submitAction = this
   }
 

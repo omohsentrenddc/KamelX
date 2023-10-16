@@ -14,6 +14,6 @@ import retrofit2.http.*
 
 interface HomeServices {
   @POST("news")
-  suspend fun news(): BaseResponse<List<NewsModel>>
+  suspend fun news(): BaseResponse<ArrayList<NewsModel>>
 
 }

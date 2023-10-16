@@ -24,7 +24,6 @@
     android:id="@+id/item_more"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:onClick="@{()-> iSubmitAction.submit(itemViewModels.model,itemViewModels.position,``)}"
     android:paddingStart="@dimen/dimen10"
     android:paddingEnd="@dimen/dimen10">
 
@@ -46,47 +45,47 @@
 
     </androidx.cardview.widget.CardView>
 
-    <androidx.appcompat.widget.AppCompatTextView
-      android:id="@+id/tv_date"
-      android:layout_width="0dp"
-      style="@style/txtStyleRegular"
-      android:text="@{itemViewModels.model.date}"
-      app:layout_constraintStart_toEndOf="@+id/shapeableImageView"
-      app:layout_constraintEnd_toEndOf="parent"
-      android:textColor="@color/colorDate"
-      tools:text="asdsad"
-      android:textSize="@dimen/text_size12"
-      android:textAlignment="viewStart"
-      app:layout_constraintTop_toTopOf="parent"
-      android:layout_height="wrap_content"/>
+<!--    <androidx.appcompat.widget.AppCompatTextView-->
+<!--      android:id="@+id/tv_date"-->
+<!--      android:layout_width="0dp"-->
+<!--      style="@style/txtStyleRegular"-->
+<!--      android:text="@{itemViewModels.model.date}"-->
+<!--      app:layout_constraintStart_toEndOf="@+id/shapeableImageView"-->
+<!--      app:layout_constraintEnd_toEndOf="parent"-->
+<!--      android:textColor="@color/colorDate"-->
+<!--      tools:text="asdsad"-->
+<!--      android:textSize="@dimen/text_size12"-->
+<!--      android:textAlignment="viewStart"-->
+<!--      app:layout_constraintTop_toTopOf="parent"-->
+<!--      android:layout_height="wrap_content"/>-->
 
-    <androidx.appcompat.widget.AppCompatTextView
-      android:id="@+id/tv_title"
-      android:layout_width="0dp"
-      style="@style/txtStyleBold"
-      android:text="@{itemViewModels.model.title}"
-      app:layout_constraintStart_toEndOf="@+id/shapeableImageView"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/tv_date"
-      android:textColor="@color/colorSecondary"
-      tools:text="asdsad"
-      android:textSize="@dimen/text_size16"
-      android:textAlignment="viewStart"
-      android:layout_height="wrap_content"/>
+<!--    <androidx.appcompat.widget.AppCompatTextView-->
+<!--      android:id="@+id/tv_title"-->
+<!--      android:layout_width="0dp"-->
+<!--      style="@style/txtStyleBold"-->
+<!--      android:text="@{itemViewModels.model.title}"-->
+<!--      app:layout_constraintStart_toEndOf="@+id/shapeableImageView"-->
+<!--      app:layout_constraintEnd_toEndOf="parent"-->
+<!--      app:layout_constraintTop_toBottomOf="@+id/tv_date"-->
+<!--      android:textColor="@color/colorSecondary"-->
+<!--      tools:text="asdsad"-->
+<!--      android:textSize="@dimen/text_size16"-->
+<!--      android:textAlignment="viewStart"-->
+<!--      android:layout_height="wrap_content"/>-->
 
-    <androidx.appcompat.widget.AppCompatTextView
-      android:id="@+id/tv_desc"
-      android:layout_width="0dp"
-      style="@style/txtStyleRegular"
-      android:text="@{itemViewModels.model.description}"
-      app:layout_constraintStart_toEndOf="@+id/shapeableImageView"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/tv_title"
-      android:textColor="@color/colorDescription"
-      tools:text="asdsad"
-      android:textSize="@dimen/text_size13"
-      android:textAlignment="viewStart"
-      android:layout_height="wrap_content"/>
+<!--    <androidx.appcompat.widget.AppCompatTextView-->
+<!--      android:id="@+id/tv_desc"-->
+<!--      android:layout_width="0dp"-->
+<!--      style="@style/txtStyleRegular"-->
+<!--      android:text="@{itemViewModels.model.description}"-->
+<!--      app:layout_constraintStart_toEndOf="@+id/shapeableImageView"-->
+<!--      app:layout_constraintEnd_toEndOf="parent"-->
+<!--      app:layout_constraintTop_toBottomOf="@+id/tv_title"-->
+<!--      android:textColor="@color/colorDescription"-->
+<!--      tools:text="asdsad"-->
+<!--      android:textSize="@dimen/text_size13"-->
+<!--      android:textAlignment="viewStart"-->
+<!--      android:layout_height="wrap_content"/>-->
 
 
   </androidx.constraintlayout.widget.ConstraintLayout>

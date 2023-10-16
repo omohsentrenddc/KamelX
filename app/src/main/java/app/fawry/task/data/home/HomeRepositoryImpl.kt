@@ -9,5 +9,5 @@ import javax.inject.Inject
 class HomeRepositoryImpl @Inject constructor(
   private val remoteDataSource: HomeRemoteDataSource
 ) : HomeRepository {
-  override suspend fun news(): Resource<BaseResponse<List<NewsModel>>> = remoteDataSource.news()
+  override suspend fun news(): Resource<BaseResponse<ArrayList<NewsModel>>> = remoteDataSource.news()
 }

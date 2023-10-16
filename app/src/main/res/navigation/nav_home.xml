@@ -15,7 +15,7 @@
     android:label="@string/look_carefully" />
 
   <fragment
-    android:id="@+id/newsFragment2"
+    android:id="@+id/newsFragment"
     android:name="app.fawry.task.presentation.news.NewsFragment"
     android:label="@string/news" />
 

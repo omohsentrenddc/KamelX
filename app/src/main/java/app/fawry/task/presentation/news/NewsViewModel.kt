@@ -20,7 +20,6 @@ class NewsViewModel @Inject constructor(
   ) : BaseViewModel() {
   private val TAG = "NewsViewModel"
 
-  @Bindable
   var newsAdapter = NewsAdapter()
 
   val response =

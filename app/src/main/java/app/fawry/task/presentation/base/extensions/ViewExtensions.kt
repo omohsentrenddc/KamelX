@@ -14,6 +14,8 @@ import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import coil.load
+import coil.transform.RoundedCornersTransformation
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.DataSource
 import com.bumptech.glide.load.engine.DiskCacheStrategy
@@ -56,6 +58,16 @@ fun View.showSnackBar(
   }
 
   snackBar.show()
+}
+
+
+@BindingAdapter("app:loadImageCache")
+fun ImageView.loadImageCache(imageUrl: String?) {
+  load(imageUrl){
+    placeholder(R.drawable.loading)
+    transformations(RoundedCornersTransformation(80f))
+    error(R.drawable.bg_no_image)
+  }
 }
 
 @BindingAdapter("load_drawable")
