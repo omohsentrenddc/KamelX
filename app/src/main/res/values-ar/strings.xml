@@ -37,5 +37,19 @@
   <string name="reset_password">اعادة تعيين كلمة المرور</string>
     <string name="please_accept_privacy_policy">من فضلك قم بالموافقة على الشروط والاحكام</string>
   <string name="both_password_must_be_both">كلا من كلمتى المرور لابد ان يكونوا متطابقين</string>
+    <string name="home">الرئيسية</string>
+  <string name="results">النتائج</string>
+  <string name="news">الأخبار</string>
+  <string name="more">المزيد</string>
+  <string name="auction_camales">مزاد الإبل</string>
+  <string name="gifts">هدايا</string>
+  <string name="judgement">لجنة التحكيم</string>
+  <string name="map_events">الخريطة التفاعلية</string>
+  <string name="events">الفعاليات</string>
+  <string name="profile">الملف الشخصى</string>
+  <string name="help">المساعدة</string>
+  <string name="contact_us">تواصل معنا</string>
+  <string name="common_questions">الأسئلة الشائعة</string>
+  <string name="look_carefully">راعى النظر</string>
 
 </resources>

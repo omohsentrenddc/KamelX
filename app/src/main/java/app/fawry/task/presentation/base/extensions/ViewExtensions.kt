@@ -58,6 +58,11 @@ fun View.showSnackBar(
   snackBar.show()
 }
 
+@BindingAdapter("load_drawable")
+fun loadDrawable(imageView: ImageView, drawable: Drawable?) {
+  imageView.setImageDrawable(drawable)
+}
+
 @BindingAdapter(
   value = ["app:loadImage", "app:progressBar", "app:placeHolder"],
   requireAll = false

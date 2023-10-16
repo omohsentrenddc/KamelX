@@ -10,6 +10,10 @@
     android:label="Home" >
 
   </fragment>
+  <fragment
+    android:id="@+id/settingsFragment"
+    android:name="app.fawry.task.presentation.settings.SettingsFragment"
+    android:label="@string/look_carefully" />
 
 
 </navigation>

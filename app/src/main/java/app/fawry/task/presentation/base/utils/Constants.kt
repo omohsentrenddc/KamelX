@@ -15,6 +15,17 @@ object Constants {
   const val FAIL = "fail"
   const val SUCCESS = "success"
 
+  const val LOGOUT = "logout"
+
+
+  const val PROFILE = "profile"
+  const val EVENTS = "profile"
+  const val MAP_EVENTS = "profile"
+  const val JUDGEMENT = "Judgement"
+  const val GIFTS = "gifts"
+  const val AUCTION = "auction"
+  const val CONTACT_US = "contact_us"
+  const val COMMON_QUESTIONS = "common_questions"
 
   const val TOKEN = "token"
   const val FIREBASE_TOKEN = "firebase_token"

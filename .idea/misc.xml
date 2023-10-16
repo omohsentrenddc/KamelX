@@ -6,10 +6,17 @@
         <entry key="..\:/projects/KamelX/app/src/main/res/drawable/bg_rounded_setting_item_14.xml" value="0.121" />
         <entry key="..\:/projects/KamelX/app/src/main/res/drawable/bg_rounded_text.xml" value="0.17" />
         <entry key="..\:/projects/KamelX/app/src/main/res/drawable/bg_rounded_white_19.xml" value="0.121" />
+        <entry key="..\:/projects/KamelX/app/src/main/res/drawable/bottom_navigation_color.xml" value="0.17" />
         <entry key="..\:/projects/KamelX/app/src/main/res/drawable/ic_arrow_down.xml" value="0.246" />
+        <entry key="..\:/projects/KamelX/app/src/main/res/drawable/ic_arrow_next.xml" value="0.17" />
         <entry key="..\:/projects/KamelX/app/src/main/res/drawable/ic_back_circle.xml" value="0.17" />
         <entry key="..\:/projects/KamelX/app/src/main/res/drawable/ic_back_circle_white.xml" value="0.1455" />
+        <entry key="..\:/projects/KamelX/app/src/main/res/drawable/ic_bottom_bar_results.xml" value="0.17" />
         <entry key="..\:/projects/KamelX/app/src/main/res/drawable/ic_email.xml" value="0.17" />
+        <entry key="..\:/projects/KamelX/app/src/main/res/drawable/ic_more_judgement_comity.xml" value="0.17" />
+        <entry key="..\:/projects/KamelX/app/src/main/res/drawable/ic_more_location.xml" value="0.17" />
+        <entry key="..\:/projects/KamelX/app/src/main/res/drawable/ic_more_profile.xml" value="0.17" />
+        <entry key="..\:/projects/KamelX/app/src/main/res/drawable/ic_notification_circle.xml" value="0.17" />
         <entry key="..\:/projects/KamelX/app/src/main/res/drawable/ic_person.xml" value="0.17" />
         <entry key="..\:/projects/KamelX/app/src/main/res/drawable/ic_phone.xml" value="0.17" />
         <entry key="..\:/projects/KamelX/app/src/main/res/drawable/img_back_circle.xml" value="0.1455" />
@@ -17,6 +24,7 @@
         <entry key="..\:/projects/KamelX/app/src/main/res/drawable/img_register.xml" value="0.1455" />
         <entry key="..\:/projects/KamelX/app/src/main/res/drawable/show_password_selector.xml" value="0.17" />
         <entry key="..\:/projects/KamelX/app/src/main/res/layout/activity_auth.xml" value="0.22592592592592592" />
+        <entry key="..\:/projects/KamelX/app/src/main/res/layout/activity_home.xml" value="0.25" />
         <entry key="..\:/projects/KamelX/app/src/main/res/layout/activity_splash.xml" value="0.21203703703703702" />
         <entry key="..\:/projects/KamelX/app/src/main/res/layout/change_password_dialog.xml" value="0.264" />
         <entry key="..\:/projects/KamelX/app/src/main/res/layout/confirm_code_dialog.xml" value="0.2222222222222222" />
@@ -24,9 +32,13 @@
         <entry key="..\:/projects/KamelX/app/src/main/res/layout/fragment_home.xml" value="0.10989583333333333" />
         <entry key="..\:/projects/KamelX/app/src/main/res/layout/fragment_login.xml" value="0.290633608815427" />
         <entry key="..\:/projects/KamelX/app/src/main/res/layout/fragment_movie.xml" value="0.22592592592592592" />
+        <entry key="..\:/projects/KamelX/app/src/main/res/layout/fragment_news.xml" value="0.22592592592592592" />
         <entry key="..\:/projects/KamelX/app/src/main/res/layout/fragment_register.xml" value="0.22592592592592592" />
+        <entry key="..\:/projects/KamelX/app/src/main/res/layout/fragment_settings.xml" value="0.22592592592592592" />
         <entry key="..\:/projects/KamelX/app/src/main/res/layout/fragment_splash.xml" value="0.22592592592592592" />
         <entry key="..\:/projects/KamelX/app/src/main/res/layout/item_movie.xml" value="0.10989583333333333" />
+        <entry key="..\:/projects/KamelX/app/src/main/res/layout/item_settings.xml" value="0.22592592592592592" />
+        <entry key="..\:/projects/KamelX/app/src/main/res/menu/bottom_home_menu.xml" value="0.22592592592592592" />
         <entry key="..\:/projects/KamelX/prettyPopUp/src/main/res/drawable/img_login.xml" value="0.1455" />
         <entry key="..\:/projects/kamelX/app/src/main/res/layout/fragment_sign_up.xml" value="0.1" />
         <entry key="..\:/projects/kamelX/app/src/main/res/layout/list_general.xml" value="0.10989583333333333" />
