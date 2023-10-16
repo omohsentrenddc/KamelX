@@ -1,6 +1,7 @@
 package app.fawry.task.core.di.module
 
 import app.fawry.task.data.auth.AuthServices
+import app.fawry.task.data.home.HomeServices
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -17,5 +18,10 @@ object NetworkServicesModule {
   @Singleton
   fun provideAuthServices(retrofit: Retrofit): AuthServices =
     retrofit.create(AuthServices::class.java)
+
+  @Provides
+  @Singleton
+  fun provideHomeServices(retrofit: Retrofit): HomeServices =
+    retrofit.create(HomeServices::class.java)
 
 }

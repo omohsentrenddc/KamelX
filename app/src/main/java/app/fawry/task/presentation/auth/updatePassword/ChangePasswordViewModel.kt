@@ -5,7 +5,7 @@ import androidx.fragment.app.findFragment
 import androidx.lifecycle.viewModelScope
 import androidx.navigation.fragment.findNavController
 import app.fawry.task.domain.auth.request.UpdatePasswordRequest
-import app.fawry.task.domain.auth.use_case.AuthUseCase
+import app.fawry.task.domain.home.use_case.HomeUseCase
 import app.fawry.task.domain.auth.use_case.UserLocalUseCase
 import app.fawry.task.presentation.base.BaseViewModel
 import app.fawry.task.presentation.base.extensions.showError
@@ -17,7 +17,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class ChangePasswordViewModel @Inject constructor(
-  private val useCase: AuthUseCase,
+  private val useCase: HomeUseCase,
   private val userLocalUseCase: UserLocalUseCase,
 ) : BaseViewModel() {
   private val TAG = "UpdatePasswordViewModel"

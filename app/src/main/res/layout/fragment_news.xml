@@ -9,7 +9,7 @@
 
     <variable
       name="viewmodel"
-      type="app.fawry.task.presentation.settings.viewmodel.SettingsViewModel" />
+      type="app.fawry.task.presentation.news.NewsViewModel" />
   </data>
 
 
@@ -30,46 +30,13 @@
         android:id="@+id/recyclerViewSettings"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:adapter="@{viewmodel.settingsAdpater}"
+        app:adapter="@{viewmodel.newsAdapter}"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:orientation="@{`1`}"
         app:span="@{`1`}"
-        tools:listitem="@layout/item_settings" />
-
-
-      <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tv_more_item"
-        style="@style/txtStyleBold"
-        android:text="@string/help"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/dimen8"
-        android:layout_marginTop="@dimen/dimen16"
-        android:layout_marginBottom="@dimen/dimen16"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textColor="@android:color/black"
-        android:textSize="@dimen/text_size16"
-        android:gravity="start"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@id/ic_icon"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-         />
-
-
-      <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerViewHelp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:adapter="@{viewmodel.helpAdpater}"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:orientation="@{`1`}"
-        app:span="@{`1`}"
-        tools:listitem="@layout/item_settings" />
+        tools:listitem="@layout/item_news" />
 
 
 

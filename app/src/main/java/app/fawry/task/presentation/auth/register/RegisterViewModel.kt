@@ -7,11 +7,9 @@ import app.fawry.task.domain.utils.BaseResponse
 import app.fawry.task.domain.utils.Resource
 import app.fawry.task.presentation.base.BaseViewModel
 import app.fawry.task.domain.auth.entity.LoginResponse
-import app.fawry.task.domain.auth.request.LogInRequest
 import app.fawry.task.domain.auth.request.RegisterRequest
-import app.fawry.task.domain.auth.use_case.AuthUseCase
+import app.fawry.task.domain.home.use_case.HomeUseCase
 import app.fawry.task.domain.auth.use_case.UserLocalUseCase
-import app.fawry.task.presentation.base.extensions.navigate
 import app.fawry.task.presentation.base.extensions.showError
 import app.fawry.task.presentation.base.utils.Constants
 import com.structure.base_mvvm.BR
@@ -20,12 +18,11 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
-import org.json.JSONObject
 import javax.inject.Inject
 
 @HiltViewModel
 class RegisterViewModel @Inject constructor(
-  private val useCase: AuthUseCase,
+  private val useCase: HomeUseCase,
   private val userLocalUseCase: UserLocalUseCase,
 ) : BaseViewModel() {
 

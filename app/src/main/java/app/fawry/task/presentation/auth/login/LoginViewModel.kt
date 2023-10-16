@@ -8,6 +8,7 @@ import app.fawry.task.presentation.base.BaseViewModel
 import app.fawry.task.domain.auth.entity.LoginResponse
 import app.fawry.task.domain.auth.request.LogInRequest
 import app.fawry.task.domain.auth.use_case.AuthUseCase
+import app.fawry.task.domain.home.use_case.HomeUseCase
 import app.fawry.task.domain.auth.use_case.UserLocalUseCase
 import app.fawry.task.presentation.base.extensions.navigate
 import app.fawry.task.presentation.base.extensions.showError
@@ -17,7 +18,6 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
-import org.json.JSONObject
 import javax.inject.Inject
 
 @HiltViewModel

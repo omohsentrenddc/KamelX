@@ -9,6 +9,8 @@
   <color name="passwordToggleColor">#CFCFCF</color>
   <color name="background">#f3f3EF</color>
   <color name="colorGrayDark">#6F6F6F</color>
+  <color name="colorDate">#BDBDBD</color>
+  <color name="colorDescription">#858585</color>
 
   <color name="colorAccent">#E4E4E4</color>
   <color name="colorGray">#9A9A9A</color>

@@ -167,6 +167,18 @@
                       </LayoutPositions>
                     </value>
                   </entry>
+                  <entry key="newsFragment2">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="-302" />
+                            <option name="y" value="-193" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
                   <entry key="settingsFragment">
                     <value>
                       <LayoutPositions>

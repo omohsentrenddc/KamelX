@@ -13,7 +13,7 @@
     android:title="@string/results" />
 
   <item
-    android:id="@+id/profileFragment"
+    android:id="@+id/newsFragment"
     android:enabled="true"
     android:icon="@drawable/ic_bottom_bar_news"
     android:title="@string/news" />

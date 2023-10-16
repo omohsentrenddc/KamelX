@@ -7,13 +7,17 @@
   <fragment
     android:id="@+id/homeFragment"
     android:name="app.fawry.task.presentation.home.list.ui.HomeFragment"
-    android:label="Home" >
-
-  </fragment>
+    android:label="@string/home" />
+  
   <fragment
     android:id="@+id/settingsFragment"
     android:name="app.fawry.task.presentation.settings.SettingsFragment"
     android:label="@string/look_carefully" />
+
+  <fragment
+    android:id="@+id/newsFragment2"
+    android:name="app.fawry.task.presentation.news.NewsFragment"
+    android:label="@string/news" />
 
 
 </navigation>

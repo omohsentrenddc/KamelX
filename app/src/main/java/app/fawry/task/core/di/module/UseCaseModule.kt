@@ -1,7 +1,7 @@
 package app.fawry.task.core.di.module
 
-import app.fawry.task.domain.auth.repository.AuthRepository
-import app.fawry.task.domain.auth.use_case.AuthUseCase
+import app.fawry.task.domain.home.repository.HomeRepository
+import app.fawry.task.domain.home.use_case.HomeUseCase
 import app.fawry.task.domain.auth.use_case.UserLocalUseCase
 import dagger.Module
 import dagger.Provides
@@ -16,9 +16,10 @@ class UseCaseModule {
   @Provides
   @Singleton
   fun provideAuthUseCase(
-    repositoryRemote: AuthRepository,
+    repositoryRemote: HomeRepository,
     userLocalUseCase: UserLocalUseCase
-  ): AuthUseCase = AuthUseCase(repositoryRemote, userLocalUseCase)
+  ): HomeUseCase = HomeUseCase(repositoryRemote, userLocalUseCase)
+
 
 
 }

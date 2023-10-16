@@ -1,6 +1,7 @@
 package app.fawry.task.data.auth
 
 import app.fawry.task.domain.auth.repository.AuthRepository
+import app.fawry.task.domain.home.repository.HomeRepository
 import app.fawry.task.domain.auth.request.LogInRequest
 import app.fawry.task.domain.auth.request.RegisterRequest
 import app.fawry.task.domain.auth.request.UpdatePasswordRequest

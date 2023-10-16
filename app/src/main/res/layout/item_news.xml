@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:card_view="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools">
+
+  <data>
+
+    <variable
+      name="iSubmitAction"
+      type="app.fawry.task.presentation.base.ISubmitAction" />
+
+
+    <import type="app.fawry.task.presentation.base.utils.Constants" />
+
+    <variable
+      name="itemViewModels"
+      type="app.fawry.task.presentation.news.ItemNewsViewModel" />
+
+  </data>
+
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/item_more"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:onClick="@{()-> iSubmitAction.submit(itemViewModels.model,itemViewModels.position,``)}"
+    android:paddingStart="@dimen/dimen10"
+    android:paddingEnd="@dimen/dimen10">
+
+    <androidx.cardview.widget.CardView
+      android:id="@+id/shapeableImageView"
+      android:layout_width="125dp"
+      android:layout_height="167dp"
+      android:elevation="10dp"
+      app:cardCornerRadius="25dp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent">
+
+      <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        app:loadImageCache="@{itemViewModels.model.image}" />
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/tv_date"
+      android:layout_width="0dp"
+      style="@style/txtStyleRegular"
+      android:text="@{itemViewModels.model.date}"
+      app:layout_constraintStart_toEndOf="@+id/shapeableImageView"
+      app:layout_constraintEnd_toEndOf="parent"
+      android:textColor="@color/colorDate"
+      tools:text="asdsad"
+      android:textSize="@dimen/text_size12"
+      android:textAlignment="viewStart"
+      app:layout_constraintTop_toTopOf="parent"
+      android:layout_height="wrap_content"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/tv_title"
+      android:layout_width="0dp"
+      style="@style/txtStyleBold"
+      android:text="@{itemViewModels.model.title}"
+      app:layout_constraintStart_toEndOf="@+id/shapeableImageView"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/tv_date"
+      android:textColor="@color/colorSecondary"
+      tools:text="asdsad"
+      android:textSize="@dimen/text_size16"
+      android:textAlignment="viewStart"
+      android:layout_height="wrap_content"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/tv_desc"
+      android:layout_width="0dp"
+      style="@style/txtStyleRegular"
+      android:text="@{itemViewModels.model.description}"
+      app:layout_constraintStart_toEndOf="@+id/shapeableImageView"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/tv_title"
+      android:textColor="@color/colorDescription"
+      tools:text="asdsad"
+      android:textSize="@dimen/text_size13"
+      android:textAlignment="viewStart"
+      android:layout_height="wrap_content"/>
+
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
