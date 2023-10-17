@@ -4,7 +4,9 @@ import app.fawry.task.domain.auth.entity.UserModel
 import app.fawry.task.domain.home.repository.HomeRepository
 import app.fawry.task.domain.auth.request.*
 import app.fawry.task.domain.auth.use_case.UserLocalUseCase
+import app.fawry.task.domain.home.model.HomeResponse
 import app.fawry.task.domain.news.NewsModel
+import app.fawry.task.domain.notification.NotificationItem
 import app.fawry.task.domain.utils.BaseResponse
 import app.fawry.task.domain.utils.Resource
 import kotlinx.coroutines.Dispatchers
@@ -23,6 +25,18 @@ class HomeUseCase @Inject constructor(
   fun news(): Flow<Resource<BaseResponse<ArrayList<NewsModel>>>> = flow {
     emit(Resource.Loading) //show loader
     val result = repository.news()
+    emit(result)//send result for collecting
+  }.flowOn(Dispatchers.IO)
+
+  fun home(): Flow<Resource<BaseResponse<HomeResponse>>> = flow {
+    emit(Resource.Loading) //show loader
+    val result = repository.home()
+    emit(result)//send result for collecting
+  }.flowOn(Dispatchers.IO)
+
+  fun notification(): Flow<Resource<BaseResponse<ArrayList<NotificationItem>>>> = flow {
+    emit(Resource.Loading) //show loader
+    val result = repository.notifications()
     emit(result)//send result for collecting
   }.flowOn(Dispatchers.IO)
 }

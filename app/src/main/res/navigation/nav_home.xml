@@ -6,18 +6,41 @@
 
   <fragment
     android:id="@+id/homeFragment"
-    android:name="app.fawry.task.presentation.home.list.ui.HomeFragment"
+    android:name="app.fawry.task.presentation.home.ui.HomeFragment"
     android:label="@string/home" />
   
   <fragment
     android:id="@+id/settingsFragment"
     android:name="app.fawry.task.presentation.settings.SettingsFragment"
-    android:label="@string/look_carefully" />
+    android:label="@string/look_carefully" >
+    <deepLink
+      android:id="@+id/registerFragment"
+      android:autoVerify="true"
+      app:uri="registerFragment://app.kamelx.register" />
+
+
+    <deepLink
+      android:id="@+id/more"
+      android:autoVerify="true"
+      app:uri="more://app.kamelx.more" />
+
+  </fragment>
 
   <fragment
     android:id="@+id/newsFragment"
     android:name="app.fawry.task.presentation.news.NewsFragment"
     android:label="@string/news" />
+  <fragment
+    android:id="@+id/notificationFragment"
+    android:name="app.fawry.task.presentation.notification.NotificationFragment"
+    android:label="@string/notifications" >
+
+    <deepLink
+      android:id="@+id/notifications"
+      android:autoVerify="true"
+      app:uri="notifications://app.kamelx.notifications" />
+
+  </fragment>
 
 
 </navigation>

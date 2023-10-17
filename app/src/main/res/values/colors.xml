@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <color name="colorPrimary">#A07614</color>
+  <color name="colorPrimary">#BB8E65</color>
   <color name="colorPrimaryOpacity">#1AA07614</color>
-  <color name="colorPrimaryDark">#9A6C00</color>
+  <color name="colorPrimaryDark">#8C5A40</color>
   <color name="colorSecondary">#015929</color>
   <color name="colorHintText">#B0B0B0</color>
   <color name="textBackgroundColor">#E7E7E7</color>
   <color name="passwordToggleColor">#CFCFCF</color>
   <color name="background">#f3f3EF</color>
+  <color name="backgroundHeader">#EAE6DD</color>
+  <color name="color_steps_text">#636363</color>
+  <color name="color_notification_text">#4D5459</color>
+  <color name="color_notification_date">#808080</color>
+
+
+  <color name="welcomeHeader">#555D63</color>
   <color name="colorGrayDark">#6F6F6F</color>
   <color name="colorDate">#BDBDBD</color>
   <color name="colorDescription">#858585</color>

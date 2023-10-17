@@ -5,6 +5,7 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.*
 import app.fawry.task.presentation.base.extensions.hide
+import app.fawry.task.presentation.base.extensions.navigate
 import app.fawry.task.presentation.base.extensions.show
 import com.structure.base_mvvm.R
 import com.structure.base_mvvm.databinding.ActivityHomeBinding
@@ -49,7 +50,12 @@ class HomeActivity : BaseActivity<ActivityHomeBinding>() {
 //        nav.navigateUp()
 //      }
       when(destination.id){
-        R.id.settingsFragment,R.id.newsFragment -> binding.tvHomeTitle.text = destination.label
+        R.id.homeFragment -> binding.toolbar.hide()
+        R.id.settingsFragment,R.id.newsFragment ->{
+          binding.tvHomeTitle.text = destination.label
+          binding.toolbar.show()
+        }
+        else -> binding.toolbar.show()
       }
       binding.toolbar.navigationIcon = null
 //      when (destination.id) {
@@ -58,6 +64,17 @@ class HomeActivity : BaseActivity<ActivityHomeBinding>() {
 //      }
     }
 
+    initClicks()
+
+  }
+
+  private fun initClicks() {
+    binding.icMenu.setOnClickListener {
+      navigate(nav, "more", "app.kamelx.more")
+    }
+    binding.icNotification.setOnClickListener {
+      navigate(nav, "notifications", "app.kamelx.notifications")
+    }
   }
 
   override fun onSupportNavigateUp(): Boolean {

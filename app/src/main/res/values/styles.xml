@@ -116,10 +116,25 @@
 
   <style name="btnSubmit" parent="Widget.MaterialComponents.Button">
     <item name="backgroundTint">@color/colorPrimary</item>
-    <item name="cornerRadius">@dimen/dimen16</item>
+    <item name="cornerRadius">32dp</item>
     <item name="android:textSize">14sp</item>
     <item name="background">@null</item>
     <item name="fontFamily">@font/ibm_bold</item>
+    <item name="android:textColor">@android:color/white</item>
+    <!--    <item name="android:padding">@dimen/dimen12</item>-->
+    <item name="android:paddingBottom">@dimen/dimen12</item>
+    <item name="android:paddingTop">@dimen/dimen8</item>
+    <item name="android:paddingStart">@dimen/dimen8</item>
+    <item name="android:paddingEnd">@dimen/dimen8</item>
+    <item name="android:minHeight">60dp</item>
+  </style>
+
+  <style name="btnSubmitMedium" parent="Widget.MaterialComponents.Button">
+    <item name="backgroundTint">@color/colorPrimary</item>
+    <item name="cornerRadius">32dp</item>
+    <item name="android:textSize">14sp</item>
+    <item name="background">@null</item>
+    <item name="fontFamily">@font/ibm_medium</item>
     <item name="android:textColor">@android:color/white</item>
     <!--    <item name="android:padding">@dimen/dimen12</item>-->
     <item name="android:paddingBottom">@dimen/dimen12</item>

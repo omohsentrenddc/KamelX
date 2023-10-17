@@ -1,17 +1,14 @@
-package app.fawry.task.presentation.home.list.ui
+package app.fawry.task.presentation.home.ui
 
 import android.util.Log
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
-import androidx.navigation.fragment.findNavController
-import androidx.work.ExistingPeriodicWorkPolicy
-import androidx.work.WorkManager
 import app.fawry.task.domain.utils.Resource
 import app.fawry.task.presentation.base.BaseFragment
 import app.fawry.task.presentation.base.extensions.handleApiError
 import app.fawry.task.presentation.base.extensions.hideKeyboard
 import app.fawry.task.presentation.base.extensions.setUpAdapter
-import app.fawry.task.presentation.home.list.viewModels.HomeViewModel
+import app.fawry.task.presentation.home.viewModels.HomeViewModel
 import com.structure.base_mvvm.R
 import com.structure.base_mvvm.databinding.FragmentHomeBinding
 import dagger.hilt.android.AndroidEntryPoint
@@ -29,8 +26,9 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(){
   override
   fun setBindingVariables() {
     Log.d(TAG, "setBindingVariables: ")
-    initWorkManager()
-    binding.rvCategories.setUpAdapter(viewModel.adapter,"1","2")
+    binding.viewmodel = viewModel
+    viewModel.getHome()
+//    binding.rvCategories.setUpAdapter(viewModel.adapter,"1","2")
   }
 
   //add work-manager for cache movies
@@ -41,25 +39,22 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(){
     super.setupObservers()
     //listen for categories api
     lifecycleScope.launchWhenResumed {
-      viewModel.categoryResponse
-        .collect {
-          when (it) {
-            Resource.Loading -> {
-              hideKeyboard()
-              showLoading()
-            }
-            is Resource.Success -> {
-              hideLoading()
-              //update categories in adapter
-//              viewModel.setData(it.value.categories)
-            }
-            is Resource.Failure -> {
-              hideLoading()
-              handleApiError(it)
-            }
-            else -> {}
+      viewModel.homeResponse.collect{
+        handleLoading(it)
+        when (it) {
+          is Resource.Loading -> handleLoading(it)
+          is Resource.Success -> {
+            Log.d(TAG, "setupObservers: DONE ${it.value.data.news.image}")
+            viewModel.setData(it.value.data)
           }
+          is Resource.Failure -> {
+            hideLoading()
+            Log.d(TAG, "setupObservers: failure")
+            handleApiError(it)
+          }
+          else ->{}
         }
+      }
     }
 
 //    //listen for movies api

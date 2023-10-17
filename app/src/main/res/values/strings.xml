@@ -56,5 +56,19 @@
   <string name="look_carefully">راعى النظر</string>
     <string name="please_relogin">من فضلك قم باعادة تسجيل الدخول</string>
   <string name="please_try_again">الرجاء المحاولة مرة اخرى</string>
+    <string name="more_results">المزيد من النتائج</string>
+  <string name="to_read_new">لقراءة الخبر</string>
+  <string name="welcome_header">يا مرحبا يا ريحة الورد والهيل .. لا هبت النسمة وتطاير عطرها</string>
+  <string name="welcome">ارحب يا</string>
+  <string name="visitor">زائر</string>
+  <string name="steps_of_participate">خطوات المشاركة</string>
+  <string name="steps_register">سجل</string>
+  <string name="steps_charge">اشحن</string>
+  <string name="steps_vote">صوّت</string>
+  <string name="to_watch_video">لمشاهدة فيديو شرح المسابقة</string>
+  <string name="notifications">الأشعارات</string>
+  <string name="round">الجولة</string>
+  <string name="vote">تصويت</string>
+  <string name="current_competitions">المنافسات المتاحة</string>
 
 </resources>

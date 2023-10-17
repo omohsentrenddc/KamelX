@@ -15,7 +15,7 @@ object Constants {
   const val FAIL = "fail"
   const val SUCCESS = "success"
 
-  const val LOGOUT = "logout"
+  const val VOTE = "vote"
 
 
   const val PROFILE = "profile"

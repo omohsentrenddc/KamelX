@@ -1,4 +1,4 @@
-package app.fawry.task.presentation.home.list.adapter
+package app.fawry.task.presentation.home.adapter
 
 import android.view.LayoutInflater
 import android.view.View

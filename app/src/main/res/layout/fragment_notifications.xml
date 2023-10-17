@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools">
+
+  <data>
+
+    <import type="android.view.View" />
+
+    <variable
+      name="viewmodel"
+      type="app.fawry.task.presentation.notification.NotificationViewModel" />
+  </data>
+
+
+  <androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:fillViewport="true">
+
+
+    <LinearLayout
+      android:orientation="vertical"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@color/white"
+      android:padding="@dimen/dimen16">
+
+      <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewSettings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:adapter="@{viewmodel.adapter}"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:orientation="@{`1`}"
+        app:span="@{`1`}"
+        tools:listitem="@layout/item_news" />
+
+
+
+    </LinearLayout>
+  </androidx.core.widget.NestedScrollView>
+
+</layout>

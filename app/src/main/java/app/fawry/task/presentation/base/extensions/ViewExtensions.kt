@@ -9,7 +9,9 @@ import android.view.View
 import android.webkit.URLUtil
 import android.widget.ImageView
 import android.widget.ProgressBar
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.constraintlayout.widget.Group
+import androidx.constraintlayout.widget.Guideline
 import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -75,13 +77,25 @@ fun loadDrawable(imageView: ImageView, drawable: Drawable?) {
   imageView.setImageDrawable(drawable)
 }
 
+@BindingAdapter("layout_constraintGuide_begin")
+fun setLayoutConstraintGuideBegin(guideline: Guideline, percent: Float) {
+  val params: (ConstraintLayout.LayoutParams) =
+    guideline.layoutParams as ConstraintLayout.LayoutParams;
+  params.guidePercent = percent;
+  guideline.layoutParams = params
+}
+
+private  val TAG = "ViewExtensions"
 @BindingAdapter(
   value = ["app:loadImage", "app:progressBar", "app:placeHolder"],
   requireAll = false
 )
 fun ImageView.loadImage(imageUrl: String?, progressBar: ProgressBar?, defaultImage: Any?) {
+  Log.d(TAG, "loadImage: HEREE $imageUrl")
   if (imageUrl != null && imageUrl.isNotEmpty()) {
+    Log.d(TAG, "loadImage: DONER")
     if (URLUtil.isValidUrl(imageUrl)) {
+      Log.d(TAG, "loadImage: $imageUrl")
       Glide
         .with(context)
         .load(imageUrl)
