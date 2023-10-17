@@ -167,13 +167,13 @@
                       </LayoutPositions>
                     </value>
                   </entry>
-                  <entry key="newsFragment2">
+                  <entry key="newsFragment">
                     <value>
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="-302" />
-                            <option name="y" value="-193" />
+                            <option name="x" value="12" />
+                            <option name="y" value="12" />
                           </Point>
                         </option>
                       </LayoutPositions>

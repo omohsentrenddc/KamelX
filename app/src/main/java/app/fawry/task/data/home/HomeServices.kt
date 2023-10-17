@@ -13,7 +13,7 @@ import okhttp3.RequestBody
 import retrofit2.http.*
 
 interface HomeServices {
-  @POST("news")
+  @GET("news")
   suspend fun news(): BaseResponse<ArrayList<NewsModel>>
 
 }

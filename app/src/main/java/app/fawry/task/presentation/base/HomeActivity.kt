@@ -49,7 +49,7 @@ class HomeActivity : BaseActivity<ActivityHomeBinding>() {
 //        nav.navigateUp()
 //      }
       when(destination.id){
-        R.id.settingsFragment -> binding.tvHomeTitle.text = destination.label
+        R.id.settingsFragment,R.id.newsFragment -> binding.tvHomeTitle.text = destination.label
       }
       binding.toolbar.navigationIcon = null
 //      when (destination.id) {

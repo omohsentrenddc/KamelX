@@ -20,74 +20,105 @@
   </data>
 
 
-  <androidx.constraintlayout.widget.ConstraintLayout
-    android:id="@+id/item_more"
+  <androidx.cardview.widget.CardView
+    android:id="@+id/card"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:paddingStart="@dimen/dimen10"
-    android:paddingEnd="@dimen/dimen10">
+    android:elevation="10dp"
+    app:cardCornerRadius="25dp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
 
-    <androidx.cardview.widget.CardView
-      android:id="@+id/shapeableImageView"
-      android:layout_width="125dp"
-      android:layout_height="167dp"
-      android:elevation="10dp"
-      app:cardCornerRadius="25dp"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
 
-      <androidx.appcompat.widget.AppCompatImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scaleType="centerCrop"
-        app:loadImageCache="@{itemViewModels.model.image}" />
+      <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/img_news"
+        android:layout_width="125dp"
+        android:layout_height="167dp"
 
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-    </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+          android:id="@+id/shapeableImageView"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_margin="@dimen/dimen5"
+          android:elevation="10dp"
+          app:cardCornerRadius="25dp"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent">
 
-<!--    <androidx.appcompat.widget.AppCompatTextView-->
-<!--      android:id="@+id/tv_date"-->
-<!--      android:layout_width="0dp"-->
-<!--      style="@style/txtStyleRegular"-->
-<!--      android:text="@{itemViewModels.model.date}"-->
-<!--      app:layout_constraintStart_toEndOf="@+id/shapeableImageView"-->
-<!--      app:layout_constraintEnd_toEndOf="parent"-->
-<!--      android:textColor="@color/colorDate"-->
-<!--      tools:text="asdsad"-->
-<!--      android:textSize="@dimen/text_size12"-->
-<!--      android:textAlignment="viewStart"-->
-<!--      app:layout_constraintTop_toTopOf="parent"-->
-<!--      android:layout_height="wrap_content"/>-->
-
-<!--    <androidx.appcompat.widget.AppCompatTextView-->
-<!--      android:id="@+id/tv_title"-->
-<!--      android:layout_width="0dp"-->
-<!--      style="@style/txtStyleBold"-->
-<!--      android:text="@{itemViewModels.model.title}"-->
-<!--      app:layout_constraintStart_toEndOf="@+id/shapeableImageView"-->
-<!--      app:layout_constraintEnd_toEndOf="parent"-->
-<!--      app:layout_constraintTop_toBottomOf="@+id/tv_date"-->
-<!--      android:textColor="@color/colorSecondary"-->
-<!--      tools:text="asdsad"-->
-<!--      android:textSize="@dimen/text_size16"-->
-<!--      android:textAlignment="viewStart"-->
-<!--      android:layout_height="wrap_content"/>-->
-
-<!--    <androidx.appcompat.widget.AppCompatTextView-->
-<!--      android:id="@+id/tv_desc"-->
-<!--      android:layout_width="0dp"-->
-<!--      style="@style/txtStyleRegular"-->
-<!--      android:text="@{itemViewModels.model.description}"-->
-<!--      app:layout_constraintStart_toEndOf="@+id/shapeableImageView"-->
-<!--      app:layout_constraintEnd_toEndOf="parent"-->
-<!--      app:layout_constraintTop_toBottomOf="@+id/tv_title"-->
-<!--      android:textColor="@color/colorDescription"-->
-<!--      tools:text="asdsad"-->
-<!--      android:textSize="@dimen/text_size13"-->
-<!--      android:textAlignment="viewStart"-->
-<!--      android:layout_height="wrap_content"/>-->
+          <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            app:loadImageCache="@{itemViewModels.model.image}" />
 
 
-  </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+      </androidx.constraintlayout.widget.ConstraintLayout>
 
+
+      <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/item_more"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_marginStart="@dimen/dimen5"
+        android:layout_marginEnd="@dimen/dimen5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/img_news"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+          android:id="@+id/tv_date"
+          style="@style/txtStyleRegular"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:text="@{itemViewModels.model.date}"
+          android:textAlignment="viewStart"
+          android:textColor="@color/colorDate"
+          android:textSize="@dimen/text_size12"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent"
+          tools:text="asdsad" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+          android:id="@+id/tv_title"
+          style="@style/txtStyleBold"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:text="@{itemViewModels.model.title}"
+          android:textAlignment="viewStart"
+          android:textColor="@color/colorSecondary"
+          android:textSize="@dimen/text_size16"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/tv_date"
+          tools:text="asdsad" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+          android:id="@+id/tv_desc"
+          style="@style/txtStyleRegular"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:text="@{itemViewModels.model.description}"
+          android:textAlignment="viewStart"
+          android:textColor="@color/colorDescription"
+          android:textSize="@dimen/text_size13"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/tv_title"
+          tools:text="asdsad" />
+
+
+      </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+  </androidx.cardview.widget.CardView>
 </layout>

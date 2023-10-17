@@ -1,6 +1,7 @@
 package app.fawry.task.data.remote
 
 import android.util.Log
+import app.fawry.task.core.MyApplication
 import com.google.gson.Gson
 import com.google.gson.JsonSyntaxException
 import app.fawry.task.domain.utils.BaseResponse
@@ -8,6 +9,7 @@ import app.fawry.task.domain.utils.ErrorResponse
 import app.fawry.task.domain.utils.FailureStatus
 import app.fawry.task.domain.utils.Resource
 import app.fawry.task.presentation.base.utils.Constants
+import com.structure.base_mvvm.R
 import retrofit2.HttpException
 import java.net.ConnectException
 import java.net.UnknownHostException
@@ -32,26 +34,22 @@ open class BaseRemoteDataSource @Inject constructor() {
         is HttpException -> {
           when {
             throwable.code() == 401 -> {
-              val errorResponse = Gson().fromJson(
-                throwable.response()?.errorBody()!!.charStream().readText(),
-                ErrorResponse::class.java
-              )
               return Resource.Failure(
                 FailureStatus.INVALID_TOKEN,
                 throwable.code(),
-                errorResponse.detail
+                MyApplication.instance.getString(R.string.please_relogin)
               )
             }
             throwable.code() == 404 -> {
-              val errorResponse = Gson().fromJson(
-                throwable.response()?.errorBody()!!.charStream().readText(),
-                ErrorResponse::class.java
-              )
+//              val errorResponse = Gson().fromJson(
+//                throwable.response()?.errorBody()!!.charStream().readText(),
+//                ErrorResponse::class.java
+//              )
 
               return Resource.Failure(
                 FailureStatus.API_FAIL,
                 throwable.code(),
-                errorResponse.detail
+                MyApplication.instance.getString(R.string.please_try_again)
               )
             }
             else -> {
@@ -59,13 +57,22 @@ open class BaseRemoteDataSource @Inject constructor() {
                 Resource.Failure(FailureStatus.API_FAIL, throwable.code())
               } else {
                 try {
-                  val errorResponse = Gson().fromJson(
-                    throwable.response()?.errorBody()!!.charStream().readText(),
-                    ErrorResponse::class.java
+//                  val errorResponse = Gson().fromJson(
+//                    throwable.response()?.errorBody()!!.charStream().readText(),
+//                    ErrorResponse::class.java
+//                  )
+//                  Resource.Failure(FailureStatus.API_FAIL, throwable.code(), errorResponse?.detail)
+                  return Resource.Failure(
+                    FailureStatus.API_FAIL,
+                    throwable.code(),
+                    MyApplication.instance.getString(R.string.please_try_again)
                   )
-                  Resource.Failure(FailureStatus.API_FAIL, throwable.code(), errorResponse?.detail)
                 } catch (ex: JsonSyntaxException) {
-                  Resource.Failure(FailureStatus.API_FAIL, throwable.code())
+                  return Resource.Failure(
+                    FailureStatus.API_FAIL,
+                    throwable.code(),
+                    MyApplication.instance.getString(R.string.please_try_again)
+                  )
                 }
               }
             }

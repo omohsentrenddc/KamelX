@@ -51,5 +51,7 @@
   <string name="contact_us">تواصل معنا</string>
   <string name="common_questions">الأسئلة الشائعة</string>
   <string name="look_carefully">راعى النظر</string>
+    <string name="please_relogin">من فضلك قم باعادة تسجيل الدخول</string>
+  <string name="please_try_again">الرجاء المحاولة مرة اخرى</string>
 
 </resources>

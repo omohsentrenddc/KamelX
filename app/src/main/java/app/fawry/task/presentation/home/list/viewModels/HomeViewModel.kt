@@ -4,6 +4,7 @@ import android.util.Log
 import androidx.databinding.Bindable
 import androidx.lifecycle.viewModelScope
 import androidx.work.PeriodicWorkRequest
+import app.fawry.task.domain.auth.use_case.UserLocalUseCase
 import app.fawry.task.domain.category.entity.Category
 import app.fawry.task.domain.category.entity.CategoryResponse
 import app.fawry.task.domain.category.use_case.CategoryUseCase
@@ -18,6 +19,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class HomeViewModel @Inject constructor(
+  var userLocalUseCase: UserLocalUseCase
 ) : BaseViewModel() {
   private val TAG = "HomeViewModel"
 
@@ -28,7 +30,7 @@ class HomeViewModel @Inject constructor(
   val adapter = CategoriesAdapter()
 
   init {
-
+    Log.d(TAG, "user: "+userLocalUseCase.invoke())
   }
 
 

@@ -10,6 +10,7 @@ import app.fawry.task.domain.auth.request.forgetPassword.ForgetPasswordRequest
 import app.fawry.task.domain.auth.request.forgetPassword.ForgetPasswordResponse
 import app.fawry.task.domain.utils.BaseResponse
 import app.fawry.task.domain.utils.Resource
+import app.fawry.task.presentation.base.utils.Constants
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
@@ -29,6 +30,7 @@ class AuthUseCase @Inject constructor(
     val result = repository.login(request)
     if (result is Resource.Success) {
       if(result.value.data.data.isActive == 1){
+        result.value.data.data.token = result.value.data.token.toString()
 //        result.value.data.data.token = result.value.data.token?.accessToken.toString()
         userLocalUseCase.invoke(result.value.data)
       }
@@ -45,6 +47,7 @@ class AuthUseCase @Inject constructor(
     val result = repository.register(request)
     if (result is Resource.Success) {
       if(result.value.data.data.isActive == 1) {
+        result.value.data.data.token = result.value.data.token.toString()
 //        result.value.data.data.token = result.value.data.token?.accessToken.toString()
         userLocalUseCase.invoke(result.value.data)
       }

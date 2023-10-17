@@ -1,7 +1,9 @@
 package app.fawry.task.core.di.module
 
 import android.content.Context
+import android.util.Log
 import app.fawry.task.data.local.preferences.AppPreferences
+import app.fawry.task.presentation.base.utils.Constants
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import com.readystatesoftware.chuck.ChuckInterceptor
@@ -25,20 +27,21 @@ object RetrofitModule {
 
   const val REQUEST_TIME_OUT: Long = 60
 
+  private  val TAG = "RetrofitModule"
   /**Add Query Parameter for api-key in BuildConfig instead of send every time in each request**/
   @Provides
   @Singleton
   fun provideHeadersInterceptor(appPreferences: AppPreferences) = run {
     Interceptor { chain ->
-      var request = chain.request()
-      request = request.newBuilder().url(
-        request.url.newBuilder()
-          .addQueryParameter("api_key", BuildConfig.APIKEY)
-          .build()
-      ).build()
-      chain.proceed(
-        request
-      )
+      val request = chain.request().newBuilder()
+      Log.d(TAG, "provideHeadersInterceptor: ${appPreferences.getIsLoggedIn()}")
+      if (appPreferences.getIsLoggedIn()) {
+        Log.d(TAG, "token: ${appPreferences.getUser().token}")
+        request.removeHeader("Token")
+        request.addHeader("Token",  appPreferences.getUser().token)
+//        request.addHeader("lang",  appPreferences.getLanguage())
+      }
+      chain.proceed(request.build())
     }
   }
 
