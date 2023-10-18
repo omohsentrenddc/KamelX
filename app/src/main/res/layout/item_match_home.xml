@@ -12,6 +12,7 @@
 
 
     <import type="app.fawry.task.presentation.base.utils.Constants" />
+    <import type="android.view.View" />
 
     <variable
       name="itemViewModels"
@@ -27,7 +28,10 @@
     <androidx.constraintlayout.widget.ConstraintLayout
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:layout_margin="@dimen/dimen5"
+      android:layout_marginStart="@dimen/dimen5"
+      android:layout_marginTop="@dimen/dimen5"
+      android:layout_marginEnd="@dimen/dimen5"
+      android:layout_marginBottom="@dimen/dimen5"
       android:background="@drawable/bg_rounded_white_19"
       android:paddingStart="@dimen/dimen5"
       android:paddingEnd="@dimen/dimen5">
@@ -66,10 +70,10 @@
 
       <LinearLayout
         android:id="@+id/ll_competition"
-        android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dimen10"
+        android:orientation="horizontal"
         android:weightSum="2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -82,9 +86,9 @@
           android:orientation="vertical">
 
           <androidx.cardview.widget.CardView
-            android:layout_gravity="center"
             android:layout_width="123dp"
             android:layout_height="123dp"
+            android:layout_gravity="center"
             android:elevation="10dp"
             app:cardCornerRadius="25dp"
             app:layout_constraintStart_toStartOf="parent"
@@ -137,9 +141,9 @@
 
 
           <androidx.cardview.widget.CardView
-            android:layout_gravity="center"
             android:layout_width="123dp"
             android:layout_height="123dp"
+            android:layout_gravity="center"
             android:elevation="10dp"
             app:cardCornerRadius="25dp"
             app:layout_constraintStart_toStartOf="parent"
@@ -148,7 +152,7 @@
             <androidx.appcompat.widget.AppCompatImageView
               android:layout_width="match_parent"
               android:layout_height="match_parent"
-              app:loadImageCache="@{itemViewModels.model.secondCompetitor.camelImage}" />
+              app:loadImageCache="@{itemViewModels.model.second_competitor.camelImage}" />
 
           </androidx.cardview.widget.CardView>
 
@@ -160,7 +164,7 @@
             android:layout_marginTop="@dimen/dimen5"
             android:layout_marginEnd="@dimen/dimen5"
             android:gravity="center"
-            android:text="@{itemViewModels.model.secondCompetitor.camelName}"
+            android:text="@{itemViewModels.model.second_competitor.camelName}"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="18sp"
             app:layout_constraintStart_toStartOf="parent"
@@ -175,7 +179,7 @@
             android:layout_marginTop="@dimen/dimen5"
             android:layout_marginEnd="@dimen/dimen5"
             android:gravity="center"
-            android:text="@{itemViewModels.model.secondCompetitor.ownerName}"
+            android:text="@{itemViewModels.model.second_competitor.ownerName}"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="14sp"
             app:layout_constraintStart_toStartOf="parent"
@@ -190,10 +194,10 @@
         android:id="@+id/view"
         android:layout_width="0dp"
         android:layout_height="@dimen/dimen20"
+        android:layout_marginEnd="@dimen/dimen20"
         android:background="@drawable/bg_solid_primary_dark_25"
         app:layout_constraintEnd_toStartOf="@+id/guideline_percentage"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginEnd="@dimen/dimen20"
         app:layout_constraintTop_toBottomOf="@+id/ll_competition" />
 
       <androidx.constraintlayout.widget.Guideline
@@ -201,8 +205,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        tools:layout_constraintGuide_percent="0.5"
-        app:layout_constraintGuide_begin="@{itemViewModels.vote()}" />
+        app:layout_constraintGuide_begin="@{itemViewModels.vote()}"
+        tools:layout_constraintGuide_percent="0.5" />
 
       <View
         android:id="@+id/view_percentage"
@@ -248,19 +252,21 @@
         app:layout_constraintTop_toBottomOf="@+id/view_percentage"
         tools:text="asdsad" />
 
+      <!--      android:visibility="@{itemViewModels.model.isAvailable ? View.VISIBLE : View.GONE}"-->
+
       <com.google.android.material.button.MaterialButton
         android:id="@+id/materialButton2"
         style="@style/btnSubmit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen20"
         android:onClick="@{ () -> iSubmitAction.submit(itemViewModels.model,itemViewModels.position,Constants.VOTE)}"
         android:paddingStart="@dimen/dimen50"
         android:paddingEnd="@dimen/dimen50"
         android:text="@string/vote"
-        app:iconGravity="start"
         android:textSize="@dimen/text_size16"
         app:backgroundTint="@color/colorSecondary"
-        android:layout_marginTop="@dimen/dimen20"
+        app:iconGravity="start"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

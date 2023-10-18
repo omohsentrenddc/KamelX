@@ -7,8 +7,12 @@
         <entry key="..\:/projects/KamelX/app/src/main/res/drawable-ar/bg_rounded_white_32.xml" value="0.17" />
         <entry key="..\:/projects/KamelX/app/src/main/res/drawable-ar/bg_solid_primary_25.xml" value="0.117" />
         <entry key="..\:/projects/KamelX/app/src/main/res/drawable-ar/bg_solid_primary_dark_25.xml" value="0.117" />
+        <entry key="..\:/projects/KamelX/app/src/main/res/drawable-xxxhdpi/bg_rounded_match_details_16.xml" value="0.1705" />
+        <entry key="..\:/projects/KamelX/app/src/main/res/drawable/bg_rounded_grey_strock_12.xml" value="0.1675" />
         <entry key="..\:/projects/KamelX/app/src/main/res/drawable/bg_rounded_setting_item_14.xml" value="0.121" />
         <entry key="..\:/projects/KamelX/app/src/main/res/drawable/bg_rounded_steps_16.xml" value="0.117" />
+        <entry key="..\:/projects/KamelX/app/src/main/res/drawable/bg_rounded_strock_primary_12.xml" value="0.1675" />
+        <entry key="..\:/projects/KamelX/app/src/main/res/drawable/bg_rounded_strock_white_32.xml" value="0.1675" />
         <entry key="..\:/projects/KamelX/app/src/main/res/drawable/bg_rounded_text.xml" value="0.17" />
         <entry key="..\:/projects/KamelX/app/src/main/res/drawable/bg_rounded_white_19.xml" value="0.121" />
         <entry key="..\:/projects/KamelX/app/src/main/res/drawable/bottom_navigation_color.xml" value="0.17" />
@@ -25,6 +29,7 @@
         <entry key="..\:/projects/KamelX/app/src/main/res/drawable/ic_person.xml" value="0.17" />
         <entry key="..\:/projects/KamelX/app/src/main/res/drawable/ic_phone.xml" value="0.17" />
         <entry key="..\:/projects/KamelX/app/src/main/res/drawable/ic_plus.xml" value="0.17" />
+        <entry key="..\:/projects/KamelX/app/src/main/res/drawable/ic_wallet_balance.xml" value="0.1435" />
         <entry key="..\:/projects/KamelX/app/src/main/res/drawable/img_back_circle.xml" value="0.1455" />
         <entry key="..\:/projects/KamelX/app/src/main/res/drawable/img_login.xml" value="0.1455" />
         <entry key="..\:/projects/KamelX/app/src/main/res/drawable/img_register.xml" value="0.1455" />
@@ -35,14 +40,17 @@
         <entry key="..\:/projects/KamelX/app/src/main/res/layout/change_password_dialog.xml" value="0.264" />
         <entry key="..\:/projects/KamelX/app/src/main/res/layout/confirm_code_dialog.xml" value="0.2222222222222222" />
         <entry key="..\:/projects/KamelX/app/src/main/res/layout/forget_password_dialog.xml" value="0.2222222222222222" />
+        <entry key="..\:/projects/KamelX/app/src/main/res/layout/fragment_all_matches.xml" value="0.22962962962962963" />
         <entry key="..\:/projects/KamelX/app/src/main/res/layout/fragment_home.xml" value="0.1881227580709446" />
         <entry key="..\:/projects/KamelX/app/src/main/res/layout/fragment_login.xml" value="0.290633608815427" />
+        <entry key="..\:/projects/KamelX/app/src/main/res/layout/fragment_match_details.xml" value="0.4" />
         <entry key="..\:/projects/KamelX/app/src/main/res/layout/fragment_movie.xml" value="0.22592592592592592" />
         <entry key="..\:/projects/KamelX/app/src/main/res/layout/fragment_news.xml" value="0.21313131313131314" />
         <entry key="..\:/projects/KamelX/app/src/main/res/layout/fragment_notifications.xml" value="0.22592592592592592" />
         <entry key="..\:/projects/KamelX/app/src/main/res/layout/fragment_register.xml" value="0.22592592592592592" />
         <entry key="..\:/projects/KamelX/app/src/main/res/layout/fragment_settings.xml" value="0.22592592592592592" />
         <entry key="..\:/projects/KamelX/app/src/main/res/layout/fragment_splash.xml" value="0.22592592592592592" />
+        <entry key="..\:/projects/KamelX/app/src/main/res/layout/fragment_wallet.xml" value="0.264" />
         <entry key="..\:/projects/KamelX/app/src/main/res/layout/item_category.xml" value="0.22592592592592592" />
         <entry key="..\:/projects/KamelX/app/src/main/res/layout/item_match_home.xml" value="0.22592592592592592" />
         <entry key="..\:/projects/KamelX/app/src/main/res/layout/item_movie.xml" value="0.10989583333333333" />

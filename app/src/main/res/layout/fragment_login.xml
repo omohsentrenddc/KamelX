@@ -111,22 +111,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
-<!--      <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/input_password"
-        style="@style/editText"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dimen14"
-        android:hint="5xxxxxxxxxx"
-        android:layout_marginEnd="@dimen/dimen10"
-        android:inputType="text"
-        android:text="@={viewmodel.request.phone}"
-        android:textAppearance="@style/TextAppearance.AppCompat.Small"
-        android:textColor="@android:color/black"
-        android:textColorHint="@color/colorAccent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_password" />-->
 
 
       <com.google.android.material.textfield.TextInputLayout

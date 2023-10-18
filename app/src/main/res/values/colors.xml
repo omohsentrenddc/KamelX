@@ -12,6 +12,8 @@
   <color name="color_steps_text">#636363</color>
   <color name="color_notification_text">#4D5459</color>
   <color name="color_notification_date">#808080</color>
+  <color name="color_storke">#909090</color>
+  <color name="backgroundMatchDetails">#F3F2EE</color>
 
 
   <color name="welcomeHeader">#555D63</color>

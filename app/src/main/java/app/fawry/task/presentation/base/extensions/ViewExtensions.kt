@@ -27,6 +27,7 @@ import com.bumptech.glide.request.target.Target
 import com.google.android.material.snackbar.Snackbar
 import com.structure.base_mvvm.R
 import java.io.File
+import kotlin.math.roundToInt
 
 fun View.show() {
   if (visibility == View.VISIBLE) return
@@ -173,6 +174,23 @@ fun getItemsV2Binding(
   ) else initHorizontalRV(recyclerView, recyclerView.context, spanCount.toInt())
   recyclerView.adapter = itemsAdapter
 }
+
+@BindingAdapter("rv_ln","adapter_percentage","orientation")
+fun loadDrawable(recyclerView: RecyclerView, percentage: Int,adapter: RecyclerView.Adapter<*>?, orientation : Int?) {
+  val l = object : LinearLayoutManager(recyclerView.context, if(orientation == 0) HORIZONTAL else VERTICAL, false) {
+    override fun checkLayoutParams(lp: RecyclerView.LayoutParams?): Boolean {
+      if (lp != null) {
+        lp.width = (width.toFloat() * (percentage.toFloat() / 100f)).roundToInt()
+      }
+
+      return super.checkLayoutParams(lp)
+    }
+  }
+  recyclerView.layoutManager = l
+  recyclerView.adapter = adapter
+}
+
+
 
 @SuppressLint("WrongConstant")
 fun initVerticalRV(recyclerView: RecyclerView, context: Context?, spanCount: Int) {

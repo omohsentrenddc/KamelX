@@ -29,7 +29,16 @@
   <fragment
     android:id="@+id/newsFragment"
     android:name="app.fawry.task.presentation.news.NewsFragment"
-    android:label="@string/news" />
+    android:label="@string/news" >
+
+
+    <deepLink
+      android:id="@+id/news"
+      android:autoVerify="true"
+      app:uri="news://app.kamelx.news" />
+
+
+  </fragment>
   <fragment
     android:id="@+id/notificationFragment"
     android:name="app.fawry.task.presentation.notification.NotificationFragment"
@@ -41,6 +50,21 @@
       app:uri="notifications://app.kamelx.notifications" />
 
   </fragment>
+  <fragment
+    android:id="@+id/allMatchesFragment"
+    android:name="app.fawry.task.presentation.match.AllMatchesFragment"
+    android:label="@string/more_competitions">
+
+    <deepLink
+      android:id="@+id/competitions"
+      android:autoVerify="true"
+      app:uri="competitions://app.kamelx.competitions" />
+
+  </fragment>
+  <fragment
+    android:id="@+id/walletFragment"
+    android:name="app.fawry.task.presentation.balance.WalletFragment"
+    android:label="WalletFragment" />
 
 
 </navigation>

@@ -50,10 +50,16 @@ class HomeActivity : BaseActivity<ActivityHomeBinding>() {
 //        nav.navigateUp()
 //      }
       when(destination.id){
-        R.id.homeFragment -> binding.toolbar.hide()
+        R.id.homeFragment -> {
+          hideBack()
+          binding.toolbar.hide()
+        }
         R.id.settingsFragment,R.id.newsFragment ->{
           binding.tvHomeTitle.text = destination.label
-          binding.toolbar.show()
+          showBack(destination.label as String)
+        }
+        R.id.allMatchesFragment ->{
+          showBack(destination.label as String)
         }
         else -> binding.toolbar.show()
       }
@@ -68,12 +74,31 @@ class HomeActivity : BaseActivity<ActivityHomeBinding>() {
 
   }
 
+  private fun showBack(name: String){
+    binding.toolbar.show()
+    binding.icBack.show()
+    binding.icNotification.hide()
+    binding.icMenu.hide()
+    binding.tvHomeTitle.show()
+    binding.tvHomeTitle.text = name
+  }
+  private fun hideBack(){
+    binding.icBack.hide()
+    binding.icNotification.show()
+    binding.icMenu.show()
+    binding.tvHomeTitle.hide()
+  }
+
+
   private fun initClicks() {
     binding.icMenu.setOnClickListener {
       navigate(nav, "more", "app.kamelx.more")
     }
     binding.icNotification.setOnClickListener {
       navigate(nav, "notifications", "app.kamelx.notifications")
+    }
+    binding.icBack.setOnClickListener {
+      onBackPressed()
     }
   }
 

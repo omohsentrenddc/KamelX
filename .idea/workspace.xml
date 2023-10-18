@@ -8,7 +8,6 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="setupObservers" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="AutoImportSettings">
@@ -16,354 +15,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7f64cf3a-9ffb-4d53-bc81-1cf9d27bbc44" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules/Fawry.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules/app/Fawry.app.androidTest.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules/app/Fawry.app.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules/app/Fawry.app.main.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules/app/Fawry.app.unitTest.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules/prettyPopUp/Fawry.prettyPopUp.androidTest.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules/prettyPopUp/Fawry.prettyPopUp.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules/prettyPopUp/Fawry.prettyPopUp.main.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules/prettyPopUp/Fawry.prettyPopUp.unitTest.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/build.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/proguard-rules.pro" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/release/output-metadata.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/assets/loading.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/ic_launcher_debug-playstore.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/ic_launcher_round_debug-playstore.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/core/MyApplication.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/core/di/module/AppPreferencesModule.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/core/di/module/NetworkServicesModule.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/core/di/module/RepositoryModule.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/core/di/module/RetrofitModule.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/core/di/module/UseCaseModule.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/core/language/LanguagesHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/core/language/MyContextWrapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/data/auth/AuthRemoteDataSource.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/data/auth/AuthRepositoryImpl.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/data/auth/AuthServices.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/data/local/preferences/AppPreferences.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/data/remote/BaseRemoteDataSource.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/data/repository/AccountRepositoryImpl.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/domain/auth/entity/LoginResponse.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/domain/auth/entity/UserModel.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/domain/auth/repository/AuthRemoteRepository.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/domain/auth/repository/AuthRepository.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/domain/auth/request/LogInRequest.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/domain/auth/request/RegisterRequest.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/domain/auth/request/SendOrCheckCodeRequest.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/domain/auth/request/UpdatePasswordRequest.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/domain/auth/request/UpdateProfileRequest.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/domain/auth/request/UpdateTokenRequest.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/domain/auth/request/forgetPassword/ForgetPasswordRequest.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/domain/auth/request/forgetPassword/ForgetPasswordResponse.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/domain/auth/request/forgetPassword/UpdateTokenGuestUserRequest.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/domain/auth/use_case/AuthUseCase.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/domain/auth/use_case/UserLocalUseCase.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/domain/category/entity/Category.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/domain/category/entity/CategoryResponse.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/domain/category/repository/CategoryRemoteRepository.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/domain/category/use_case/CategoryUseCase.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/domain/home/model/HomeResponse.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/domain/home/model/match/Competiton.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/domain/home/model/match/FirstCompetitor.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/domain/home/model/match/MatchModel.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/domain/home/model/match/SecondCompetitor.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/domain/home/repository/HomeRemoteRepository.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/domain/news/NewsModel.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/domain/notification/NotificationItem.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/domain/repository/AccountRepository.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/domain/utils/BaseRequest.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/domain/utils/BaseResponse.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/domain/utils/Converter.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/domain/utils/ErrorResponse.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/domain/utils/FailureStatus.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/domain/utils/IdNameIcon.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/domain/utils/Resource.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/presentation/activity/auth/AuthActivity.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/presentation/activity/auth/AuthBaseViewModel.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/presentation/auth/confirmCode/ConfirmCodeDialog.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/presentation/auth/confirmCode/ConfirmCodeViewModel.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/presentation/auth/forgetPassword/ForgetPasswordDialog.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/presentation/auth/forgetPassword/ForgetPasswordViewModel.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/presentation/auth/login/LoginFragment.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/presentation/auth/login/LoginViewModel.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/presentation/auth/register/RegisterFragment.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/presentation/auth/register/RegisterViewModel.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/presentation/auth/updatePassword/ChangePasswordDialog.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/presentation/auth/updatePassword/ChangePasswordViewModel.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/presentation/base/BaseActivity.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/presentation/base/BaseDialog.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/presentation/base/BaseFragment.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/presentation/base/BaseTabsFragment.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/presentation/base/BaseViewModel.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/presentation/base/ISubmitAction.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/presentation/base/custom_views/TimePicker.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/presentation/base/custom_views/chip/FragmentChipExtensions.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/presentation/base/custom_views/chip/GlideChip.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/presentation/base/extensions/ActivityExtensions.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/presentation/base/extensions/CalenderExtensions.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/presentation/base/extensions/CommonExtensions.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/presentation/base/extensions/ContextExtention.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/presentation/base/extensions/FragmentExtensions.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/presentation/base/extensions/NavigationExtensions.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/presentation/base/extensions/Uri.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/presentation/base/utils/DateUtils.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/presentation/base/utils/EndlessRecyclerViewScrollListener.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/presentation/base/utils/KeyboardUtils.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/presentation/base/utils/SingleLiveEvent.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/presentation/base/utils/SwipeToDeleteCallback.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/presentation/base/utils/Utils.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/presentation/home/adapter/HomeMatchAdapter.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/presentation/home/viewModels/ItemMatchViewModel.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/presentation/news/ItemNewsViewModel.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/presentation/news/NewsAdapter.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/presentation/news/NewsFragment.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/presentation/news/NewsViewModel.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/presentation/notification/ItemNotificationViewModel.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/presentation/notification/NotificationFragment.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/presentation/notification/NotificationViewModel.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/presentation/notification/NotificationsAdapter.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/presentation/settings/SettingItem.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/presentation/settings/SettingsAdapter.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/presentation/settings/SettingsFragment.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/presentation/settings/viewmodel/ItemSettingsViewModel.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/presentation/settings/viewmodel/SettingsViewModel.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/presentation/splash/SplashActivity.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/presentation/splash/SplashViewModel.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/anim/anim_slide_in_left.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/anim/anim_slide_in_right.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/anim/anim_slide_out_left.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/anim/anim_slide_out_right.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-ar/bg_no_image.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/img_login.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/img_register.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/img_saudia.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/img_login.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/img_register.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/img_saudia.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/img_login.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/img_register.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/img_saudia.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi/img.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi/img_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi/img_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi/img_login.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi/img_register.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi/img_saudia.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/bg_rounded_steps_16.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/bg_rounded_strock_white_32.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/bg_solid_primary_25.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/bg_solid_primary_dark_25.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_menu_grid.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_notification_default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_play.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_plus.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_steps_charge.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_steps_register.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_steps_vote.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/font/ibm_bold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/font/ibm_medium.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/font/ibm_regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_auth.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_splash.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/change_password_dialog.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/confirm_code_dialog.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/forget_password_dialog.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_login.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_news.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_notifications.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_register.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_category.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_match_home.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_news.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_notification.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/progress_dialog.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/menu/bottom_home_menu.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_launcher_debug.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_launcher_debug_round.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round_debug.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round_debug_round.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher_debug.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher_debug_round.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher_debug.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher_debug_round.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher_debug.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher_debug_round.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher_debug.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher_debug_round.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher_debug.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher_debug_round.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/navigation/nav_auth.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/values/ic_launcher_background.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/values/ic_launcher_debug_background.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/values/ic_launcher_round_debug_background.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/xml/network_security_config.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/.gradle/7.0.2/dependencies-accessors/dependencies-accessors.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/.gradle/7.0.2/dependencies-accessors/gc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/.gradle/7.0.2/executionHistory/executionHistory.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/.gradle/7.0.2/fileChanges/last-build.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/.gradle/7.0.2/fileHashes/fileHashes.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/.gradle/7.0.2/gc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/.gradle/checksums/checksums.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/.gradle/checksums/md5-checksums.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/.gradle/vcs-1/gc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/build.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/build/20220911_4795204063815889742.compiler.options" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/build/20220912_10580836107859207627.compiler.options" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/build/20220912_10744513722033145851.compiler.options" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/build/20220912_10812024566828071524.compiler.options" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/build/20220912_15621111666790737020.compiler.options" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/build/20220912_15989333563633099026.compiler.options" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/build/20220912_164976958626443740.compiler.options" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/build/20220912_16895809741638924650.compiler.options" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/build/20220912_3811963020537092636.compiler.options" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/build/20220912_3916223438524991626.compiler.options" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/build/20220912_6992894485928723467.compiler.options" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/build/20220912_9752167503707901698.compiler.options" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/build/classes/kotlin/main/Config$AppConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/build/classes/kotlin/main/Config$Dependencies.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/build/classes/kotlin/main/Config$Environments.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/build/classes/kotlin/main/Config$Plugins.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/build/classes/kotlin/main/Config.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/build/classes/kotlin/main/Libraries.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/build/classes/kotlin/main/META-INF/buildSrc.kotlin_module" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/build/classes/kotlin/main/Versions.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/buildSrcjar-classes.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/build-history.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/inputs/source-to-output.tab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/inputs/source-to-output.tab.keystream" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/inputs/source-to-output.tab.keystream.len" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/inputs/source-to-output.tab.len" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/inputs/source-to-output.tab.values.at" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/inputs/source-to-output.tab_i" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/inputs/source-to-output.tab_i.len" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/class-attributes.tab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/class-attributes.tab.keystream" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/class-attributes.tab.keystream.len" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/class-attributes.tab.len" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/class-attributes.tab.values.at" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/class-attributes.tab_i" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/class-attributes.tab_i.len" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.keystream" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.keystream.len" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.len" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.values.at" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab_i" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab_i.len" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/constants.tab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/constants.tab.keystream" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/constants.tab.keystream.len" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/constants.tab.len" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/constants.tab.values.at" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/constants.tab_i" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/constants.tab_i.len" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab.keystream" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab.keystream.len" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab.len" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab.values.at" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab_i" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab_i.len" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/proto.tab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/proto.tab.keystream" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/proto.tab.keystream.len" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/proto.tab.len" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/proto.tab.values.at" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/proto.tab_i" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/proto.tab_i.len" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab.keystream" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab.keystream.len" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab.len" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab.values.at" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab_i" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab_i.len" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/lookups/counters.tab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/lookups/file-to-id.tab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/lookups/file-to-id.tab.keystream" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/lookups/file-to-id.tab.keystream.len" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/lookups/file-to-id.tab.len" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/lookups/file-to-id.tab.values.at" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/lookups/file-to-id.tab_i" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/lookups/file-to-id.tab_i.len" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/lookups/id-to-file.tab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/lookups/id-to-file.tab.keystream" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/lookups/id-to-file.tab.keystream.len" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/lookups/id-to-file.tab.len" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/lookups/id-to-file.tab.values.at" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/lookups/id-to-file.tab_i" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/lookups/id-to-file.tab_i.len" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/lookups/lookups.tab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/lookups/lookups.tab.keystream" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/lookups/lookups.tab.keystream.len" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/lookups/lookups.tab.len" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/lookups/lookups.tab.values.at" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/lookups/lookups.tab_i" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/lookups/lookups.tab_i.len" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/last-build.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/build/libs/buildSrc.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/build/pluginUnderTestMetadata/plugin-under-test-metadata.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/build/reports/plugin-development/validation-report.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/build/source-roots/buildSrc/source-roots.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/build/tmp/jar/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/src/main/java/Config.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/src/main/java/Libraries.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/src/main/java/Versions.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hs_err_pid6400.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hs_err_pid8116.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/architecture.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/data_layer.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/ui_layer.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/local.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myGitHooks/pre-commit-mac" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myGitHooks/pre-commit-windows" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pre-commit" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/prettyPopUp/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/prettyPopUp/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/prettyPopUp/proguard-rules.pro" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/prettyPopUp/src/main/AndroidManifest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/prettyPopUp/src/main/ic_launcher-playstore.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/prettyPopUp/src/main/java/codes/grand/pretty_pop_up/PrettyPopUpHelper.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/prettyPopUp/src/main/res/drawable/bg_pretty_pop_up.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/prettyPopUp/src/main/res/drawable/btn_action_negative.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/prettyPopUp/src/main/res/drawable/btn_action_positive.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/prettyPopUp/src/main/res/drawable/corner_view_gray_border.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/prettyPopUp/src/main/res/font/ibm_regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/prettyPopUp/src/main/res/layout/pretty_pop_up.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/prettyPopUp/src/main/res/values/colors.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/prettyPopUp/src/main/res/values/dimens.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/prettyPopUp/src/main/res/values/styles.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/replay_pid6400.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/replay_pid8116.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/presentation/balance/WalletFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/presentation/balance/WalletViewModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/presentation/match/AllMatchesFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/presentation/match/AllMatchesViewModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/presentation/match/MatchDetailsFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/presentation/match/MatchDetailsViewModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/bg_rounded_grey_strock_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/bg_rounded_match_details_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/bg_rounded_strock_primary_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_circle_primary_dark.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_correct_dialog.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_wallet_balance.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_all_matches.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_match_details.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_wallet.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.0.2/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.0.2/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.0.2/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.0.2/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.0.2/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.0.2/fileHashes/fileHashes.bin" afterDir="false" />
@@ -376,27 +42,34 @@
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/app/Fawry.app.androidTest.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/Fawry.app.androidTest.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/app/Fawry.app.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/Fawry.app.main.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/app/Fawry.app.unitTest.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/Fawry.app.unitTest.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/navEditor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/navEditor.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle.kts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/data/home/HomeRemoteDataSource.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/data/home/HomeRemoteDataSource.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/data/home/HomeRepositoryImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/data/home/HomeRepositoryImpl.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/data/home/HomeServices.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/data/home/HomeServices.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/domain/home/model/match/FirstCompetitor.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/domain/home/model/match/MatchModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/domain/home/model/match/MatchModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/domain/home/model/match/SecondCompetitor.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/domain/home/model/match/PlayerModel.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/domain/home/repository/HomeRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/domain/home/repository/HomeRepository.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/domain/home/use_case/HomeUseCase.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/domain/home/use_case/HomeUseCase.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/presentation/base/HomeActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/presentation/base/HomeActivity.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/presentation/base/extensions/ViewExtensions.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/presentation/base/extensions/ViewExtensions.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/presentation/base/extensions/_Toast.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/presentation/base/extensions/_Toast.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/presentation/base/utils/Constants.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/presentation/base/utils/Constants.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/presentation/home/list/adapter/CategoriesAdapter.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/presentation/home/list/ui/HomeFragment.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/presentation/home/list/viewModels/HomeViewModel.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/presentation/home/viewModels/HomeViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/presentation/home/viewModels/HomeViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_back_circle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_back_circle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_back_white.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_back_white.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_home.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_login.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_login.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/item_match_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_match_home.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/menu/bottom_home_menu.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/menu/bottom_home_menu.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/navigation/nav_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/navigation/nav_home.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/values-ar/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-ar/strings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/buildSrc/.gradle/7.0.2/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/.gradle/7.0.2/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/buildSrc/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
     </list>
@@ -442,18 +115,20 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
+    <property name="android-custom-viewC:/Users/Lenovo/.gradle/caches/modules-2/files-2.1/androidx.recyclerview/recyclerview/1.1.0/f2bdf79e1977939817f54a9d3e2f6bc52b63bdd0/recyclerview-1.1.0-sources.jar!/androidx/recyclerview/widget/RecyclerView.java_RecyclerView_DIMENSIONS" value="1080&#10;1920" />
+    <property name="android-custom-viewC:/Users/Lenovo/.gradle/caches/modules-2/files-2.1/androidx.recyclerview/recyclerview/1.1.0/f2bdf79e1977939817f54a9d3e2f6bc52b63bdd0/recyclerview-1.1.0-sources.jar!/androidx/recyclerview/widget/RecyclerView.java_SELECTED" value="RecyclerView" />
     <property name="cidr.known.project.marker" value="true" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/drawable-ar" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\projects\KamelX\app\src\main\res\drawable-xxxhdpi" />
+      <recent name="E:\projects\KamelX\app\src\main\res\layout" />
+      <recent name="E:\projects\KamelX\app\src\main\res\drawable" />
       <recent name="E:\projects\KamelX\app\src\main\res\drawable-ar" />
       <recent name="E:\projects\KamelX\app\src\main\java\app\fawry\task\presentation\home\viewModels" />
-      <recent name="E:\projects\KamelX\app\src\main\res\layout" />
-      <recent name="E:\projects\KamelX\app\src\main\java\app\fawry\task\presentation\base\extensions" />
-      <recent name="E:\projects\KamelX\app\src\main\java\app\fawry\task\presentation\notification" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\projects\KamelX\app\src\main\res\drawable" />
@@ -466,11 +141,11 @@
       <recent name="app.fawry.task.presentation.auth.login" />
     </key>
     <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
+      <recent name="app.fawry.task.presentation.match" />
+      <recent name="app.fawry.task.presentation.balance" />
       <recent name="app.fawry.task.presentation.home.adapter" />
       <recent name="app.fawry.task.presentation.notification" />
       <recent name="app.fawry.task.domain.notification" />
-      <recent name="app.fawry.task.data.home" />
-      <recent name="app.fawry.task.domain.auth.use_case" />
     </key>
   </component>
   <component name="RunManager">

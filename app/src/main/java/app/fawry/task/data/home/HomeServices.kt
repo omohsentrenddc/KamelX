@@ -7,6 +7,7 @@ import app.fawry.task.domain.auth.request.UpdatePasswordRequest
 import app.fawry.task.domain.auth.request.forgetPassword.ForgetPasswordRequest
 import app.fawry.task.domain.auth.request.forgetPassword.ForgetPasswordResponse
 import app.fawry.task.domain.home.model.HomeResponse
+import app.fawry.task.domain.home.model.match.MatchModel
 import app.fawry.task.domain.news.NewsModel
 import app.fawry.task.domain.notification.NotificationItem
 import app.fawry.task.domain.utils.BaseResponse
@@ -20,6 +21,12 @@ interface HomeServices {
 
   @GET("home")
   suspend fun home(): BaseResponse<HomeResponse>
+
+  @GET("matches/all")
+  suspend fun allMatches(): BaseResponse<ArrayList<MatchModel>>
+
+  @GET("matches/{id}")
+  suspend fun matchDetails(@Query("id") id: Int): BaseResponse<MatchModel>
 
 
   @GET("notifications")

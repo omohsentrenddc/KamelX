@@ -67,5 +67,14 @@
   <string name="round">الجولة</string>
   <string name="vote">تصويت</string>
   <string name="current_competitions">المنافسات المتاحة</string>
+    <string name="point_balance">رصيد النقاط</string>
+  <string name="wallet_automatic"><![CDATA[المحفظة > الآلية]]></string>
+  <string name="wallet_charge_wallet"><![CDATA[المحفظة > اشحن محفظتك]]></string>
+  <string name="enter_another_balance">أدخل مبلغ اخر</string>
+  <string name="cost">التكلفة</string>
+  <string name="pay">دفع</string>
+  <string name="more_competitions">المزيد من المنافسات</string>
+  <string name="wallet">المحفظة</string>
+    <string name="owner">المالك</string>
 
 </resources>

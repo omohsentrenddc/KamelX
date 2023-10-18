@@ -36,6 +36,7 @@
             android:id="@+id/ic_menu"
             android:layout_width="@dimen/dimen40"
             android:layout_height="@dimen/dimen40"
+            android:visibility="gone"
             android:layout_marginEnd="@dimen/dimen10"
             android:src="@drawable/ic_menu_grid"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -51,6 +52,17 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+          <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ic_back"
+            android:layout_width="@dimen/dimen40"
+            android:layout_height="@dimen/dimen40"
+            android:layout_marginEnd="@dimen/dimen10"
+            android:src="@drawable/ic_back_circle"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

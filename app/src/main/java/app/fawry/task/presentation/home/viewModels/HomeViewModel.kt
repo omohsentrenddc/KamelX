@@ -46,6 +46,10 @@ class HomeViewModel @Inject constructor(
     v.context.navigate(v, "more", "app.kamelx.more")
   }
 
+  fun competitions(v: View){
+    v.context.navigate(v, "competitions", "app.kamelx.competitions")
+  }
+
   /** Get Categories Api using useCase invoke function **/
   fun getHome() {
     homeUseCase.home().onEach {
@@ -67,6 +71,7 @@ class HomeViewModel @Inject constructor(
   }
 
   fun newsDetails(v: View) {
+    v.context.navigate(v, "news", "app.kamelx.news")
 
   }
 

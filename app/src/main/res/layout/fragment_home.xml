@@ -19,6 +19,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
       android:layout_width="match_parent"
+      android:paddingBottom="@dimen/dimen20"
       android:layout_height="match_parent">
 
 
@@ -37,6 +38,7 @@
           android:layout_width="41dp"
           android:layout_height="41dp"
           android:src="@drawable/ic_menu_grid"
+
           android:onClick="@{ (v) -> viewmodel.more(v) }"
           app:layout_constraintEnd_toEndOf="parent"
           app:layout_constraintTop_toTopOf="parent" />
@@ -337,14 +339,31 @@
         android:id="@+id/recyclerViewMatches"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:adapter="@{viewmodel.adapter}"
+        adapter_percentage="@{viewmodel.adapter}"
+        rv_ln="@{80}"
+        orientation="@{0}"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
         android:nestedScrollingEnabled="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_competitons"
-        app:orientation="@{`2`}"
-        app:span="@{`1`}"
         tools:listitem="@layout/item_match_home" />
+
+      <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_competitions"
+        style="@style/btnSubmitMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="@{ (v) -> viewmodel.competitions(v) }"
+        android:paddingStart="@dimen/dimen50"
+        android:paddingEnd="@dimen/dimen50"
+        android:text="@string/more_competitions"
+        app:icon="@drawable/ic_plus"
+        app:iconGravity="start"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerViewMatches" />
+
 
 
       <androidx.constraintlayout.widget.ConstraintLayout
@@ -353,11 +372,12 @@
         android:layout_height="168dp"
         android:layout_marginBottom="@dimen/dimen20"
         android:layout_marginTop="@dimen/dimen30"
+
         android:background="@color/colorPrimaryDark"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/recyclerViewMatches">
+        app:layout_constraintTop_toBottomOf="@+id/btn_competitions">
 
 
         <androidx.constraintlayout.widget.Guideline
@@ -445,22 +465,22 @@
       </androidx.cardview.widget.CardView>
 
 
-      <com.google.android.material.button.MaterialButton
-        android:id="@+id/materialButton2"
-        style="@style/btnSubmitMedium"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="@{ (v) -> viewmodel.moreNews(v) }"
-        android:paddingStart="@dimen/dimen50"
-        android:paddingEnd="@dimen/dimen50"
-        android:text="@string/more_results"
-        app:icon="@drawable/ic_plus"
-        app:iconGravity="start"
-        android:layout_marginTop="@dimen/dimen20"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+<!--      <com.google.android.material.button.MaterialButton-->
+<!--        android:id="@+id/materialButton2"-->
+<!--        style="@style/btnSubmitMedium"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:onClick="@{ (v) -> viewmodel.moreNews(v) }"-->
+<!--        android:paddingStart="@dimen/dimen50"-->
+<!--        android:paddingEnd="@dimen/dimen50"-->
+<!--        android:text="@string/more_results"-->
+<!--        app:icon="@drawable/ic_plus"-->
+<!--        app:iconGravity="start"-->
+<!--        android:layout_marginTop="@dimen/dimen20"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />-->
 
     </androidx.constraintlayout.widget.ConstraintLayout>
   </androidx.core.widget.NestedScrollView>

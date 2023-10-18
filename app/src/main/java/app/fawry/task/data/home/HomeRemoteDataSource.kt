@@ -13,10 +13,22 @@ class HomeRemoteDataSource @Inject constructor(private val apiService: HomeServi
   suspend fun news() = safeApiCall {
     apiService.news()
   }
-  suspend fun home() = safeApiCall {
-    apiService.home()
-  }
+
   suspend fun notifications() = safeApiCall {
     apiService.notifications()
   }
+
+  suspend fun home() = safeApiCall {
+    apiService.home()
+  }
+
+  suspend fun allMatches() = safeApiCall {
+    apiService.allMatches()
+  }
+
+  suspend fun matchDetails(id: Int) = safeApiCall {
+    apiService.matchDetails(id)
+  }
+
+
 }

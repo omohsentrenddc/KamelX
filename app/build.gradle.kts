@@ -130,6 +130,9 @@ dependencies {
   implementation(Libraries.loadingAnimations)
   implementation(Libraries.alerter)
 
+  //circleImage
+  implementation("de.hdodenhof:circleimageview:3.1.0")
+
   //coil
   implementation("io.coil-kt:coil:2.2.2")
 
