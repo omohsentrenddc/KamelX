@@ -7,14 +7,22 @@
         <entry key="..\:/projects/KamelX/app/src/main/res/drawable-ar/bg_rounded_white_32.xml" value="0.17" />
         <entry key="..\:/projects/KamelX/app/src/main/res/drawable-ar/bg_solid_primary_25.xml" value="0.117" />
         <entry key="..\:/projects/KamelX/app/src/main/res/drawable-ar/bg_solid_primary_dark_25.xml" value="0.117" />
+        <entry key="..\:/projects/KamelX/app/src/main/res/drawable-hdpi/bg_rounded_primary_12.xml" value="0.121" />
+        <entry key="..\:/projects/KamelX/app/src/main/res/drawable-hdpi/bg_rounded_primary_opacity_12.xml" value="0.223" />
+        <entry key="..\:/projects/KamelX/app/src/main/res/drawable-hdpi/bg_rounded_secondary_strock_12.xml" value="0.121" />
+        <entry key="..\:/projects/KamelX/app/src/main/res/drawable-hdpi/bg_rounded_winner_strock_10.xml" value="0.223" />
         <entry key="..\:/projects/KamelX/app/src/main/res/drawable-xxxhdpi/bg_rounded_match_details_16.xml" value="0.1705" />
         <entry key="..\:/projects/KamelX/app/src/main/res/drawable/bg_rounded_grey_strock_12.xml" value="0.1675" />
+        <entry key="..\:/projects/KamelX/app/src/main/res/drawable/bg_rounded_primary_12.xml" value="0.223" />
+        <entry key="..\:/projects/KamelX/app/src/main/res/drawable/bg_rounded_secondary_strock_12.xml" value="0.223" />
         <entry key="..\:/projects/KamelX/app/src/main/res/drawable/bg_rounded_setting_item_14.xml" value="0.121" />
         <entry key="..\:/projects/KamelX/app/src/main/res/drawable/bg_rounded_steps_16.xml" value="0.117" />
         <entry key="..\:/projects/KamelX/app/src/main/res/drawable/bg_rounded_strock_primary_12.xml" value="0.1675" />
         <entry key="..\:/projects/KamelX/app/src/main/res/drawable/bg_rounded_strock_white_32.xml" value="0.1675" />
         <entry key="..\:/projects/KamelX/app/src/main/res/drawable/bg_rounded_text.xml" value="0.17" />
         <entry key="..\:/projects/KamelX/app/src/main/res/drawable/bg_rounded_white_19.xml" value="0.121" />
+        <entry key="..\:/projects/KamelX/app/src/main/res/drawable/bg_rounded_winner_10.xml" value="0.223" />
+        <entry key="..\:/projects/KamelX/app/src/main/res/drawable/bg_solid_primary_25.xml" value="0.121" />
         <entry key="..\:/projects/KamelX/app/src/main/res/drawable/bottom_navigation_color.xml" value="0.17" />
         <entry key="..\:/projects/KamelX/app/src/main/res/drawable/ic_arrow_down.xml" value="0.246" />
         <entry key="..\:/projects/KamelX/app/src/main/res/drawable/ic_arrow_next.xml" value="0.17" />
@@ -41,6 +49,7 @@
         <entry key="..\:/projects/KamelX/app/src/main/res/layout/confirm_code_dialog.xml" value="0.2222222222222222" />
         <entry key="..\:/projects/KamelX/app/src/main/res/layout/forget_password_dialog.xml" value="0.2222222222222222" />
         <entry key="..\:/projects/KamelX/app/src/main/res/layout/fragment_all_matches.xml" value="0.22962962962962963" />
+        <entry key="..\:/projects/KamelX/app/src/main/res/layout/fragment_available_matches.xml" value="0.22592592592592592" />
         <entry key="..\:/projects/KamelX/app/src/main/res/layout/fragment_home.xml" value="0.1881227580709446" />
         <entry key="..\:/projects/KamelX/app/src/main/res/layout/fragment_login.xml" value="0.290633608815427" />
         <entry key="..\:/projects/KamelX/app/src/main/res/layout/fragment_match_details.xml" value="0.4" />
@@ -50,9 +59,11 @@
         <entry key="..\:/projects/KamelX/app/src/main/res/layout/fragment_register.xml" value="0.22592592592592592" />
         <entry key="..\:/projects/KamelX/app/src/main/res/layout/fragment_settings.xml" value="0.22592592592592592" />
         <entry key="..\:/projects/KamelX/app/src/main/res/layout/fragment_splash.xml" value="0.22592592592592592" />
+        <entry key="..\:/projects/KamelX/app/src/main/res/layout/fragment_vote.xml" value="0.176" />
         <entry key="..\:/projects/KamelX/app/src/main/res/layout/fragment_wallet.xml" value="0.264" />
         <entry key="..\:/projects/KamelX/app/src/main/res/layout/item_category.xml" value="0.22592592592592592" />
         <entry key="..\:/projects/KamelX/app/src/main/res/layout/item_match_home.xml" value="0.22592592592592592" />
+        <entry key="..\:/projects/KamelX/app/src/main/res/layout/item_match_result.xml" value="0.22592592592592592" />
         <entry key="..\:/projects/KamelX/app/src/main/res/layout/item_movie.xml" value="0.10989583333333333" />
         <entry key="..\:/projects/KamelX/app/src/main/res/layout/item_news.xml" value="0.22592592592592592" />
         <entry key="..\:/projects/KamelX/app/src/main/res/layout/item_notification.xml" value="0.22592592592592592" />

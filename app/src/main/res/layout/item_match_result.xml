@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:card_view="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools">
+
+  <data>
+
+    <variable
+      name="iSubmitAction"
+      type="app.fawry.task.presentation.base.ISubmitAction" />
+
+
+    <import type="app.fawry.task.presentation.base.utils.Constants" />
+
+    <import type="android.view.View" />
+
+    <variable
+      name="itemViewModels"
+      type="app.fawry.task.presentation.home.viewModels.ItemMatchViewModel" />
+
+  </data>
+
+  <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="@dimen/dimen5"
+      android:layout_marginTop="@dimen/dimen5"
+      android:layout_marginEnd="@dimen/dimen5"
+      android:layout_marginBottom="@dimen/dimen5"
+      android:background="@drawable/bg_rounded_white_19"
+      android:paddingStart="@dimen/dimen5"
+      android:paddingEnd="@dimen/dimen5">
+
+      <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_competition_name"
+        style="@style/txtStyleRegular"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen5"
+        android:layout_marginTop="@dimen/dimen5"
+        android:layout_marginEnd="@dimen/dimen5"
+        android:text="@{itemViewModels.model.competiton.name}"
+        android:textAlignment="viewStart"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="asdsad" />
+
+      <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_competition_round"
+        style="@style/txtStyleRegular"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen5"
+        android:layout_marginTop="@dimen/dimen5"
+        android:layout_marginEnd="@dimen/dimen5"
+        android:text="@{@string/round +` `+ itemViewModels.model.round}"
+        android:textAlignment="viewStart"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/round" />
+
+      <LinearLayout
+        android:id="@+id/ll_competition"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen10"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_competition_name">
+
+        <LinearLayout
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:padding="@dimen/dimen10"
+          android:layout_weight="1"
+          android:background="@{itemViewModels.model.firstCompetitor.winner ? @drawable/bg_rounded_winner_strock_10 : null}"
+          android:orientation="vertical">
+
+          <androidx.cardview.widget.CardView
+            android:layout_width="123dp"
+            android:layout_height="123dp"
+            android:layout_gravity="center"
+            android:elevation="10dp"
+            app:cardCornerRadius="25dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              app:loadImageCache="@{itemViewModels.model.firstCompetitor.camelImage}" />
+
+          </androidx.cardview.widget.CardView>
+
+          <androidx.appcompat.widget.AppCompatTextView
+            style="@style/txtStyleBold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen5"
+            android:layout_marginTop="@dimen/dimen5"
+            android:layout_marginEnd="@dimen/dimen5"
+            android:gravity="center"
+            android:text="@{itemViewModels.model.firstCompetitor.camelName}"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="asdsad" />
+
+          <androidx.appcompat.widget.AppCompatTextView
+            style="@style/txtStyleRegular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen5"
+            android:layout_marginTop="@dimen/dimen5"
+            android:layout_marginEnd="@dimen/dimen5"
+            android:gravity="center"
+            android:text="@{itemViewModels.model.firstCompetitor.ownerName}"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="asdsad" />
+
+        </LinearLayout>
+
+        <LinearLayout
+          android:layout_width="0dp"
+          android:background="@{itemViewModels.model.second_competitor.winner ? @drawable/bg_rounded_winner_strock_10 : null}"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:padding="@dimen/dimen10"
+          android:orientation="vertical">
+
+
+          <androidx.cardview.widget.CardView
+            android:layout_width="123dp"
+            android:layout_height="123dp"
+            android:layout_gravity="center"
+            android:elevation="10dp"
+            app:cardCornerRadius="25dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              app:loadImageCache="@{itemViewModels.model.second_competitor.camelImage}" />
+
+          </androidx.cardview.widget.CardView>
+
+          <androidx.appcompat.widget.AppCompatTextView
+            style="@style/txtStyleBold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen5"
+            android:layout_marginTop="@dimen/dimen5"
+            android:layout_marginEnd="@dimen/dimen5"
+            android:gravity="center"
+            android:text="@{itemViewModels.model.second_competitor.camelName}"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="asdsad" />
+
+          <androidx.appcompat.widget.AppCompatTextView
+            style="@style/txtStyleRegular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen5"
+            android:layout_marginTop="@dimen/dimen5"
+            android:layout_marginEnd="@dimen/dimen5"
+            android:gravity="center"
+            android:text="@{itemViewModels.model.second_competitor.ownerName}"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="asdsad" />
+
+        </LinearLayout>
+
+      </LinearLayout>
+
+
+      <com.google.android.material.button.MaterialButton
+        android:id="@+id/materialButton3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/round_winner"
+        android:textColor="@color/white"
+        android:visibility="@{itemViewModels.model.firstCompetitor.winner ? View.VISIBLE : View.GONE , default = gone}"
+        app:backgroundTint="@color/colorWinner"
+        app:cornerRadius="@dimen/dimen10"
+        app:icon="@drawable/ic_winner_cup"
+        app:iconGravity="end"
+        app:layout_constraintBottom_toBottomOf="@+id/ll_competition"
+        app:layout_constraintEnd_toEndOf="@+id/guideline_percentage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_competition" />
+
+      <com.google.android.material.button.MaterialButton
+        android:id="@+id/materialButton4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/round_winner"
+        android:textColor="@color/white"
+        android:visibility="@{itemViewModels.model.second_competitor.winner ? View.VISIBLE : View.GONE , default = gone}"
+        app:backgroundTint="@color/colorWinner"
+        app:cornerRadius="@dimen/dimen10"
+        app:icon="@drawable/ic_winner_cup"
+        app:iconGravity="end"
+        app:layout_constraintBottom_toBottomOf="@+id/ll_competition"
+        tools:visibility="visible"
+        app:layout_constraintStart_toStartOf="@+id/guideline_percentage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_competition" />
+
+
+      <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_percentage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@{itemViewModels.vote()}"
+        tools:layout_constraintGuide_percent="0.5" />
+
+
+      <!--      android:visibility="@{itemViewModels.model.isAvailable ? View.VISIBLE : View.GONE}"-->
+
+      <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="ll_competition,materialButton3,materialButton4" />
+
+
+
+      <View
+        android:id="@+id/view_percentage_first"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dimen20"
+        android:layout_marginStart="@dimen/dimen20"
+        android:background="@drawable/bg_solid_primary_25"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/barrier2" />
+
+      <View
+        android:id="@+id/view_percentage_second"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dimen20"
+        android:layout_marginStart="@dimen/dimen20"
+        android:background="@drawable/bg_solid_primary_25"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/barrier2" />
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+  </RelativeLayout>
+
+</layout>

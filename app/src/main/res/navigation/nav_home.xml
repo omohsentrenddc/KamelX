@@ -52,7 +52,7 @@
   </fragment>
   <fragment
     android:id="@+id/allMatchesFragment"
-    android:name="app.fawry.task.presentation.match.AllMatchesFragment"
+    android:name="app.fawry.task.presentation.match.all.ResultMatchesFragment"
     android:label="@string/more_competitions">
 
     <deepLink
@@ -65,6 +65,43 @@
     android:id="@+id/walletFragment"
     android:name="app.fawry.task.presentation.balance.WalletFragment"
     android:label="WalletFragment" />
+  <fragment
+    android:id="@+id/matchDetailsFragment"
+    android:name="app.fawry.task.presentation.match.details.MatchDetailsFragment"
+    android:label="@string/current_competitions" >
+
+
+    <deepLink
+      android:id="@+id/competitions"
+      android:autoVerify="true"
+      app:uri="competitions://app.kamelx.competitions/{id}" />
+    <argument
+      android:name="id"
+      app:argType="integer" />
+    <action
+      android:id="@+id/action_matchDetailsFragment_to_voteFragment"
+      app:enterAnim="@anim/anim_slide_in_right"
+      app:exitAnim="@anim/anim_slide_out_left"
+      app:popEnterAnim="@anim/anim_slide_in_left"
+      app:popExitAnim="@anim/anim_slide_out_right"
+      app:destination="@id/voteFragment" />
+
+
+  </fragment>
+  <fragment
+    android:id="@+id/voteFragment"
+    android:name="app.fawry.task.presentation.vote.VoteFragment"
+    android:label="@string/vote" >
+
+    <argument
+      android:name="position"
+      app:argType="integer" />
+
+    <argument
+      android:name="matchModel"
+      app:argType="app.fawry.task.domain.home.model.match.MatchModel" />
+
+  </fragment>
 
 
 </navigation>

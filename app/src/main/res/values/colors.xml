@@ -4,6 +4,7 @@
   <color name="colorPrimaryOpacity">#1AA07614</color>
   <color name="colorPrimaryDark">#8C5A40</color>
   <color name="colorSecondary">#015929</color>
+  <color name="colorWinner">#199E5E</color>
   <color name="colorHintText">#B0B0B0</color>
   <color name="textBackgroundColor">#E7E7E7</color>
   <color name="passwordToggleColor">#CFCFCF</color>
@@ -14,6 +15,7 @@
   <color name="color_notification_date">#808080</color>
   <color name="color_storke">#909090</color>
   <color name="backgroundMatchDetails">#F3F2EE</color>
+  <color name="blackOpacity">#4D000000</color>
 
 
   <color name="welcomeHeader">#555D63</color>

@@ -8,6 +8,7 @@ import app.fawry.task.domain.home.model.HomeResponse
 import app.fawry.task.domain.home.model.match.MatchModel
 import app.fawry.task.domain.news.NewsModel
 import app.fawry.task.domain.notification.NotificationItem
+import app.fawry.task.domain.pricing.PricingItem
 import app.fawry.task.domain.utils.BaseResponse
 import app.fawry.task.domain.utils.Resource
 import kotlinx.coroutines.Dispatchers
@@ -42,6 +43,12 @@ class HomeUseCase @Inject constructor(
     emit(result)//send result for collecting
   }.flowOn(Dispatchers.IO)
 
+  fun availableMatches(): Flow<Resource<BaseResponse<ArrayList<MatchModel>>>> = flow {
+    emit(Resource.Loading) //show loader
+    val result = repository.availableMatches()
+    emit(result)//send result for collecting
+  }.flowOn(Dispatchers.IO)
+
   fun allMatches(): Flow<Resource<BaseResponse<ArrayList<MatchModel>>>> = flow {
     emit(Resource.Loading) //show loader
     val result = repository.allMatches()
@@ -55,4 +62,9 @@ class HomeUseCase @Inject constructor(
   }.flowOn(Dispatchers.IO)
 
 
+  fun getPricingPlan(): Flow<Resource<BaseResponse<ArrayList<PricingItem>>>> = flow {
+    emit(Resource.Loading) //show loader
+    val result = repository.getPricingPlan()
+    emit(result)//send result for collecting
+  }.flowOn(Dispatchers.IO)
 }

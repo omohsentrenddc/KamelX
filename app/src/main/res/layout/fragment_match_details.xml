@@ -9,7 +9,7 @@
 
     <variable
       name="viewmodel"
-      type="app.fawry.task.presentation.match.MatchDetailsViewModel" />
+      type="app.fawry.task.presentation.match.details.MatchDetailsViewModel" />
   </data>
 
   <!--  android:background="@color/background"-->
@@ -21,18 +21,15 @@
 
 
     <LinearLayout
+      android:layout_margin="@dimen/dimen10"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:orientation="vertical"
-      android:padding="@dimen/dimen16">
+      android:orientation="vertical">
+
 
       <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/dimen5"
-        android:background="@drawable/bg_rounded_white_19"
-        android:paddingStart="@dimen/dimen5"
-        android:paddingEnd="@dimen/dimen5">
+        android:layout_height="wrap_content">
 
         <androidx.appcompat.widget.AppCompatTextView
           android:id="@+id/tv_competition_name"
@@ -65,146 +62,762 @@
           app:layout_constraintEnd_toEndOf="parent"
           app:layout_constraintTop_toTopOf="parent"
           tools:text="@string/round" />
+      </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-          android:layout_width="match_parent"
+
+      <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/dimen10"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_rounded_match_details_12">
+
+        <androidx.appcompat.widget.AppCompatTextView
+          android:id="@+id/tv_competition_percentage"
+          style="@style/txtStyleBold"
+          android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          android:layout_marginTop="@dimen/dimen10"
-          android:background="@drawable/bg_rounded_match_details_12"
+          android:layout_marginStart="@dimen/dimen5"
+          android:layout_marginTop="@dimen/dimen5"
+          android:layout_marginEnd="@dimen/dimen5"
+          android:text="@{viewmodel.model.firstCompetitor.vote + ` %`}"
+          android:textAlignment="viewStart"
+          android:textColor="@color/color_steps_text"
+          android:textSize="16sp"
+          app:layout_constraintBottom_toBottomOf="parent"
           app:layout_constraintEnd_toEndOf="parent"
+
+          app:layout_constraintTop_toTopOf="parent"
+          tools:text="40%" />
+
+        <View
+          android:layout_width="1dp"
+          android:layout_height="0dp"
+          android:layout_marginTop="@dimen/dimen10"
+          android:layout_marginEnd="@dimen/dimen10"
+          android:layout_marginBottom="@dimen/dimen10"
+          android:background="@color/backgroundHeader"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toStartOf="@+id/tv_competition_percentage"
+          app:layout_constraintTop_toTopOf="parent" />
+
+
+        <LinearLayout
+          android:id="@+id/ll_player_first"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          app:layout_constraintEnd_toStartOf="@+id/tv_competition_percentage"
           app:layout_constraintStart_toStartOf="parent"
-          app:layout_constraintTop_toBottomOf="@+id/tv_competition_round">
+          app:layout_constraintTop_toTopOf="parent">
 
 
-          <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginStart="@dimen/dimen10"
-            android:layout_marginTop="@dimen/dimen10"
-            android:layout_marginEnd="@dimen/dimen10"
-            android:background="@drawable/bg_rounded_steps_16"
-            android:padding="@dimen/dimen5"
-            app:layout_constraintBottom_toBottomOf="@+id/card_img_first"
-            app:layout_constraintEnd_toStartOf="@+id/card_img_first"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/dimen16">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              >
+
+
+              <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen10"
+                android:background="@drawable/bg_rounded_match_details_12"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                  android:layout_width="0dp"
+                  android:layout_height="0dp"
+                  android:layout_marginStart="@dimen/dimen10"
+                  android:layout_marginTop="@dimen/dimen10"
+                  android:layout_marginEnd="@dimen/dimen10"
+                  android:background="@drawable/bg_rounded_steps_16"
+                  android:padding="@dimen/dimen5"
+                  app:layout_constraintBottom_toBottomOf="@+id/card_img_first"
+                  app:layout_constraintEnd_toStartOf="@+id/card_img_first"
+                  app:layout_constraintStart_toStartOf="parent"
+                  app:layout_constraintTop_toTopOf="parent">
+
+
+                  <LinearLayout
+                    android:id="@+id/ll_item_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/ic_circle_primary_dark"
+                    android:gravity="center"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                      style="@style/txtStyleBold"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_centerInParent="true"
+                      android:layout_gravity="center"
+                      android:gravity="center"
+                      android:text="@{``+viewmodel.model.firstCompetitor.id}"
+                      android:textColor="@color/white"
+                      android:textSize="14sp"
+                      tools:text="1" />
+
+                  </LinearLayout>
+
+
+                  <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_title"
+                    style="@style/txtStyleBold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/dimen10"
+                    android:layout_marginEnd="@dimen/dimen10"
+                    android:gravity="center"
+                    android:text="@{``+viewmodel.model.firstCompetitor.ownerName}"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toEndOf="@+id/ll_item_id"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="asdas  s" />
+
+
+                  <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profile_image"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="@dimen/dimen20"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_title"
+                    app:loadImage="@{viewmodel.model.firstCompetitor.ownerImage}" />
+
+                  <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_owner"
+                    style="@style/txtStyleRegular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/dimen10"
+                    android:layout_marginEnd="@dimen/dimen10"
+                    android:gravity="center"
+                    android:text="@string/owner"
+                    android:textColor="@color/color_steps_text"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toEndOf="@+id/profile_image"
+                    app:layout_constraintTop_toTopOf="@+id/profile_image"
+                    tools:text="asdas  s" />
+
+                  <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_owner_name"
+                    style="@style/txtStyleMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/dimen10"
+                    android:layout_marginEnd="@dimen/dimen10"
+                    android:gravity="center"
+                    android:text="@{``+viewmodel.model.firstCompetitor.ownerName}"
+                    android:textColor="@color/color_steps_text"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toEndOf="@+id/profile_image"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_owner"
+                    tools:text="asdas  s" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <androidx.cardview.widget.CardView
+                  android:id="@+id/card_img_first"
+                  android:layout_width="110dp"
+                  android:layout_height="123dp"
+                  android:layout_gravity="center"
+                  android:layout_margin="@dimen/dimen10"
+                  android:elevation="10dp"
+                  android:padding="@dimen/dimen10"
+                  app:cardCornerRadius="25dp"
+                  app:layout_constraintEnd_toEndOf="parent"
+                  app:layout_constraintTop_toTopOf="parent">
+
+                  <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_rounded_steps_16"
+                    app:loadImageCache="@{viewmodel.model.firstCompetitor.camelImage}" />
+
+                </androidx.cardview.widget.CardView>
+
+
+              </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
 
             <LinearLayout
-              android:id="@+id/ll_item_id"
-              android:layout_width="wrap_content"
+              android:layout_width="match_parent"
               android:layout_height="wrap_content"
-              android:layout_gravity="center"
-              android:background="@drawable/ic_circle_primary_dark"
-              android:gravity="center"
-              app:layout_constraintStart_toStartOf="parent"
-              app:layout_constraintTop_toTopOf="parent">
+              android:layout_margin="@dimen/dimen5"
+              android:background="@drawable/bg_rounded_steps_16"
+              android:orientation="horizontal"
+              android:paddingBottom="@dimen/dimen6"
+              android:weightSum="3">
 
-              <androidx.appcompat.widget.AppCompatTextView
-                style="@style/txtStyleBold"
-                android:layout_width="wrap_content"
+              <LinearLayout
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                  style="@style/txtStyleRegular"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="center"
+                  android:layout_marginStart="@dimen/dimen5"
+                  android:layout_marginTop="@dimen/dimen5"
+                  android:layout_marginEnd="@dimen/dimen5"
+                  android:gravity="center"
+                  android:text="@string/color"
+                  android:textAlignment="center"
+                  android:textColor="@color/color_steps_text"
+                  android:textSize="12sp"
+                  app:layout_constraintStart_toStartOf="parent"
+                  app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                  style="@style/txtStyleMedium"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="center"
+                  android:layout_marginStart="@dimen/dimen5"
+                  android:layout_marginTop="@dimen/dimen5"
+                  android:layout_marginEnd="@dimen/dimen5"
+                  android:gravity="center"
+                  android:text="@{viewmodel.model.firstCompetitor.color}"
+                  android:textAlignment="center"
+                  android:textColor="@color/color_steps_text"
+                  android:textSize="16sp"
+                  app:layout_constraintStart_toStartOf="parent"
+                  app:layout_constraintTop_toTopOf="parent" />
+
+              </LinearLayout>
+
+              <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:layout_weight="1"
                 android:gravity="center"
-                android:text="@{``+viewmodel.model.firstCompetitor.id}"
-                android:textColor="@color/white"
-                android:textSize="14sp"
-                tools:text="1" />
+                android:orientation="horizontal">
+
+                <View
+                  android:layout_width="2dp"
+                  android:layout_height="@dimen/dimen40"
+                  android:layout_gravity="center|start"
+                  android:layout_marginStart="@dimen/dimen10"
+                  android:background="@color/white" />
+
+                <LinearLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="center"
+                  android:orientation="vertical">
+
+                  <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/txtStyleRegular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/dimen5"
+                    android:layout_marginTop="@dimen/dimen5"
+                    android:layout_marginEnd="@dimen/dimen5"
+                    android:gravity="center"
+                    android:text="@string/age"
+                    android:textAlignment="center"
+                    android:textColor="@color/color_steps_text"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                  <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/txtStyleMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/dimen5"
+                    android:gravity="center"
+                    android:text="@{viewmodel.model.firstCompetitor.age}"
+                    android:textAlignment="center"
+                    android:textColor="@color/color_steps_text"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="asd asdsa" />
+
+                </LinearLayout>
+
+                <View
+                  android:layout_width="2dp"
+                  android:layout_height="@dimen/dimen40"
+                  android:layout_gravity="center"
+                  android:layout_marginEnd="@dimen/dimen10"
+                  android:background="@color/white" />
+              </LinearLayout>
+
+              <LinearLayout
+                android:layout_width="0dp"
+
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                  style="@style/txtStyleRegular"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="center"
+                  android:layout_marginStart="@dimen/dimen5"
+                  android:layout_marginTop="@dimen/dimen5"
+                  android:layout_marginEnd="@dimen/dimen5"
+                  android:gravity="center"
+                  android:text="@string/origin"
+                  android:textAlignment="center"
+                  android:textColor="@color/color_steps_text"
+                  android:textSize="12sp"
+                  app:layout_constraintStart_toStartOf="parent"
+                  app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                  style="@style/txtStyleMedium"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="center"
+                  android:layout_marginStart="@dimen/dimen5"
+                  android:layout_marginTop="@dimen/dimen5"
+                  android:layout_marginEnd="@dimen/dimen5"
+                  android:gravity="center"
+                  android:text="@{viewmodel.model.firstCompetitor.origin}"
+                  android:textAlignment="center"
+                  android:textColor="@color/color_steps_text"
+                  android:textSize="16sp"
+                  app:layout_constraintStart_toStartOf="parent"
+                  app:layout_constraintTop_toTopOf="parent" />
+
+              </LinearLayout>
+
 
             </LinearLayout>
 
-
-            <androidx.appcompat.widget.AppCompatTextView
-              android:id="@+id/tv_title"
-              style="@style/txtStyleBold"
-              android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-              android:layout_centerInParent="true"
-              android:layout_gravity="center"
-              android:layout_marginStart="@dimen/dimen10"
-              android:layout_marginEnd="@dimen/dimen10"
-              android:gravity="center"
-              android:text="@{``+viewmodel.model.firstCompetitor.ownerName}"
-              android:textColor="@color/colorPrimaryDark"
-              android:textSize="16sp"
-              app:layout_constraintStart_toEndOf="@+id/ll_item_id"
-              app:layout_constraintTop_toTopOf="parent"
-              tools:text="asdas  s" />
-
-
-            <de.hdodenhof.circleimageview.CircleImageView
-              android:id="@+id/profile_image"
-              android:layout_width="40dp"
-              android:layout_height="40dp"
-              android:layout_marginTop="@dimen/dimen20"
-              app:civ_border_color="#FF000000"
-              app:civ_border_width="2dp"
-              app:layout_constraintStart_toStartOf="parent"
-              app:layout_constraintTop_toBottomOf="@+id/tv_title"
-              app:loadImage="@{viewmodel.model.firstCompetitor.ownerImage}" />
-
-            <androidx.appcompat.widget.AppCompatTextView
-              android:id="@+id/tv_owner"
-              style="@style/txtStyleRegular"
-              android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-              android:layout_centerInParent="true"
-              android:layout_gravity="center"
-              android:layout_marginStart="@dimen/dimen10"
-              android:layout_marginEnd="@dimen/dimen10"
-              android:gravity="center"
-              android:text="@string/owner"
-              android:textColor="@color/color_steps_text"
-              android:textSize="12sp"
-              app:layout_constraintStart_toEndOf="@+id/profile_image"
-              app:layout_constraintTop_toTopOf="@+id/profile_image"
-              tools:text="asdas  s" />
-
-            <androidx.appcompat.widget.AppCompatTextView
-              android:id="@+id/tv_owner_name"
-              style="@style/txtStyleMedium"
-              android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-              android:layout_centerInParent="true"
-              android:layout_gravity="center"
-              android:layout_marginStart="@dimen/dimen10"
-              android:layout_marginEnd="@dimen/dimen10"
-              android:gravity="center"
-              android:text="@{``+viewmodel.model.firstCompetitor.ownerName}"
-              android:textColor="@color/color_steps_text"
-              android:textSize="12sp"
-              app:layout_constraintStart_toEndOf="@+id/profile_image"
-              app:layout_constraintTop_toBottomOf="@+id/tv_owner"
-              tools:text="asdas  s" />
-
-
-          </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-          <androidx.cardview.widget.CardView
-            android:id="@+id/card_img_first"
-            android:layout_width="110dp"
-            android:layout_height="123dp"
-            android:layout_gravity="center"
-            android:elevation="10dp"
-            app:cardCornerRadius="25dp"
-            android:padding="@dimen/dimen10"
-            android:layout_margin="@dimen/dimen10"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <androidx.appcompat.widget.AppCompatImageView
+            <com.google.android.material.button.MaterialButton
+              android:id="@+id/materialButton2"
+              style="@style/btnSubmit"
               android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="@dimen/dimen10"
+              android:onClick="@{ () -> viewmodel.submit(viewmodel.model.firstCompetitor,1)}"
+              android:paddingStart="@dimen/dimen50"
+              android:paddingEnd="@dimen/dimen50"
+              android:text="@string/vote"
+              android:textSize="@dimen/text_size16"
+              app:backgroundTint="@color/colorSecondary"
+              app:iconGravity="start"
+              app:layout_constraintBottom_toBottomOf="parent"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toBottomOf="@+id/tv_Second_competitor" />
+
+
+          </LinearLayout>
+        </LinearLayout>
+
+
+      </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+      <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/dimen10"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_rounded_match_details_12">
+
+        <androidx.appcompat.widget.AppCompatTextView
+          android:id="@+id/tv_competition_percentage_2"
+          style="@style/txtStyleBold"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="@dimen/dimen5"
+          android:layout_marginTop="@dimen/dimen5"
+          android:layout_marginEnd="@dimen/dimen5"
+          android:text="@{viewmodel.model.second_competitor.vote + ` %`}"
+          android:textAlignment="viewStart"
+          android:textColor="@color/color_steps_text"
+          android:textSize="16sp"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+
+          app:layout_constraintTop_toTopOf="parent"
+          tools:text="40%" />
+
+        <View
+          android:layout_width="1dp"
+          android:layout_height="0dp"
+          android:layout_marginTop="@dimen/dimen10"
+          android:layout_marginEnd="@dimen/dimen10"
+          android:layout_marginBottom="@dimen/dimen10"
+          android:background="@color/backgroundHeader"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toStartOf="@+id/tv_competition_percentage_2"
+          app:layout_constraintTop_toTopOf="parent" />
+
+
+        <LinearLayout
+          android:id="@+id/ll_player_second"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          app:layout_constraintEnd_toStartOf="@+id/tv_competition_percentage_2"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent">
+
+
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/dimen16">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              >
+
+
+              <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen10"
+                android:background="@drawable/bg_rounded_match_details_12"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                  android:layout_width="0dp"
+                  android:layout_height="0dp"
+                  android:layout_marginStart="@dimen/dimen10"
+                  android:layout_marginTop="@dimen/dimen10"
+                  android:layout_marginEnd="@dimen/dimen10"
+                  android:background="@drawable/bg_rounded_steps_16"
+                  android:padding="@dimen/dimen5"
+                  app:layout_constraintBottom_toBottomOf="@+id/card_img_second"
+                  app:layout_constraintEnd_toStartOf="@+id/card_img_second"
+                  app:layout_constraintStart_toStartOf="parent"
+                  app:layout_constraintTop_toTopOf="parent">
+
+
+                  <LinearLayout
+                    android:id="@+id/ll_item_id_second"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/ic_circle_primary_dark"
+                    android:gravity="center"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                      style="@style/txtStyleBold"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_centerInParent="true"
+                      android:layout_gravity="center"
+                      android:gravity="center"
+                      android:text="@{``+viewmodel.model.second_competitor.id}"
+                      android:textColor="@color/white"
+                      android:textSize="14sp"
+                      tools:text="1" />
+
+                  </LinearLayout>
+
+
+                  <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_title_second"
+                    style="@style/txtStyleBold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/dimen10"
+                    android:layout_marginEnd="@dimen/dimen10"
+                    android:gravity="center"
+                    android:text="@{``+viewmodel.model.second_competitor.ownerName}"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toEndOf="@+id/ll_item_id_second"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="asdas  s" />
+
+
+                  <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profile_image_second"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="@dimen/dimen20"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_title_second"
+                    app:loadImage="@{viewmodel.model.second_competitor.ownerImage}" />
+
+                  <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_owner_second"
+                    style="@style/txtStyleRegular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/dimen10"
+                    android:layout_marginEnd="@dimen/dimen10"
+                    android:gravity="center"
+                    android:text="@string/owner"
+                    android:textColor="@color/color_steps_text"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toEndOf="@+id/profile_image_second"
+                    app:layout_constraintTop_toTopOf="@+id/profile_image_second"
+                    tools:text="asdas  s" />
+
+                  <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_owner_name_second"
+                    style="@style/txtStyleMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/dimen10"
+                    android:layout_marginEnd="@dimen/dimen10"
+                    android:gravity="center"
+                    android:text="@{``+viewmodel.model.second_competitor.ownerName}"
+                    android:textColor="@color/color_steps_text"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toEndOf="@+id/profile_image_second"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_owner_second"
+                    tools:text="asdas  s" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <androidx.cardview.widget.CardView
+                  android:id="@+id/card_img_second"
+                  android:layout_width="110dp"
+                  android:layout_height="123dp"
+                  android:layout_gravity="center"
+                  android:layout_margin="@dimen/dimen10"
+                  android:elevation="10dp"
+                  android:padding="@dimen/dimen10"
+                  app:cardCornerRadius="25dp"
+                  app:layout_constraintEnd_toEndOf="parent"
+                  app:layout_constraintTop_toTopOf="parent">
+
+                  <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_rounded_steps_16"
+                    app:loadImageCache="@{viewmodel.model.second_competitor.camelImage}" />
+
+                </androidx.cardview.widget.CardView>
+
+
+              </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_margin="@dimen/dimen5"
               android:background="@drawable/bg_rounded_steps_16"
-              android:src="@drawable/img_login"
-              android:layout_height="match_parent"
-              app:loadImageCache="@{viewmodel.model.firstCompetitor.camelImage}" />
+              android:orientation="horizontal"
+              android:paddingBottom="@dimen/dimen6"
+              android:weightSum="3">
 
-          </androidx.cardview.widget.CardView>
+              <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                  style="@style/txtStyleRegular"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="center"
+                  android:layout_marginStart="@dimen/dimen5"
+                  android:layout_marginTop="@dimen/dimen5"
+                  android:layout_marginEnd="@dimen/dimen5"
+                  android:gravity="center"
+                  android:text="@string/color"
+                  android:textAlignment="center"
+                  android:textColor="@color/color_steps_text"
+                  android:textSize="12sp"
+                  app:layout_constraintStart_toStartOf="parent"
+                  app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                  style="@style/txtStyleMedium"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="center"
+                  android:layout_marginStart="@dimen/dimen5"
+                  android:layout_marginTop="@dimen/dimen5"
+                  android:layout_marginEnd="@dimen/dimen5"
+                  android:gravity="center"
+                  android:text="@{viewmodel.model.second_competitor.color}"
+                  android:textAlignment="center"
+                  android:textColor="@color/color_steps_text"
+                  android:textSize="16sp"
+                  app:layout_constraintStart_toStartOf="parent"
+                  app:layout_constraintTop_toTopOf="parent" />
+
+              </LinearLayout>
+
+              <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <View
+                  android:layout_width="2dp"
+                  android:layout_height="@dimen/dimen40"
+                  android:layout_gravity="center|start"
+                  android:layout_marginStart="@dimen/dimen10"
+                  android:background="@color/white" />
+
+                <LinearLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="center"
+                  android:orientation="vertical">
+
+                  <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/txtStyleRegular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/dimen5"
+                    android:layout_marginTop="@dimen/dimen5"
+                    android:layout_marginEnd="@dimen/dimen5"
+                    android:gravity="center"
+                    android:text="@string/age"
+                    android:textAlignment="center"
+                    android:textColor="@color/color_steps_text"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                  <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/txtStyleMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/dimen5"
+                    android:gravity="center"
+                    android:text="@{viewmodel.model.second_competitor.age}"
+                    android:textAlignment="center"
+                    android:textColor="@color/color_steps_text"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="asd asdsa" />
+
+                </LinearLayout>
+
+                <View
+                  android:layout_width="2dp"
+                  android:layout_height="@dimen/dimen40"
+                  android:layout_gravity="center"
+                  android:layout_marginEnd="@dimen/dimen10"
+                  android:background="@color/white" />
+              </LinearLayout>
+
+              <LinearLayout
+                android:layout_width="0dp"
+
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                  style="@style/txtStyleRegular"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="center"
+                  android:layout_marginStart="@dimen/dimen5"
+                  android:layout_marginTop="@dimen/dimen5"
+                  android:layout_marginEnd="@dimen/dimen5"
+                  android:gravity="center"
+                  android:text="@string/origin"
+                  android:textAlignment="center"
+                  android:textColor="@color/color_steps_text"
+                  android:textSize="12sp"
+                  app:layout_constraintStart_toStartOf="parent"
+                  app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                  style="@style/txtStyleMedium"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="center"
+                  android:layout_marginStart="@dimen/dimen5"
+                  android:layout_marginTop="@dimen/dimen5"
+                  android:layout_marginEnd="@dimen/dimen5"
+                  android:gravity="center"
+                  android:text="@{viewmodel.model.second_competitor.origin}"
+                  android:textAlignment="center"
+                  android:textColor="@color/color_steps_text"
+                  android:textSize="16sp"
+                  app:layout_constraintStart_toStartOf="parent"
+                  app:layout_constraintTop_toTopOf="parent" />
+
+              </LinearLayout>
 
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+              style="@style/btnSubmit"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="@dimen/dimen10"
+              android:onClick="@{ () -> viewmodel.submit(viewmodel.model.second_competitor,2)}"
+              android:paddingStart="@dimen/dimen50"
+              android:paddingEnd="@dimen/dimen50"
+              android:text="@string/vote"
+              android:textSize="@dimen/text_size16"
+              app:backgroundTint="@color/colorSecondary"
+              app:iconGravity="start"
+              app:layout_constraintBottom_toBottomOf="parent"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toBottomOf="@+id/tv_Second_competitor" />
+
+
+          </LinearLayout>
+        </LinearLayout>
+
 
       </androidx.constraintlayout.widget.ConstraintLayout>
 

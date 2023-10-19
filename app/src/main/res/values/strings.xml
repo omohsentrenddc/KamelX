@@ -79,5 +79,14 @@
   <string name="more_competitions">المزيد من المنافسات</string>
   <string name="wallet">المحفظة</string>
     <string name="owner">المالك</string>
+    <string name="color">اللون</string>
+  <string name="age">السن</string>
+  <string name="origin">الاصل و السلالة</string>
+    <string name="enter_another_number">عدد آخر</string>
+  <string name="write_number">كتابة العدد</string>
+  <string name="choose_the_number_points_for_voting">اختر عدد نقاط التصويت</string>
+  <string name="your_balance_from_points">رصيدك من النقاط</string>
+  <string name="point">نقطة</string>
+  <string name="round_winner">الفائز بالجولة</string>
 
 </resources>

@@ -10,6 +10,7 @@ import app.fawry.task.domain.home.model.HomeResponse
 import app.fawry.task.domain.home.model.match.MatchModel
 import app.fawry.task.domain.news.NewsModel
 import app.fawry.task.domain.notification.NotificationItem
+import app.fawry.task.domain.pricing.PricingItem
 import app.fawry.task.domain.utils.BaseResponse
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
@@ -22,14 +23,26 @@ interface HomeServices {
   @GET("home")
   suspend fun home(): BaseResponse<HomeResponse>
 
+
+  @GET("matches/available")
+  suspend fun availableMatches(): BaseResponse<ArrayList<MatchModel>>
+
+
   @GET("matches/all")
   suspend fun allMatches(): BaseResponse<ArrayList<MatchModel>>
 
-  @GET("matches/{id}")
-  suspend fun matchDetails(@Query("id") id: Int): BaseResponse<MatchModel>
 
+  @GET("matches/{id}")
+  suspend fun matchDetails(@Path("id") id: Int): BaseResponse<MatchModel>
+
+
+  @GET("pricingPlan")
+  suspend fun getPricingPlan(): BaseResponse<ArrayList<PricingItem>>
 
   @GET("notifications")
   suspend fun notifications(): BaseResponse<ArrayList<NotificationItem>>
+
+  @GET("pricingPlan")
+  suspend fun pricingPlan(): BaseResponse<ArrayList<NotificationItem>>
 
 }

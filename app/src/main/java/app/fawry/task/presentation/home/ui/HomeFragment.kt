@@ -3,10 +3,13 @@ package app.fawry.task.presentation.home.ui
 import android.util.Log
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
+import app.fawry.task.domain.home.model.match.MatchModel
 import app.fawry.task.domain.utils.Resource
 import app.fawry.task.presentation.base.BaseFragment
+import app.fawry.task.presentation.base.ISubmitAction
 import app.fawry.task.presentation.base.extensions.handleApiError
 import app.fawry.task.presentation.base.extensions.hideKeyboard
+import app.fawry.task.presentation.base.extensions.navigate
 import app.fawry.task.presentation.base.extensions.setUpAdapter
 import app.fawry.task.presentation.home.viewModels.HomeViewModel
 import com.structure.base_mvvm.R
@@ -14,9 +17,9 @@ import com.structure.base_mvvm.databinding.FragmentHomeBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class HomeFragment : BaseFragment<FragmentHomeBinding>(){
+class HomeFragment : BaseFragment<FragmentHomeBinding>(), ISubmitAction {
 
-  private  val TAG = "HomeFragment"
+  private val TAG = "HomeFragment"
 
   private val viewModel: HomeViewModel by viewModels()
 
@@ -27,6 +30,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(){
   fun setBindingVariables() {
     Log.d(TAG, "setBindingVariables: ")
     binding.viewmodel = viewModel
+    viewModel.adapter.submitAction = this
     viewModel.getHome()
 //    binding.rvCategories.setUpAdapter(viewModel.adapter,"1","2")
   }
@@ -39,7 +43,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(){
     super.setupObservers()
     //listen for categories api
     lifecycleScope.launchWhenResumed {
-      viewModel.homeResponse.collect{
+      viewModel.homeResponse.collect {
         handleLoading(it)
         when (it) {
           is Resource.Loading -> handleLoading(it)
@@ -52,7 +56,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(){
             Log.d(TAG, "setupObservers: failure")
             handleApiError(it)
           }
-          else ->{}
+          else -> {}
         }
       }
     }
@@ -80,6 +84,13 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(){
 //        }
 //    }
 
+  }
+
+  override fun submit(type: Any, position: Int, constant: String) {
+    val model = type as MatchModel
+    val list = ArrayList<String>()
+    list.add(model.id.toString())
+    requireContext().navigate(binding.root, "competitions", " app.kamelx.competitions",list)
   }
 
 }

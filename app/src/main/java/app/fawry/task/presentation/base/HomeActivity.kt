@@ -54,11 +54,11 @@ class HomeActivity : BaseActivity<ActivityHomeBinding>() {
           hideBack()
           binding.toolbar.hide()
         }
-        R.id.settingsFragment,R.id.newsFragment ->{
+        R.id.settingsFragment ->{
           binding.tvHomeTitle.text = destination.label
           showBack(destination.label as String)
         }
-        R.id.allMatchesFragment ->{
+        R.id.allMatchesFragment,R.id.matchDetailsFragment,R.id.voteFragment ->{
           showBack(destination.label as String)
         }
         else -> binding.toolbar.show()

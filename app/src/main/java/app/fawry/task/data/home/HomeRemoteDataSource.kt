@@ -22,6 +22,11 @@ class HomeRemoteDataSource @Inject constructor(private val apiService: HomeServi
     apiService.home()
   }
 
+
+  suspend fun availableMatches() = safeApiCall {
+    apiService.availableMatches()
+  }
+
   suspend fun allMatches() = safeApiCall {
     apiService.allMatches()
   }
@@ -30,5 +35,7 @@ class HomeRemoteDataSource @Inject constructor(private val apiService: HomeServi
     apiService.matchDetails(id)
   }
 
-
+  suspend fun getPricingPlan() = safeApiCall {
+    apiService.getPricingPlan()
+  }
 }

@@ -13,6 +13,7 @@ open class BaseViewModel : ViewModel(), Observable {
 
   var dataLoadingEvent: SingleLiveEvent<Int> = SingleLiveEvent()
   var clickEvent: SingleLiveEvent<Int> = SingleLiveEvent()
+  var clickEventStr: SingleLiveEvent<String> = SingleLiveEvent()
   val responseDefault =
     MutableStateFlow<Resource<BaseResponse<*>>>(Resource.Default)
 
